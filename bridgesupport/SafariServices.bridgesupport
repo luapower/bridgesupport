@@ -1,0 +1,165 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='SFErrorDomain' type='@'/>
+<enum name='SFErrorLoadingInterrupted' value='3'/>
+<enum name='SFErrorNoAttachmentFound' value='2'/>
+<enum name='SFErrorNoExtensionFound' value='1'/>
+<enum name='SFSafariServicesVersion10_0' value='0'/>
+<enum name='SFSafariServicesVersion10_1' value='1'/>
+<class name='NSObject'>
+<method selector='validateContextMenuItemWithCommand:inPage:userInfo:validationHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='B'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='validateToolbarItemInWindow:validationHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='B'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='SFContentBlockerManager'>
+<method class_method='true' selector='getStateOfContentBlockerWithIdentifier:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='reloadContentBlockerWithIdentifier:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='SFContentBlockerState'>
+<method selector='isEnabled'>
+<retval type='B'/>
+</method>
+</class>
+<class name='SFSafariApplication'>
+<method class_method='true' selector='dispatchMessageWithName:toExtensionWithIdentifier:userInfo:completionHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='getActiveWindowWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='openWindowWithURL:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='showPreferencesForExtensionWithIdentifier:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='SFSafariExtensionManager'>
+<method class_method='true' selector='getStateOfSafariExtensionWithIdentifier:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='SFSafariExtensionState'>
+<method selector='isEnabled'>
+<retval type='B'/>
+</method>
+</class>
+<class name='SFSafariPage'>
+<method selector='getPagePropertiesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='SFSafariPageProperties'>
+<method selector='isActive'>
+<retval type='B'/>
+</method>
+<method selector='usesPrivateBrowsing'>
+<retval type='B'/>
+</method>
+</class>
+<class name='SFSafariTab'>
+<method selector='activateWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='getActivePageWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='getPagesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='SFSafariToolbarItem'>
+<method selector='setEnabled:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setEnabled:withBadgeText:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='SFSafariWindow'>
+<method selector='getActiveTabWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='getToolbarItemWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='openTabWithURL:makeActiveIfPossible:completionHandler:'>
+<arg index='1' type='B'/>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<informal_protocol name='SFSafariExtensionHandling'>
+<method selector='contextMenuItemSelectedWithCommand:inPage:userInfo:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='messageReceivedFromContainingAppWithName:userInfo:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='messageReceivedWithName:fromPage:userInfo:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='popoverDidCloseInWindow:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='popoverViewController' type='@8@0:4' type64='@16@0:8'/>
+<method selector='popoverWillShowInWindow:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='toolbarItemClickedInWindow:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='validateContextMenuItemWithCommand:inPage:userInfo:validationHandler:' type='v24@0:4@8@12@16@?20' type64='v48@0:8@16@24@32@?40'/>
+<method selector='validateToolbarItemInWindow:validationHandler:' type='v16@0:4@8@?12' type64='v32@0:8@16@?24'/>
+</informal_protocol>
+</signatures>

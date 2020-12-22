@@ -1,0 +1,1034 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/SpriteKit.framework'/>
+<depends_on path='/System/Library/Frameworks/SceneKit.framework'/>
+<depends_on path='/System/Library/Frameworks/MetalKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/GameplayKit.framework'/>
+<depends_on path='/System/Library/Frameworks/GameController.framework'/>
+<depends_on path='/System/Library/Frameworks/ModelIO.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<constant name='GKErrorDomain' type='@'/>
+<constant name='GKExchangeTimeoutDefault' type='d'/>
+<constant name='GKExchangeTimeoutNone' type='d'/>
+<constant name='GKGameSessionErrorDomain' type='@'/>
+<constant name='GKPlayerAuthenticationDidChangeNotificationName' type='@'/>
+<constant name='GKPlayerDidChangeNotificationName' type='@'/>
+<constant name='GKSessionErrorDomain' type='@'/>
+<constant name='GKTurnTimeoutDefault' type='d'/>
+<constant name='GKTurnTimeoutNone' type='d'/>
+<constant name='GKVoiceChatServiceErrorDomain' type='@'/>
+<enum name='GKChallengeStateCompleted' value='2'/>
+<enum name='GKChallengeStateDeclined' value='3'/>
+<enum name='GKChallengeStateInvalid' value='0'/>
+<enum name='GKChallengeStatePending' value='1'/>
+<enum name='GKConnectionStateConnected' value='1'/>
+<enum name='GKConnectionStateNotConnected' value='0'/>
+<enum name='GKErrorAuthenticationInProgress' value='7'/>
+<enum name='GKErrorCancelled' value='2'/>
+<enum name='GKErrorChallengeInvalid' value='19'/>
+<enum name='GKErrorCommunicationsFailure' value='3'/>
+<enum name='GKErrorGameSessionRequestInvalid' value='29'/>
+<enum name='GKErrorGameUnrecognized' value='15'/>
+<enum name='GKErrorInvalidCredentials' value='5'/>
+<enum name='GKErrorInvalidParameter' value='17'/>
+<enum name='GKErrorInvalidPlayer' value='8'/>
+<enum name='GKErrorInvitationsDisabled' value='25'/>
+<enum name='GKErrorMatchNotConnected' value='28'/>
+<enum name='GKErrorMatchRequestInvalid' value='13'/>
+<enum name='GKErrorNotAuthenticated' value='6'/>
+<enum name='GKErrorNotSupported' value='16'/>
+<enum name='GKErrorParentalControlsBlocked' value='10'/>
+<enum name='GKErrorPlayerPhotoFailure' value='26'/>
+<enum name='GKErrorPlayerStatusExceedsMaximumLength' value='11'/>
+<enum name='GKErrorPlayerStatusInvalid' value='12'/>
+<enum name='GKErrorScoreNotSet' value='9'/>
+<enum name='GKErrorTurnBasedInvalidParticipant' value='22'/>
+<enum name='GKErrorTurnBasedInvalidState' value='24'/>
+<enum name='GKErrorTurnBasedInvalidTurn' value='23'/>
+<enum name='GKErrorTurnBasedMatchDataTooLarge' value='20'/>
+<enum name='GKErrorTurnBasedTooManySessions' value='21'/>
+<enum name='GKErrorUbiquityContainerUnavailable' value='27'/>
+<enum name='GKErrorUnderage' value='14'/>
+<enum name='GKErrorUnexpectedConnection' value='18'/>
+<enum name='GKErrorUnknown' value='1'/>
+<enum name='GKErrorUserDenied' value='4'/>
+<enum name='GKGameCenterViewControllerStateAchievements' value='1'/>
+<enum name='GKGameCenterViewControllerStateChallenges' value='2'/>
+<enum name='GKGameCenterViewControllerStateDefault' value='-1'/>
+<enum name='GKGameCenterViewControllerStateLeaderboards' value='0'/>
+<enum name='GKGameSessionErrorBadContainer' value='12'/>
+<enum name='GKGameSessionErrorCloudDriveDisabled' value='15'/>
+<enum name='GKGameSessionErrorCloudQuotaExceeded' value='13'/>
+<enum name='GKGameSessionErrorConnectionCancelledByUser' value='5'/>
+<enum name='GKGameSessionErrorConnectionFailed' value='6'/>
+<enum name='GKGameSessionErrorInvalidSession' value='16'/>
+<enum name='GKGameSessionErrorNetworkFailure' value='14'/>
+<enum name='GKGameSessionErrorNotAuthenticated' value='2'/>
+<enum name='GKGameSessionErrorSendDataNoRecipients' value='9'/>
+<enum name='GKGameSessionErrorSendDataNotConnected' value='8'/>
+<enum name='GKGameSessionErrorSendDataNotReachable' value='10'/>
+<enum name='GKGameSessionErrorSendRateLimitReached' value='11'/>
+<enum name='GKGameSessionErrorSessionConflict' value='3'/>
+<enum name='GKGameSessionErrorSessionHasMaxConnectedPlayers' value='7'/>
+<enum name='GKGameSessionErrorSessionNotShared' value='4'/>
+<enum name='GKGameSessionErrorUnknown' value='1'/>
+<enum name='GKInviteRecipientResponseAccepted' value='0'/>
+<enum name='GKInviteRecipientResponseDeclined' value='1'/>
+<enum name='GKInviteRecipientResponseFailed' value='2'/>
+<enum name='GKInviteRecipientResponseIncompatible' value='3'/>
+<enum name='GKInviteRecipientResponseNoAnswer' value='5'/>
+<enum name='GKInviteRecipientResponseUnableToConnect' value='4'/>
+<enum name='GKInviteeResponseAccepted' value='0'/>
+<enum name='GKInviteeResponseDeclined' value='1'/>
+<enum name='GKInviteeResponseFailed' value='2'/>
+<enum name='GKInviteeResponseIncompatible' value='3'/>
+<enum name='GKInviteeResponseNoAnswer' value='5'/>
+<enum name='GKInviteeResponseUnableToConnect' value='4'/>
+<enum name='GKLeaderboardPlayerScopeFriendsOnly' value='1'/>
+<enum name='GKLeaderboardPlayerScopeGlobal' value='0'/>
+<enum name='GKLeaderboardTimeScopeAllTime' value='2'/>
+<enum name='GKLeaderboardTimeScopeToday' value='0'/>
+<enum name='GKLeaderboardTimeScopeWeek' value='1'/>
+<enum name='GKMatchSendDataReliable' value='0'/>
+<enum name='GKMatchSendDataUnreliable' value='1'/>
+<enum name='GKMatchTypeHosted' value='1'/>
+<enum name='GKMatchTypePeerToPeer' value='0'/>
+<enum name='GKMatchTypeTurnBased' value='2'/>
+<enum name='GKPeerStateAvailable' value='0'/>
+<enum name='GKPeerStateConnected' value='2'/>
+<enum name='GKPeerStateConnecting' value='4'/>
+<enum name='GKPeerStateDisconnected' value='3'/>
+<enum name='GKPeerStateUnavailable' value='1'/>
+<enum name='GKPhotoSizeNormal' value='1'/>
+<enum name='GKPhotoSizeSmall' value='0'/>
+<enum name='GKPlayerStateConnected' value='1'/>
+<enum name='GKPlayerStateDisconnected' value='2'/>
+<enum name='GKPlayerStateUnknown' value='0'/>
+<enum name='GKSendDataReliable' value='0'/>
+<enum name='GKSendDataUnreliable' value='1'/>
+<enum name='GKSessionCancelledError' value='30504'/>
+<enum name='GKSessionCannotEnableError' value='30509'/>
+<enum name='GKSessionConnectionClosedError' value='30506'/>
+<enum name='GKSessionConnectionFailedError' value='30505'/>
+<enum name='GKSessionConnectivityError' value='30201'/>
+<enum name='GKSessionDataTooBigError' value='30507'/>
+<enum name='GKSessionDeclinedError' value='30502'/>
+<enum name='GKSessionInProgressError' value='30510'/>
+<enum name='GKSessionInternalError' value='30203'/>
+<enum name='GKSessionInvalidParameterError' value='30500'/>
+<enum name='GKSessionModeClient' value='1'/>
+<enum name='GKSessionModePeer' value='2'/>
+<enum name='GKSessionModeServer' value='0'/>
+<enum name='GKSessionNotConnectedError' value='30508'/>
+<enum name='GKSessionPeerNotFoundError' value='30501'/>
+<enum name='GKSessionSystemError' value='30205'/>
+<enum name='GKSessionTimedOutError' value='30503'/>
+<enum name='GKSessionTransportError' value='30202'/>
+<enum name='GKSessionUnknownError' value='30204'/>
+<enum name='GKTransportTypeReliable' value='1'/>
+<enum name='GKTransportTypeUnreliable' value='0'/>
+<enum name='GKTurnBasedExchangeStatusActive' value='1'/>
+<enum name='GKTurnBasedExchangeStatusCanceled' value='4'/>
+<enum name='GKTurnBasedExchangeStatusComplete' value='2'/>
+<enum name='GKTurnBasedExchangeStatusResolved' value='3'/>
+<enum name='GKTurnBasedExchangeStatusUnknown' value='0'/>
+<enum name='GKTurnBasedMatchOutcomeCustomRange' value='16711680'/>
+<enum name='GKTurnBasedMatchOutcomeFirst' value='6'/>
+<enum name='GKTurnBasedMatchOutcomeFourth' value='9'/>
+<enum name='GKTurnBasedMatchOutcomeLost' value='3'/>
+<enum name='GKTurnBasedMatchOutcomeNone' value='0'/>
+<enum name='GKTurnBasedMatchOutcomeQuit' value='1'/>
+<enum name='GKTurnBasedMatchOutcomeSecond' value='7'/>
+<enum name='GKTurnBasedMatchOutcomeThird' value='8'/>
+<enum name='GKTurnBasedMatchOutcomeTied' value='4'/>
+<enum name='GKTurnBasedMatchOutcomeTimeExpired' value='5'/>
+<enum name='GKTurnBasedMatchOutcomeWon' value='2'/>
+<enum name='GKTurnBasedMatchStatusEnded' value='2'/>
+<enum name='GKTurnBasedMatchStatusMatching' value='3'/>
+<enum name='GKTurnBasedMatchStatusOpen' value='1'/>
+<enum name='GKTurnBasedMatchStatusUnknown' value='0'/>
+<enum name='GKTurnBasedParticipantStatusActive' value='4'/>
+<enum name='GKTurnBasedParticipantStatusDeclined' value='2'/>
+<enum name='GKTurnBasedParticipantStatusDone' value='5'/>
+<enum name='GKTurnBasedParticipantStatusInvited' value='1'/>
+<enum name='GKTurnBasedParticipantStatusMatching' value='3'/>
+<enum name='GKTurnBasedParticipantStatusUnknown' value='0'/>
+<enum name='GKVoiceChatPlayerConnected' value='0'/>
+<enum name='GKVoiceChatPlayerConnecting' value='4'/>
+<enum name='GKVoiceChatPlayerDisconnected' value='1'/>
+<enum name='GKVoiceChatPlayerSilent' value='3'/>
+<enum name='GKVoiceChatPlayerSpeaking' value='2'/>
+<enum name='GKVoiceChatServiceAudioUnavailableError' value='32005'/>
+<enum name='GKVoiceChatServiceClientMissingRequiredMethodsError' value='32007'/>
+<enum name='GKVoiceChatServiceInternalError' value='32000'/>
+<enum name='GKVoiceChatServiceInvalidCallIDError' value='32004'/>
+<enum name='GKVoiceChatServiceInvalidParameterError' value='32016'/>
+<enum name='GKVoiceChatServiceMethodCurrentlyInvalidError' value='32012'/>
+<enum name='GKVoiceChatServiceNetworkConfigurationError' value='32013'/>
+<enum name='GKVoiceChatServiceNoRemotePacketsError' value='32001'/>
+<enum name='GKVoiceChatServiceOutOfMemoryError' value='32015'/>
+<enum name='GKVoiceChatServiceRemoteParticipantBusyError' value='32008'/>
+<enum name='GKVoiceChatServiceRemoteParticipantCancelledError' value='32009'/>
+<enum name='GKVoiceChatServiceRemoteParticipantDeclinedInviteError' value='32011'/>
+<enum name='GKVoiceChatServiceRemoteParticipantHangupError' value='32003'/>
+<enum name='GKVoiceChatServiceRemoteParticipantResponseInvalidError' value='32010'/>
+<enum name='GKVoiceChatServiceUnableToConnectError' value='32002'/>
+<enum name='GKVoiceChatServiceUninitializedClientError' value='32006'/>
+<enum name='GKVoiceChatServiceUnsupportedRemoteVersionError' value='32014'/>
+<class name='GKAchievement'>
+<method selector='challengeComposeControllerWithMessage:players:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<arg type='B'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='isCompleted'>
+<retval type='B'/>
+</method>
+<method selector='isHidden'>
+<retval type='B'/>
+</method>
+<method class_method='true' selector='loadAchievementsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='reportAchievementWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='reportAchievements:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='reportAchievements:withEligibleChallenges:withCompletionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='resetAchievementsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='selectChallengeablePlayerIDs:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='selectChallengeablePlayers:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='setShowsCompletionBanner:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='showsCompletionBanner'>
+<retval type='B'/>
+</method>
+</class>
+<class name='GKAchievementDescription'>
+<method selector='isHidden'>
+<retval type='B'/>
+</method>
+<method selector='isReplayable'>
+<retval type='B'/>
+</method>
+<method class_method='true' selector='loadAchievementDescriptionsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadImageWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKChallenge'>
+<method class_method='true' selector='loadReceivedChallengesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKCloudPlayer'>
+<method class_method='true' selector='getCurrentSignedInPlayerForContainer:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKDialogController'>
+<method selector='presentViewController:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='GKGameSession'>
+<method selector='clearBadgeForPlayers:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='createSessionInContainer:withTitle:maxConnectedPlayers:completionHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='getShareURLWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadDataWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='loadSessionWithIdentifier:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='loadSessionsInContainer:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='removeSessionWithIdentifier:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='saveData:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='sendData:withTransportType:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='sendMessageWithLocalizedFormatKey:arguments:data:toPlayers:badgePlayers:completionHandler:'>
+<arg index='4' type='B'/>
+<arg function_pointer='true' index='5' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='setConnectionState:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKInvite'>
+<method selector='isHosted'>
+<retval type='B'/>
+</method>
+</class>
+<class name='GKLeaderboard'>
+<method selector='isLoading'>
+<retval type='B'/>
+</method>
+<method class_method='true' selector='loadCategoriesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadImageWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='loadLeaderboardsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadScoresWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='setDefaultLeaderboard:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKLeaderboardSet'>
+<method selector='loadImageWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='loadLeaderboardSetsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadLeaderboardsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKLocalPlayer'>
+<method selector='authenticateWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='deleteSavedGamesWithName:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='fetchSavedGamesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='generateIdentityVerificationSignatureWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='Q'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='isAuthenticated'>
+<retval type='B'/>
+</method>
+<method selector='isUnderage'>
+<retval type='B'/>
+</method>
+<method selector='loadDefaultLeaderboardCategoryIDWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadDefaultLeaderboardIdentifierWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadFriendPlayersWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadFriendsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadRecentPlayersWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='resolveConflictingSavedGames:withData:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='saveGameData:withName:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='setAuthenticateHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='setDefaultLeaderboardCategoryID:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='setDefaultLeaderboardIdentifier:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKMatch'>
+<method selector='chooseBestHostPlayerWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='chooseBestHostingPlayerWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='rematchWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='sendData:toPlayers:dataMode:error:'>
+<retval type='B'/>
+</method>
+<method selector='sendData:toPlayers:withDataMode:error:'>
+<retval type='B'/>
+</method>
+<method selector='sendDataToAllPlayers:withDataMode:error:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='GKMatchRequest'>
+<method selector='setInviteeResponseHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='i' type64='q'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='setRecipientResponseHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='i' type64='q'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKMatchmaker'>
+<method selector='addPlayersToMatch:matchRequest:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='findMatchForRequest:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='findPlayersForHostedMatchRequest:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='findPlayersForHostedRequest:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='matchForInvite:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='queryActivityWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='queryPlayerGroupActivity:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='setInviteHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='startBrowsingForNearbyPlayersWithHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='B'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='startBrowsingForNearbyPlayersWithReachableHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='B'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKMatchmakerViewController'>
+<method selector='isHosted'>
+<retval type='B'/>
+</method>
+<method selector='setHosted:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setHostedPlayer:connected:'>
+<arg index='1' type='B'/>
+</method>
+<method selector='setHostedPlayer:didConnect:'>
+<arg index='1' type='B'/>
+</method>
+</class>
+<class name='GKNotificationBanner'>
+<method class_method='true' selector='showBannerWithTitle:message:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='showBannerWithTitle:message:duration:completionHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKPlayer'>
+<method selector='isFriend'>
+<retval type='B'/>
+</method>
+<method selector='loadPhotoForSize:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='loadPlayersForIdentifiers:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKSavedGame'>
+<method selector='loadDataWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKScore'>
+<method selector='reportScoreWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='reportScores:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='reportScores:withEligibleChallenges:withCompletionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='setShouldSetDefaultLeaderboard:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='shouldSetDefaultLeaderboard'>
+<retval type='B'/>
+</method>
+</class>
+<class name='GKSession'>
+<method selector='acceptConnectionFromPeer:error:'>
+<retval type='B'/>
+</method>
+<method selector='isAvailable'>
+<retval type='B'/>
+</method>
+<method selector='sendData:toPeers:withDataMode:error:'>
+<retval type='B'/>
+</method>
+<method selector='sendDataToAllPeers:withDataMode:error:'>
+<retval type='B'/>
+</method>
+<method selector='setAvailable:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='GKTurnBasedExchange'>
+<method selector='cancelWithLocalizableMessageKey:arguments:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='replyWithLocalizableMessageKey:arguments:data:completionHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKTurnBasedMatch'>
+<method selector='acceptInviteWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='declineInviteWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='endMatchInTurnWithMatchData:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='endMatchInTurnWithMatchData:scores:achievements:completionHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='endTurnWithNextParticipant:matchData:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='endTurnWithNextParticipants:turnTimeout:matchData:completionHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='findMatchForRequest:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadMatchDataWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='loadMatchWithID:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method class_method='true' selector='loadMatchesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='participantQuitInTurnWithOutcome:nextParticipant:matchData:completionHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='participantQuitInTurnWithOutcome:nextParticipants:turnTimeout:matchData:completionHandler:'>
+<arg function_pointer='true' index='4' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='participantQuitOutOfTurnWithOutcome:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='rematchWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='removeWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='saveCurrentTurnWithMatchData:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='saveMergedMatchData:withResolvedExchanges:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='sendExchangeToParticipants:data:localizableMessageKey:arguments:timeout:completionHandler:'>
+<arg function_pointer='true' index='5' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='sendReminderToParticipants:localizableMessageKey:arguments:completionHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='GKTurnBasedMatchmakerViewController'>
+<method selector='setShowExistingMatches:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='showExistingMatches'>
+<retval type='B'/>
+</method>
+</class>
+<class name='GKVoiceChat'>
+<method selector='isActive'>
+<retval type='B'/>
+</method>
+<method class_method='true' selector='isVoIPAllowed'>
+<retval type='B'/>
+</method>
+<method selector='setActive:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setMute:forPlayer:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setPlayer:muted:'>
+<arg index='1' type='B'/>
+</method>
+<method selector='setPlayerStateUpdateHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='i' type64='q'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='setPlayerVoiceChatStateDidChangeHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='i' type64='q'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='handleTurnEventForMatch:didBecomeActive:'>
+<arg index='1' type='B'/>
+</method>
+<method selector='match:shouldReinviteDisconnectedPlayer:'>
+<retval type='B'/>
+</method>
+<method selector='match:shouldReinvitePlayer:'>
+<retval type='B'/>
+</method>
+<method selector='player:receivedTurnEventForMatch:didBecomeActive:'>
+<arg index='2' type='B'/>
+</method>
+<method selector='shouldShowBannerForLocallyCompletedChallenge:'>
+<retval type='B'/>
+</method>
+<method selector='shouldShowBannerForLocallyReceivedChallenge:'>
+<retval type='B'/>
+</method>
+<method selector='shouldShowBannerForRemotelyCompletedChallenge:'>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='GKAchievementViewControllerDelegate'>
+<method selector='achievementViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='GKChallengeEventHandlerDelegate'>
+<method selector='localPlayerDidCompleteChallenge:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='localPlayerDidReceiveChallenge:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='localPlayerDidSelectChallenge:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='remotePlayerDidCompleteChallenge:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='shouldShowBannerForLocallyCompletedChallenge:' type='B12@0:4@8' type64='B24@0:8@16'/>
+<method selector='shouldShowBannerForLocallyReceivedChallenge:' type='B12@0:4@8' type64='B24@0:8@16'/>
+<method selector='shouldShowBannerForRemotelyCompletedChallenge:' type='B12@0:4@8' type64='B24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='GKChallengeListener'>
+<method selector='player:didCompleteChallenge:issuedByFriend:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='player:didReceiveChallenge:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='player:issuedChallengeWasCompleted:byFriend:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='player:wantsToPlayChallenge:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+</informal_protocol>
+<informal_protocol name='GKChallengesViewControllerDelegate'>
+<method selector='challengesViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='GKFriendRequestComposeViewControllerDelegate'>
+<method selector='friendRequestComposeViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='GKGameCenterControllerDelegate'>
+<method selector='gameCenterViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='GKGameSessionEventListener'>
+<method selector='session:didAddPlayer:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='session:didReceiveData:fromPlayer:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='session:didReceiveMessage:withData:fromPlayer:' type='v24@0:4@8@12@16@20' type64='v48@0:8@16@24@32@40'/>
+<method selector='session:didRemovePlayer:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='session:player:didChangeConnectionState:' type='v20@0:4@8@12i16' type64='v40@0:8@16@24q32'/>
+<method selector='session:player:didSaveData:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+</informal_protocol>
+<informal_protocol name='GKInviteEventListener'>
+<method selector='player:didAcceptInvite:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='player:didRequestMatchWithRecipients:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+</informal_protocol>
+<informal_protocol name='GKLeaderboardViewControllerDelegate'>
+<method selector='leaderboardViewControllerDidFinish:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='GKMatchDelegate'>
+<method selector='match:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='match:didReceiveData:forRecipient:fromRemotePlayer:' type='v24@0:4@8@12@16@20' type64='v48@0:8@16@24@32@40'/>
+<method selector='match:didReceiveData:fromPlayer:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='match:didReceiveData:fromRemotePlayer:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='match:player:didChangeConnectionState:' type='v20@0:4@8@12i16' type64='v40@0:8@16@24q32'/>
+<method selector='match:player:didChangeState:' type='v20@0:4@8@12i16' type64='v40@0:8@16@24q32'/>
+<method selector='match:shouldReinviteDisconnectedPlayer:' type='B16@0:4@8@12' type64='B32@0:8@16@24'/>
+<method selector='match:shouldReinvitePlayer:' type='B16@0:4@8@12' type64='B32@0:8@16@24'/>
+</informal_protocol>
+<informal_protocol name='GKMatchmakerViewControllerDelegate'>
+<method selector='matchmakerViewController:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='matchmakerViewController:didFindHostedPlayers:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='matchmakerViewController:didFindMatch:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='matchmakerViewController:didFindPlayers:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='matchmakerViewController:didReceiveAcceptFromHostedPlayer:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='matchmakerViewController:hostedPlayerDidAccept:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='matchmakerViewControllerWasCancelled:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='GKSavedGameListener'>
+<method selector='player:didModifySavedGame:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='player:hasConflictingSavedGames:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+</informal_protocol>
+<informal_protocol name='GKSessionDelegate'>
+<method selector='session:connectionWithPeerFailed:withError:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='session:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='session:didReceiveConnectionRequestFromPeer:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='session:peer:didChangeState:' type='v20@0:4@8@12i16' type64='v36@0:8@16@24i32'/>
+</informal_protocol>
+<informal_protocol name='GKTurnBasedEventHandlerDelegate'>
+<method selector='handleInviteFromGameCenter:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='handleMatchEnded:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='handleTurnEventForMatch:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='handleTurnEventForMatch:didBecomeActive:' type='v16@0:4@8B12' type64='v28@0:8@16B24'/>
+</informal_protocol>
+<informal_protocol name='GKTurnBasedEventListener'>
+<method selector='player:didRequestMatchWithOtherPlayers:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='player:matchEnded:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='player:receivedExchangeCancellation:forMatch:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='player:receivedExchangeReplies:forCompletedExchange:forMatch:' type='v24@0:4@8@12@16@20' type64='v48@0:8@16@24@32@40'/>
+<method selector='player:receivedExchangeRequest:forMatch:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='player:receivedTurnEventForMatch:didBecomeActive:' type='v20@0:4@8@12B16' type64='v36@0:8@16@24B32'/>
+<method selector='player:wantsToQuitMatch:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+</informal_protocol>
+<informal_protocol name='GKTurnBasedMatchmakerViewControllerDelegate'>
+<method selector='turnBasedMatchmakerViewController:didFailWithError:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='turnBasedMatchmakerViewController:didFindMatch:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='turnBasedMatchmakerViewController:playerQuitForMatch:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='turnBasedMatchmakerViewControllerWasCancelled:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='GKVoiceChatClient'>
+<method selector='participantID' type='@8@0:4' type64='@16@0:8'/>
+<method selector='voiceChatService:didNotStartWithParticipantID:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='voiceChatService:didReceiveInvitationFromParticipantID:callID:' type='v20@0:4@8@12i16' type64='v40@0:8@16@24q32'/>
+<method selector='voiceChatService:didStartWithParticipantID:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='voiceChatService:didStopWithParticipantID:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='voiceChatService:sendData:toParticipantID:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='voiceChatService:sendRealTimeData:toParticipantID:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+</informal_protocol>
+</signatures>

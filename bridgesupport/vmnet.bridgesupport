@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='vmpktdesc' type64='{vmpktdesc=&quot;vm_pkt_size&quot;Q&quot;vm_pkt_iov&quot;^{iovec}&quot;vm_pkt_iovcnt&quot;I&quot;vm_flags&quot;I}'/>
+<opaque name='interface_ref' type64='^{vmnet_interface=}'/>
+<constant name='vmnet_estimated_packets_available_key' type64='*'/>
+<constant name='vmnet_interface_id_key' type64='*'/>
+<constant name='vmnet_mac_address_key' type64='*'/>
+<constant name='vmnet_max_packet_size_key' type64='*'/>
+<constant name='vmnet_mtu_key' type64='*'/>
+<constant name='vmnet_operation_mode_key' type64='*'/>
+<enum name='VMNET_BUFFER_EXHAUSTED' value64='1007'/>
+<enum name='VMNET_FAILURE' value64='1001'/>
+<enum name='VMNET_HOST_MODE' value64='1000'/>
+<enum name='VMNET_INTERFACE_PACKETS_AVAILABLE' value64='1'/>
+<enum name='VMNET_INVALID_ACCESS' value64='1005'/>
+<enum name='VMNET_INVALID_ARGUMENT' value64='1003'/>
+<enum name='VMNET_MEM_FAILURE' value64='1002'/>
+<enum name='VMNET_PACKET_TOO_BIG' value64='1006'/>
+<enum name='VMNET_SETUP_INCOMPLETE' value64='1004'/>
+<enum name='VMNET_SHARED_MODE' value64='1001'/>
+<enum name='VMNET_SUCCESS' value64='1000'/>
+<enum name='VMNET_TOO_MANY_PACKETS' value64='1008'/>
+<function name='vmnet_interface_set_event_callback'>
+<arg type64='^{vmnet_interface=}'/>
+<arg type64='I'/>
+<arg type64='@'/>
+<arg function_pointer='true' type64='@?'>
+<arg type64='I'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+<retval type64='I'/>
+</function>
+<function name='vmnet_read'>
+<arg type64='^{vmnet_interface=}'/>
+<arg type64='^{vmpktdesc=Q^{iovec}II}'/>
+<arg type64='^i'/>
+<retval type64='I'/>
+</function>
+<function name='vmnet_start_interface'>
+<arg type64='@'/>
+<arg type64='@'/>
+<arg function_pointer='true' type64='@?'>
+<arg type64='I'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+<retval type64='^{vmnet_interface=}'/>
+</function>
+<function name='vmnet_stop_interface'>
+<arg type64='^{vmnet_interface=}'/>
+<arg type64='@'/>
+<arg function_pointer='true' type64='@?'>
+<arg type64='I'/>
+<retval type64='v'/>
+</arg>
+<retval type64='I'/>
+</function>
+<function name='vmnet_write'>
+<arg type64='^{vmnet_interface=}'/>
+<arg type64='^{vmpktdesc=Q^{iovec}II}'/>
+<arg type64='^i'/>
+<retval type64='I'/>
+</function>
+</signatures>

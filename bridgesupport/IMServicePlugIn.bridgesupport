@@ -1,0 +1,71 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IMServicePlugIn.framework/Versions/A/Frameworks/IMServicePlugInSupport.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<opaque name='IMServicePlugInFileTransferInternal' type64='^{_IMServicePlugInFileTransferInternal=}'/>
+<opaque name='IMServicePlugInFileTransferSessionInternal' type64='^{_IMServicePlugInFileTransferSessionInternal=}'/>
+<opaque name='IMServicePlugInMessageInternal' type64='^{_IMServicePlugInMessageInternal=}'/>
+<constant name='IMAccountSettingLoginHandle' type64='@'/>
+<constant name='IMAccountSettingPassword' type64='@'/>
+<constant name='IMAccountSettingServerHost' type64='@'/>
+<constant name='IMAccountSettingServerPort' type64='@'/>
+<constant name='IMAccountSettingUsesSSL' type64='@'/>
+<constant name='IMAttributeBackgroundColor' type64='@'/>
+<constant name='IMAttributeBaseWritingDirection' type64='@'/>
+<constant name='IMAttributeBold' type64='@'/>
+<constant name='IMAttributeFontFamily' type64='@'/>
+<constant name='IMAttributeFontSize' type64='@'/>
+<constant name='IMAttributeForegroundColor' type64='@'/>
+<constant name='IMAttributeItalic' type64='@'/>
+<constant name='IMAttributeLink' type64='@'/>
+<constant name='IMAttributeMessageBackgroundColor' type64='@'/>
+<constant name='IMAttributePreformatted' type64='@'/>
+<constant name='IMAttributeStrikethrough' type64='@'/>
+<constant name='IMAttributeUnderline' type64='@'/>
+<constant name='IMGroupListDefaultGroup' type64='@'/>
+<constant name='IMGroupListHandlesKey' type64='@'/>
+<constant name='IMGroupListNameKey' type64='@'/>
+<constant name='IMGroupListPermissionsKey' type64='@'/>
+<constant name='IMHandleCapabilityChatRoom' type64='@'/>
+<constant name='IMHandleCapabilityFileTransfer' type64='@'/>
+<constant name='IMHandleCapabilityHandlePicture' type64='@'/>
+<constant name='IMHandleCapabilityMessaging' type64='@'/>
+<constant name='IMHandleCapabilityOfflineMessaging' type64='@'/>
+<constant name='IMHandlePropertyAlias' type64='@'/>
+<constant name='IMHandlePropertyAuthorizationStatus' type64='@'/>
+<constant name='IMHandlePropertyAvailability' type64='@'/>
+<constant name='IMHandlePropertyCapabilities' type64='@'/>
+<constant name='IMHandlePropertyEmailAddress' type64='@'/>
+<constant name='IMHandlePropertyFirstName' type64='@'/>
+<constant name='IMHandlePropertyIdleDate' type64='@'/>
+<constant name='IMHandlePropertyLastName' type64='@'/>
+<constant name='IMHandlePropertyPictureData' type64='@'/>
+<constant name='IMHandlePropertyPictureIdentifier' type64='@'/>
+<constant name='IMHandlePropertyStatusMessage' type64='@'/>
+<constant name='IMSessionPropertyAvailability' type64='@'/>
+<constant name='IMSessionPropertyIdleDate' type64='@'/>
+<constant name='IMSessionPropertyIsInvisible' type64='@'/>
+<constant name='IMSessionPropertyPictureData' type64='@'/>
+<constant name='IMSessionPropertyStatusMessage' type64='@'/>
+<enum name='IMGroupListCanAddNewMembers' value64='4'/>
+<enum name='IMGroupListCanRemoveMembers' value64='8'/>
+<enum name='IMGroupListCanRenameGroup' value64='2'/>
+<enum name='IMGroupListCanReorderGroup' value64='1'/>
+<enum name='IMGroupListCanReorderMembers' value64='16'/>
+<enum name='IMHandleAuthorizationStatusAccepted' value64='0'/>
+<enum name='IMHandleAuthorizationStatusDeclined' value64='2'/>
+<enum name='IMHandleAuthorizationStatusPending' value64='1'/>
+<enum name='IMHandleAvailabilityAvailable' value64='1'/>
+<enum name='IMHandleAvailabilityAway' value64='0'/>
+<enum name='IMHandleAvailabilityOffline' value64='-1'/>
+<enum name='IMHandleAvailabilityUnknown' value64='-2'/>
+<enum name='IMSessionAvailabilityAvailable' value64='1'/>
+<enum name='IMSessionAvailabilityAway' value64='0'/>
+<class name='NSObject'>
+<method selector='plugInDidLogOutWithError:reconnect:'>
+<arg index='1' type64='B'/>
+</method>
+</class>
+</signatures>

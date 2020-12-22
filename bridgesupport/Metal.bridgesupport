@@ -1,0 +1,958 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='MTLClearColor' type='{_MTLClearColor=&quot;red&quot;d&quot;green&quot;d&quot;blue&quot;d&quot;alpha&quot;d}'/>
+<struct name='MTLDispatchThreadgroupsIndirectArguments' type='{_MTLDispatchThreadgroupsIndirectArguments=&quot;threadgroupsPerGrid&quot;[3I]}'/>
+<struct name='MTLDrawIndexedPrimitivesIndirectArguments' type='{_MTLDrawIndexedPrimitivesIndirectArguments=&quot;indexCount&quot;I&quot;instanceCount&quot;I&quot;indexStart&quot;I&quot;baseVertex&quot;i&quot;baseInstance&quot;I}'/>
+<struct name='MTLDrawPatchIndirectArguments' type='{_MTLDrawPatchIndirectArguments=&quot;patchCount&quot;I&quot;instanceCount&quot;I&quot;patchStart&quot;I&quot;baseInstance&quot;I}'/>
+<struct name='MTLDrawPrimitivesIndirectArguments' type='{_MTLDrawPrimitivesIndirectArguments=&quot;vertexCount&quot;I&quot;instanceCount&quot;I&quot;vertexStart&quot;I&quot;baseInstance&quot;I}'/>
+<struct name='MTLOrigin' type='{_MTLOrigin=&quot;x&quot;I&quot;y&quot;I&quot;z&quot;I}' type64='{_MTLOrigin=&quot;x&quot;Q&quot;y&quot;Q&quot;z&quot;Q}'/>
+<struct name='MTLQuadTessellationFactorsHalf' type='{_MTLQuadTessellationFactorsHalf=&quot;edgeTessellationFactor&quot;[4S]&quot;insideTessellationFactor&quot;[2S]}'/>
+<struct name='MTLRegion' type='{_MTLRegion=&quot;origin&quot;{_MTLOrigin=&quot;x&quot;I&quot;y&quot;I&quot;z&quot;I}&quot;size&quot;{_MTLSize=&quot;width&quot;I&quot;height&quot;I&quot;depth&quot;I}}' type64='{_MTLRegion=&quot;origin&quot;{_MTLOrigin=&quot;x&quot;Q&quot;y&quot;Q&quot;z&quot;Q}&quot;size&quot;{_MTLSize=&quot;width&quot;Q&quot;height&quot;Q&quot;depth&quot;Q}}'/>
+<struct name='MTLScissorRect' type='{_MTLScissorRect=&quot;x&quot;I&quot;y&quot;I&quot;width&quot;I&quot;height&quot;I}' type64='{_MTLScissorRect=&quot;x&quot;Q&quot;y&quot;Q&quot;width&quot;Q&quot;height&quot;Q}'/>
+<struct name='MTLSize' type='{_MTLSize=&quot;width&quot;I&quot;height&quot;I&quot;depth&quot;I}' type64='{_MTLSize=&quot;width&quot;Q&quot;height&quot;Q&quot;depth&quot;Q}'/>
+<struct name='MTLSizeAndAlign' type='{_MTLSizeAndAlign=&quot;size&quot;I&quot;align&quot;I}' type64='{_MTLSizeAndAlign=&quot;size&quot;Q&quot;align&quot;Q}'/>
+<struct name='MTLTriangleTessellationFactorsHalf' type='{_MTLTriangleTessellationFactorsHalf=&quot;edgeTessellationFactor&quot;[3S]&quot;insideTessellationFactor&quot;S}'/>
+<struct name='MTLViewport' type='{_MTLViewport=&quot;originX&quot;d&quot;originY&quot;d&quot;width&quot;d&quot;height&quot;d&quot;znear&quot;d&quot;zfar&quot;d}'/>
+<constant name='MTLCommandBufferErrorDomain' type='@'/>
+<constant name='MTLLibraryErrorDomain' type='@'/>
+<constant name='MTLRenderPipelineErrorDomain' type='@'/>
+<enum name='MTLArgumentAccessReadOnly' value='0'/>
+<enum name='MTLArgumentAccessReadWrite' value='1'/>
+<enum name='MTLArgumentAccessWriteOnly' value='2'/>
+<enum name='MTLArgumentTypeBuffer' value='0'/>
+<enum name='MTLArgumentTypeSampler' value='3'/>
+<enum name='MTLArgumentTypeTexture' value='2'/>
+<enum name='MTLArgumentTypeThreadgroupMemory' value='1'/>
+<enum name='MTLAttributeFormatChar2' value='4'/>
+<enum name='MTLAttributeFormatChar2Normalized' value='10'/>
+<enum name='MTLAttributeFormatChar3' value='5'/>
+<enum name='MTLAttributeFormatChar3Normalized' value='11'/>
+<enum name='MTLAttributeFormatChar4' value='6'/>
+<enum name='MTLAttributeFormatChar4Normalized' value='12'/>
+<enum name='MTLAttributeFormatFloat' value='28'/>
+<enum name='MTLAttributeFormatFloat2' value='29'/>
+<enum name='MTLAttributeFormatFloat3' value='30'/>
+<enum name='MTLAttributeFormatFloat4' value='31'/>
+<enum name='MTLAttributeFormatHalf2' value='25'/>
+<enum name='MTLAttributeFormatHalf3' value='26'/>
+<enum name='MTLAttributeFormatHalf4' value='27'/>
+<enum name='MTLAttributeFormatInt' value='32'/>
+<enum name='MTLAttributeFormatInt1010102Normalized' value='40'/>
+<enum name='MTLAttributeFormatInt2' value='33'/>
+<enum name='MTLAttributeFormatInt3' value='34'/>
+<enum name='MTLAttributeFormatInt4' value='35'/>
+<enum name='MTLAttributeFormatInvalid' value='0'/>
+<enum name='MTLAttributeFormatShort2' value='16'/>
+<enum name='MTLAttributeFormatShort2Normalized' value='22'/>
+<enum name='MTLAttributeFormatShort3' value='17'/>
+<enum name='MTLAttributeFormatShort3Normalized' value='23'/>
+<enum name='MTLAttributeFormatShort4' value='18'/>
+<enum name='MTLAttributeFormatShort4Normalized' value='24'/>
+<enum name='MTLAttributeFormatUChar2' value='1'/>
+<enum name='MTLAttributeFormatUChar2Normalized' value='7'/>
+<enum name='MTLAttributeFormatUChar3' value='2'/>
+<enum name='MTLAttributeFormatUChar3Normalized' value='8'/>
+<enum name='MTLAttributeFormatUChar4' value='3'/>
+<enum name='MTLAttributeFormatUChar4Normalized' value='9'/>
+<enum name='MTLAttributeFormatUInt' value='36'/>
+<enum name='MTLAttributeFormatUInt1010102Normalized' value='41'/>
+<enum name='MTLAttributeFormatUInt2' value='37'/>
+<enum name='MTLAttributeFormatUInt3' value='38'/>
+<enum name='MTLAttributeFormatUInt4' value='39'/>
+<enum name='MTLAttributeFormatUShort2' value='13'/>
+<enum name='MTLAttributeFormatUShort2Normalized' value='19'/>
+<enum name='MTLAttributeFormatUShort3' value='14'/>
+<enum name='MTLAttributeFormatUShort3Normalized' value='20'/>
+<enum name='MTLAttributeFormatUShort4' value='15'/>
+<enum name='MTLAttributeFormatUShort4Normalized' value='21'/>
+<enum name='MTLBlendFactorBlendAlpha' value='13'/>
+<enum name='MTLBlendFactorBlendColor' value='11'/>
+<enum name='MTLBlendFactorDestinationAlpha' value='8'/>
+<enum name='MTLBlendFactorDestinationColor' value='6'/>
+<enum name='MTLBlendFactorOne' value='1'/>
+<enum name='MTLBlendFactorOneMinusBlendAlpha' value='14'/>
+<enum name='MTLBlendFactorOneMinusBlendColor' value='12'/>
+<enum name='MTLBlendFactorOneMinusDestinationAlpha' value='9'/>
+<enum name='MTLBlendFactorOneMinusDestinationColor' value='7'/>
+<enum name='MTLBlendFactorOneMinusSource1Alpha' value='18'/>
+<enum name='MTLBlendFactorOneMinusSource1Color' value='16'/>
+<enum name='MTLBlendFactorOneMinusSourceAlpha' value='5'/>
+<enum name='MTLBlendFactorOneMinusSourceColor' value='3'/>
+<enum name='MTLBlendFactorSource1Alpha' value='17'/>
+<enum name='MTLBlendFactorSource1Color' value='15'/>
+<enum name='MTLBlendFactorSourceAlpha' value='4'/>
+<enum name='MTLBlendFactorSourceAlphaSaturated' value='10'/>
+<enum name='MTLBlendFactorSourceColor' value='2'/>
+<enum name='MTLBlendFactorZero' value='0'/>
+<enum name='MTLBlendOperationAdd' value='0'/>
+<enum name='MTLBlendOperationMax' value='4'/>
+<enum name='MTLBlendOperationMin' value='3'/>
+<enum name='MTLBlendOperationReverseSubtract' value='2'/>
+<enum name='MTLBlendOperationSubtract' value='1'/>
+<enum name='MTLBlitOptionDepthFromDepthStencil' value='1'/>
+<enum name='MTLBlitOptionNone' value='0'/>
+<enum name='MTLBlitOptionRowLinearPVRTC' value='3'/>
+<enum name='MTLBlitOptionStencilFromDepthStencil' value='2'/>
+<enum name='MTLCPUCacheModeDefaultCache' value='0'/>
+<enum name='MTLCPUCacheModeWriteCombined' value='1'/>
+<enum name='MTLColorWriteMaskAll' value='15'/>
+<enum name='MTLColorWriteMaskAlpha' value='1'/>
+<enum name='MTLColorWriteMaskBlue' value='2'/>
+<enum name='MTLColorWriteMaskGreen' value='4'/>
+<enum name='MTLColorWriteMaskNone' value='0'/>
+<enum name='MTLColorWriteMaskRed' value='8'/>
+<enum name='MTLCommandBufferErrorBlacklisted' value='4'/>
+<enum name='MTLCommandBufferErrorInternal' value='1'/>
+<enum name='MTLCommandBufferErrorInvalidResource' value='9'/>
+<enum name='MTLCommandBufferErrorMemoryless' value='10'/>
+<enum name='MTLCommandBufferErrorNone' value='0'/>
+<enum name='MTLCommandBufferErrorNotPermitted' value='7'/>
+<enum name='MTLCommandBufferErrorOutOfMemory' value='8'/>
+<enum name='MTLCommandBufferErrorPageFault' value='3'/>
+<enum name='MTLCommandBufferErrorTimeout' value='2'/>
+<enum name='MTLCommandBufferStatusCommitted' value='2'/>
+<enum name='MTLCommandBufferStatusCompleted' value='4'/>
+<enum name='MTLCommandBufferStatusEnqueued' value='1'/>
+<enum name='MTLCommandBufferStatusError' value='5'/>
+<enum name='MTLCommandBufferStatusNotEnqueued' value='0'/>
+<enum name='MTLCommandBufferStatusScheduled' value='3'/>
+<enum name='MTLCompareFunctionAlways' value='7'/>
+<enum name='MTLCompareFunctionEqual' value='2'/>
+<enum name='MTLCompareFunctionGreater' value='4'/>
+<enum name='MTLCompareFunctionGreaterEqual' value='6'/>
+<enum name='MTLCompareFunctionLess' value='1'/>
+<enum name='MTLCompareFunctionLessEqual' value='3'/>
+<enum name='MTLCompareFunctionNever' value='0'/>
+<enum name='MTLCompareFunctionNotEqual' value='5'/>
+<enum name='MTLCullModeBack' value='2'/>
+<enum name='MTLCullModeFront' value='1'/>
+<enum name='MTLCullModeNone' value='0'/>
+<enum name='MTLDataTypeArray' value='2'/>
+<enum name='MTLDataTypeBool' value='53'/>
+<enum name='MTLDataTypeBool2' value='54'/>
+<enum name='MTLDataTypeBool3' value='55'/>
+<enum name='MTLDataTypeBool4' value='56'/>
+<enum name='MTLDataTypeChar' value='45'/>
+<enum name='MTLDataTypeChar2' value='46'/>
+<enum name='MTLDataTypeChar3' value='47'/>
+<enum name='MTLDataTypeChar4' value='48'/>
+<enum name='MTLDataTypeFloat' value='3'/>
+<enum name='MTLDataTypeFloat2' value='4'/>
+<enum name='MTLDataTypeFloat2x2' value='7'/>
+<enum name='MTLDataTypeFloat2x3' value='8'/>
+<enum name='MTLDataTypeFloat2x4' value='9'/>
+<enum name='MTLDataTypeFloat3' value='5'/>
+<enum name='MTLDataTypeFloat3x2' value='10'/>
+<enum name='MTLDataTypeFloat3x3' value='11'/>
+<enum name='MTLDataTypeFloat3x4' value='12'/>
+<enum name='MTLDataTypeFloat4' value='6'/>
+<enum name='MTLDataTypeFloat4x2' value='13'/>
+<enum name='MTLDataTypeFloat4x3' value='14'/>
+<enum name='MTLDataTypeFloat4x4' value='15'/>
+<enum name='MTLDataTypeHalf' value='16'/>
+<enum name='MTLDataTypeHalf2' value='17'/>
+<enum name='MTLDataTypeHalf2x2' value='20'/>
+<enum name='MTLDataTypeHalf2x3' value='21'/>
+<enum name='MTLDataTypeHalf2x4' value='22'/>
+<enum name='MTLDataTypeHalf3' value='18'/>
+<enum name='MTLDataTypeHalf3x2' value='23'/>
+<enum name='MTLDataTypeHalf3x3' value='24'/>
+<enum name='MTLDataTypeHalf3x4' value='25'/>
+<enum name='MTLDataTypeHalf4' value='19'/>
+<enum name='MTLDataTypeHalf4x2' value='26'/>
+<enum name='MTLDataTypeHalf4x3' value='27'/>
+<enum name='MTLDataTypeHalf4x4' value='28'/>
+<enum name='MTLDataTypeInt' value='29'/>
+<enum name='MTLDataTypeInt2' value='30'/>
+<enum name='MTLDataTypeInt3' value='31'/>
+<enum name='MTLDataTypeInt4' value='32'/>
+<enum name='MTLDataTypeNone' value='0'/>
+<enum name='MTLDataTypeShort' value='37'/>
+<enum name='MTLDataTypeShort2' value='38'/>
+<enum name='MTLDataTypeShort3' value='39'/>
+<enum name='MTLDataTypeShort4' value='40'/>
+<enum name='MTLDataTypeStruct' value='1'/>
+<enum name='MTLDataTypeUChar' value='49'/>
+<enum name='MTLDataTypeUChar2' value='50'/>
+<enum name='MTLDataTypeUChar3' value='51'/>
+<enum name='MTLDataTypeUChar4' value='52'/>
+<enum name='MTLDataTypeUInt' value='33'/>
+<enum name='MTLDataTypeUInt2' value='34'/>
+<enum name='MTLDataTypeUInt3' value='35'/>
+<enum name='MTLDataTypeUInt4' value='36'/>
+<enum name='MTLDataTypeUShort' value='41'/>
+<enum name='MTLDataTypeUShort2' value='42'/>
+<enum name='MTLDataTypeUShort3' value='43'/>
+<enum name='MTLDataTypeUShort4' value='44'/>
+<enum name='MTLDepthClipModeClamp' value='1'/>
+<enum name='MTLDepthClipModeClip' value='0'/>
+<enum name='MTLFeatureSet_OSX_GPUFamily1_v1' value='10000'/>
+<enum name='MTLFeatureSet_OSX_GPUFamily1_v2' value='10001'/>
+<enum name='MTLFeatureSet_OSX_ReadWriteTextureTier2' value='10002'/>
+<enum name='MTLFeatureSet_TVOS_GPUFamily1_v1' value='30000'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily1_v1' value='0'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily1_v2' value='2'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily1_v3' value='5'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily2_v1' value='1'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily2_v2' value='3'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily2_v3' value='6'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily3_v1' value='4'/>
+<enum name='MTLFeatureSet_iOS_GPUFamily3_v2' value='7'/>
+<enum name='MTLFeatureSet_tvOS_GPUFamily1_v1' value='30000'/>
+<enum name='MTLFeatureSet_tvOS_GPUFamily1_v2' value='30001'/>
+<enum name='MTLFunctionTypeFragment' value='2'/>
+<enum name='MTLFunctionTypeKernel' value='3'/>
+<enum name='MTLFunctionTypeVertex' value='1'/>
+<enum name='MTLIndexTypeUInt16' value='0'/>
+<enum name='MTLIndexTypeUInt32' value='1'/>
+<enum name='MTLLanguageVersion1_0' value='65536'/>
+<enum name='MTLLanguageVersion1_1' value='65537'/>
+<enum name='MTLLanguageVersion1_2' value='65538'/>
+<enum name='MTLLibraryErrorCompileFailure' value='3'/>
+<enum name='MTLLibraryErrorCompileWarning' value='4'/>
+<enum name='MTLLibraryErrorFileNotFound' value='6'/>
+<enum name='MTLLibraryErrorFunctionNotFound' value='5'/>
+<enum name='MTLLibraryErrorInternal' value='2'/>
+<enum name='MTLLibraryErrorUnsupported' value='1'/>
+<enum name='MTLLoadActionClear' value='2'/>
+<enum name='MTLLoadActionDontCare' value='0'/>
+<enum name='MTLLoadActionLoad' value='1'/>
+<enum name='MTLMultisampleDepthResolveFilterMax' value='2'/>
+<enum name='MTLMultisampleDepthResolveFilterMin' value='1'/>
+<enum name='MTLMultisampleDepthResolveFilterSample0' value='0'/>
+<enum name='MTLPatchTypeNone' value='0'/>
+<enum name='MTLPatchTypeQuad' value='2'/>
+<enum name='MTLPatchTypeTriangle' value='1'/>
+<enum name='MTLPipelineOptionArgumentInfo' value='1'/>
+<enum name='MTLPipelineOptionBufferTypeInfo' value='2'/>
+<enum name='MTLPipelineOptionNone' value='0'/>
+<enum name='MTLPixelFormatA8Unorm' value='1'/>
+<enum name='MTLPixelFormatInvalid' value='0'/>
+<enum name='MTLPixelFormatR8Unorm' value='10'/>
+<enum name='MTLPixelFormatR8Unorm_sRGB' value='11'/>
+<enum name='MTLPrimitiveTopologyClassLine' value='2'/>
+<enum name='MTLPrimitiveTopologyClassPoint' value='1'/>
+<enum name='MTLPrimitiveTopologyClassTriangle' value='3'/>
+<enum name='MTLPrimitiveTopologyClassUnspecified' value='0'/>
+<enum name='MTLPrimitiveTypeLine' value='1'/>
+<enum name='MTLPrimitiveTypeLineStrip' value='2'/>
+<enum name='MTLPrimitiveTypePoint' value='0'/>
+<enum name='MTLPrimitiveTypeTriangle' value='3'/>
+<enum name='MTLPrimitiveTypeTriangleStrip' value='4'/>
+<enum name='MTLPurgeableStateEmpty' value='4'/>
+<enum name='MTLPurgeableStateKeepCurrent' value='1'/>
+<enum name='MTLPurgeableStateNonVolatile' value='2'/>
+<enum name='MTLPurgeableStateVolatile' value='3'/>
+<enum name='MTLRenderPipelineErrorInternal' value='1'/>
+<enum name='MTLRenderPipelineErrorInvalidInput' value='3'/>
+<enum name='MTLRenderPipelineErrorUnsupported' value='2'/>
+<enum name='MTLRenderStageFragment' value='2'/>
+<enum name='MTLRenderStageVertex' value='1'/>
+<enum name='MTLResourceCPUCacheModeDefaultCache' value='0'/>
+<enum name='MTLResourceCPUCacheModeMask' value='15'/>
+<enum name='MTLResourceCPUCacheModeShift' value='0'/>
+<enum name='MTLResourceCPUCacheModeWriteCombined' value='1'/>
+<enum name='MTLResourceHazardTrackingModeMask' value='256'/>
+<enum name='MTLResourceHazardTrackingModeShift' value='8'/>
+<enum name='MTLResourceHazardTrackingModeUntracked' value='256'/>
+<enum name='MTLResourceOptionCPUCacheModeDefault' value='0'/>
+<enum name='MTLResourceOptionCPUCacheModeWriteCombined' value='1'/>
+<enum name='MTLResourceStorageModeManaged' value='16'/>
+<enum name='MTLResourceStorageModeMask' value='240'/>
+<enum name='MTLResourceStorageModeMemoryless' value='48'/>
+<enum name='MTLResourceStorageModePrivate' value='32'/>
+<enum name='MTLResourceStorageModeShared' value='0'/>
+<enum name='MTLResourceStorageModeShift' value='4'/>
+<enum name='MTLSamplerAddressModeClampToBorderColor' value='5'/>
+<enum name='MTLSamplerAddressModeClampToEdge' value='0'/>
+<enum name='MTLSamplerAddressModeClampToZero' value='4'/>
+<enum name='MTLSamplerAddressModeMirrorClampToEdge' value='1'/>
+<enum name='MTLSamplerAddressModeMirrorRepeat' value='3'/>
+<enum name='MTLSamplerAddressModeRepeat' value='2'/>
+<enum name='MTLSamplerBorderColorOpaqueBlack' value='1'/>
+<enum name='MTLSamplerBorderColorOpaqueWhite' value='2'/>
+<enum name='MTLSamplerBorderColorTransparentBlack' value='0'/>
+<enum name='MTLSamplerMinMagFilterLinear' value='1'/>
+<enum name='MTLSamplerMinMagFilterNearest' value='0'/>
+<enum name='MTLSamplerMipFilterLinear' value='2'/>
+<enum name='MTLSamplerMipFilterNearest' value='1'/>
+<enum name='MTLSamplerMipFilterNotMipmapped' value='0'/>
+<enum name='MTLStencilOperationDecrementClamp' value='4'/>
+<enum name='MTLStencilOperationDecrementWrap' value='7'/>
+<enum name='MTLStencilOperationIncrementClamp' value='3'/>
+<enum name='MTLStencilOperationIncrementWrap' value='6'/>
+<enum name='MTLStencilOperationInvert' value='5'/>
+<enum name='MTLStencilOperationKeep' value='0'/>
+<enum name='MTLStencilOperationReplace' value='2'/>
+<enum name='MTLStencilOperationZero' value='1'/>
+<enum name='MTLStepFunctionConstant' value='0'/>
+<enum name='MTLStepFunctionPerInstance' value='2'/>
+<enum name='MTLStepFunctionPerPatch' value='3'/>
+<enum name='MTLStepFunctionPerPatchControlPoint' value='4'/>
+<enum name='MTLStepFunctionPerVertex' value='1'/>
+<enum name='MTLStepFunctionThreadPositionInGridX' value='5'/>
+<enum name='MTLStepFunctionThreadPositionInGridXIndexed' value='7'/>
+<enum name='MTLStepFunctionThreadPositionInGridY' value='6'/>
+<enum name='MTLStepFunctionThreadPositionInGridYIndexed' value='8'/>
+<enum name='MTLStorageModeManaged' value='1'/>
+<enum name='MTLStorageModeMemoryless' value='3'/>
+<enum name='MTLStorageModePrivate' value='2'/>
+<enum name='MTLStorageModeShared' value='0'/>
+<enum name='MTLStoreActionDontCare' value='0'/>
+<enum name='MTLStoreActionMultisampleResolve' value='2'/>
+<enum name='MTLStoreActionStore' value='1'/>
+<enum name='MTLStoreActionStoreAndMultisampleResolve' value='3'/>
+<enum name='MTLStoreActionUnknown' value='4'/>
+<enum name='MTLTessellationControlPointIndexTypeNone' value='0'/>
+<enum name='MTLTessellationControlPointIndexTypeUInt16' value='1'/>
+<enum name='MTLTessellationControlPointIndexTypeUInt32' value='2'/>
+<enum name='MTLTessellationFactorFormatHalf' value='0'/>
+<enum name='MTLTessellationFactorStepFunctionConstant' value='0'/>
+<enum name='MTLTessellationFactorStepFunctionPerInstance' value='2'/>
+<enum name='MTLTessellationFactorStepFunctionPerPatch' value='1'/>
+<enum name='MTLTessellationFactorStepFunctionPerPatchAndPerInstance' value='3'/>
+<enum name='MTLTessellationPartitionModeFractionalEven' value='3'/>
+<enum name='MTLTessellationPartitionModeFractionalOdd' value='2'/>
+<enum name='MTLTessellationPartitionModeInteger' value='1'/>
+<enum name='MTLTessellationPartitionModePow2' value='0'/>
+<enum name='MTLTextureType1D' value='0'/>
+<enum name='MTLTextureType1DArray' value='1'/>
+<enum name='MTLTextureType2D' value='2'/>
+<enum name='MTLTextureType2DArray' value='3'/>
+<enum name='MTLTextureType2DMultisample' value='4'/>
+<enum name='MTLTextureType3D' value='7'/>
+<enum name='MTLTextureTypeCube' value='5'/>
+<enum name='MTLTextureTypeCubeArray' value='6'/>
+<enum name='MTLTextureUsagePixelFormatView' value='16'/>
+<enum name='MTLTextureUsageRenderTarget' value='4'/>
+<enum name='MTLTextureUsageShaderRead' value='1'/>
+<enum name='MTLTextureUsageShaderWrite' value='2'/>
+<enum name='MTLTextureUsageUnknown' value='0'/>
+<enum name='MTLTriangleFillModeFill' value='0'/>
+<enum name='MTLTriangleFillModeLines' value='1'/>
+<enum name='MTLVertexFormatChar2' value='4'/>
+<enum name='MTLVertexFormatChar2Normalized' value='10'/>
+<enum name='MTLVertexFormatChar3' value='5'/>
+<enum name='MTLVertexFormatChar3Normalized' value='11'/>
+<enum name='MTLVertexFormatChar4' value='6'/>
+<enum name='MTLVertexFormatChar4Normalized' value='12'/>
+<enum name='MTLVertexFormatFloat' value='28'/>
+<enum name='MTLVertexFormatFloat2' value='29'/>
+<enum name='MTLVertexFormatFloat3' value='30'/>
+<enum name='MTLVertexFormatFloat4' value='31'/>
+<enum name='MTLVertexFormatHalf2' value='25'/>
+<enum name='MTLVertexFormatHalf3' value='26'/>
+<enum name='MTLVertexFormatHalf4' value='27'/>
+<enum name='MTLVertexFormatInt' value='32'/>
+<enum name='MTLVertexFormatInt1010102Normalized' value='40'/>
+<enum name='MTLVertexFormatInt2' value='33'/>
+<enum name='MTLVertexFormatInt3' value='34'/>
+<enum name='MTLVertexFormatInt4' value='35'/>
+<enum name='MTLVertexFormatInvalid' value='0'/>
+<enum name='MTLVertexFormatShort2' value='16'/>
+<enum name='MTLVertexFormatShort2Normalized' value='22'/>
+<enum name='MTLVertexFormatShort3' value='17'/>
+<enum name='MTLVertexFormatShort3Normalized' value='23'/>
+<enum name='MTLVertexFormatShort4' value='18'/>
+<enum name='MTLVertexFormatShort4Normalized' value='24'/>
+<enum name='MTLVertexFormatUChar2' value='1'/>
+<enum name='MTLVertexFormatUChar2Normalized' value='7'/>
+<enum name='MTLVertexFormatUChar3' value='2'/>
+<enum name='MTLVertexFormatUChar3Normalized' value='8'/>
+<enum name='MTLVertexFormatUChar4' value='3'/>
+<enum name='MTLVertexFormatUChar4Normalized' value='9'/>
+<enum name='MTLVertexFormatUInt' value='36'/>
+<enum name='MTLVertexFormatUInt1010102Normalized' value='41'/>
+<enum name='MTLVertexFormatUInt2' value='37'/>
+<enum name='MTLVertexFormatUInt3' value='38'/>
+<enum name='MTLVertexFormatUInt4' value='39'/>
+<enum name='MTLVertexFormatUShort2' value='13'/>
+<enum name='MTLVertexFormatUShort2Normalized' value='19'/>
+<enum name='MTLVertexFormatUShort3' value='14'/>
+<enum name='MTLVertexFormatUShort3Normalized' value='20'/>
+<enum name='MTLVertexFormatUShort4' value='15'/>
+<enum name='MTLVertexFormatUShort4Normalized' value='21'/>
+<enum name='MTLVertexStepFunctionConstant' value='0'/>
+<enum name='MTLVertexStepFunctionPerInstance' value='2'/>
+<enum name='MTLVertexStepFunctionPerPatch' value='3'/>
+<enum name='MTLVertexStepFunctionPerPatchControlPoint' value='4'/>
+<enum name='MTLVertexStepFunctionPerVertex' value='1'/>
+<enum name='MTLVisibilityResultModeBoolean' value='1'/>
+<enum name='MTLVisibilityResultModeCounting' value='2'/>
+<enum name='MTLVisibilityResultModeDisabled' value='0'/>
+<enum name='MTLWindingClockwise' value='0'/>
+<enum name='MTLWindingCounterClockwise' value='1'/>
+<function inline='true' name='MTLClearColorMake'>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<arg type='d'/>
+<retval type='{_MTLClearColor=dddd}'/>
+</function>
+<function name='MTLCreateSystemDefaultDevice'>
+<retval type='@'/>
+</function>
+<function inline='true' name='MTLOriginMake'>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<retval type='{_MTLOrigin=III}' type64='{_MTLOrigin=QQQ}'/>
+</function>
+<function inline='true' name='MTLRegionMake1D'>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<retval type='{_MTLRegion={_MTLOrigin=III}{_MTLSize=III}}' type64='{_MTLRegion={_MTLOrigin=QQQ}{_MTLSize=QQQ}}'/>
+</function>
+<function inline='true' name='MTLRegionMake2D'>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<retval type='{_MTLRegion={_MTLOrigin=III}{_MTLSize=III}}' type64='{_MTLRegion={_MTLOrigin=QQQ}{_MTLSize=QQQ}}'/>
+</function>
+<function inline='true' name='MTLRegionMake3D'>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<retval type='{_MTLRegion={_MTLOrigin=III}{_MTLSize=III}}' type64='{_MTLRegion={_MTLOrigin=QQQ}{_MTLSize=QQQ}}'/>
+</function>
+<function inline='true' name='MTLSizeMake'>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<arg type='I' type64='Q'/>
+<retval type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+</function>
+<class name='MTLArgument'>
+<method selector='isActive'>
+<retval type='B'/>
+</method>
+<method selector='isDepthTexture'>
+<retval type='B'/>
+</method>
+</class>
+<class name='MTLAttribute'>
+<method selector='isActive'>
+<retval type='B'/>
+</method>
+<method selector='isPatchControlPointData'>
+<retval type='B'/>
+</method>
+<method selector='isPatchData'>
+<retval type='B'/>
+</method>
+</class>
+<class name='MTLCompileOptions'>
+<method selector='fastMathEnabled'>
+<retval type='B'/>
+</method>
+<method selector='setFastMathEnabled:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='MTLComputePipelineDescriptor'>
+<method selector='setThreadGroupSizeIsMultipleOfThreadExecutionWidth:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='threadGroupSizeIsMultipleOfThreadExecutionWidth'>
+<retval type='B'/>
+</method>
+</class>
+<class name='MTLDepthStencilDescriptor'>
+<method selector='isDepthWriteEnabled'>
+<retval type='B'/>
+</method>
+<method selector='setDepthWriteEnabled:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='MTLFunctionConstant'>
+<method selector='required'>
+<retval type='B'/>
+</method>
+</class>
+<class name='MTLRenderPassColorAttachmentDescriptor'>
+<method selector='clearColor'>
+<retval type='{_MTLClearColor=dddd}'/>
+</method>
+<method selector='setClearColor:'>
+<arg index='0' type='{_MTLClearColor=dddd}'/>
+</method>
+</class>
+<class name='MTLRenderPipelineColorAttachmentDescriptor'>
+<method selector='isBlendingEnabled'>
+<retval type='B'/>
+</method>
+<method selector='setBlendingEnabled:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='MTLRenderPipelineDescriptor'>
+<method selector='isAlphaToCoverageEnabled'>
+<retval type='B'/>
+</method>
+<method selector='isAlphaToOneEnabled'>
+<retval type='B'/>
+</method>
+<method selector='isRasterizationEnabled'>
+<retval type='B'/>
+</method>
+<method selector='isTessellationFactorScaleEnabled'>
+<retval type='B'/>
+</method>
+<method selector='setAlphaToCoverageEnabled:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setAlphaToOneEnabled:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setRasterizationEnabled:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setTessellationFactorScaleEnabled:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='MTLSamplerDescriptor'>
+<method selector='lodAverage'>
+<retval type='B'/>
+</method>
+<method selector='normalizedCoordinates'>
+<retval type='B'/>
+</method>
+<method selector='setLodAverage:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setNormalizedCoordinates:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='MTLTextureDescriptor'>
+<method class_method='true' selector='texture2DDescriptorWithPixelFormat:width:height:mipmapped:'>
+<arg index='3' type='B'/>
+</method>
+<method class_method='true' selector='textureCubeDescriptorWithPixelFormat:size:mipmapped:'>
+<arg index='2' type='B'/>
+</method>
+</class>
+<class name='MTLVertexAttribute'>
+<method selector='isActive'>
+<retval type='B'/>
+</method>
+<method selector='isPatchControlPointData'>
+<retval type='B'/>
+</method>
+<method selector='isPatchData'>
+<retval type='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='addCompletedHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='addScheduledHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:'>
+<arg index='4' type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+<arg index='8' type='{_MTLOrigin=III}' type64='{_MTLOrigin=QQQ}'/>
+</method>
+<method selector='copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:'>
+<arg index='4' type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+<arg index='8' type='{_MTLOrigin=III}' type64='{_MTLOrigin=QQQ}'/>
+</method>
+<method selector='copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:'>
+<arg index='3' type='{_MTLOrigin=III}' type64='{_MTLOrigin=QQQ}'/>
+<arg index='4' type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+</method>
+<method selector='copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:'>
+<arg index='3' type='{_MTLOrigin=III}' type64='{_MTLOrigin=QQQ}'/>
+<arg index='4' type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+</method>
+<method selector='copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:'>
+<arg index='3' type='{_MTLOrigin=III}' type64='{_MTLOrigin=QQQ}'/>
+<arg index='4' type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+<arg index='8' type='{_MTLOrigin=III}' type64='{_MTLOrigin=QQQ}'/>
+</method>
+<method selector='dispatchThreadgroups:threadsPerThreadgroup:'>
+<arg index='0' type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+<arg index='1' type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+</method>
+<method selector='dispatchThreadgroupsWithIndirectBuffer:indirectBufferOffset:threadsPerThreadgroup:'>
+<arg index='2' type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+</method>
+<method selector='getBytes:bytesPerRow:bytesPerImage:fromRegion:mipmapLevel:slice:'>
+<arg index='3' type='{_MTLRegion={_MTLOrigin=III}{_MTLSize=III}}' type64='{_MTLRegion={_MTLOrigin=QQQ}{_MTLSize=QQQ}}'/>
+</method>
+<method selector='getBytes:bytesPerRow:fromRegion:mipmapLevel:'>
+<arg index='2' type='{_MTLRegion={_MTLOrigin=III}{_MTLSize=III}}' type64='{_MTLRegion={_MTLOrigin=QQQ}{_MTLSize=QQQ}}'/>
+</method>
+<method selector='isDepth24Stencil8PixelFormatSupported'>
+<retval type='B'/>
+</method>
+<method selector='isFramebufferOnly'>
+<retval type='B'/>
+</method>
+<method selector='isHeadless'>
+<retval type='B'/>
+</method>
+<method selector='isLowPower'>
+<retval type='B'/>
+</method>
+<method selector='maxThreadsPerThreadgroup'>
+<retval type='{_MTLSize=III}' type64='{_MTLSize=QQQ}'/>
+</method>
+<method selector='newBufferWithBytesNoCopy:length:options:deallocator:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='^v'/>
+<arg type='I' type64='Q'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='newComputePipelineStateWithDescriptor:options:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='newComputePipelineStateWithFunction:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='newComputePipelineStateWithFunction:options:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='newFunctionWithName:constantValues:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='newLibraryWithSource:options:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='newRenderPipelineStateWithDescriptor:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='newRenderPipelineStateWithDescriptor:options:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='replaceRegion:mipmapLevel:slice:withBytes:bytesPerRow:bytesPerImage:'>
+<arg index='0' type='{_MTLRegion={_MTLOrigin=III}{_MTLSize=III}}' type64='{_MTLRegion={_MTLOrigin=QQQ}{_MTLSize=QQQ}}'/>
+</method>
+<method selector='replaceRegion:mipmapLevel:withBytes:bytesPerRow:'>
+<arg index='0' type='{_MTLRegion={_MTLOrigin=III}{_MTLSize=III}}' type64='{_MTLRegion={_MTLOrigin=QQQ}{_MTLSize=QQQ}}'/>
+</method>
+<method selector='retainedReferences'>
+<retval type='B'/>
+</method>
+<method selector='setScissorRect:'>
+<arg index='0' type='{_MTLScissorRect=IIII}' type64='{_MTLScissorRect=QQQQ}'/>
+</method>
+<method selector='setStageInRegion:'>
+<arg index='0' type='{_MTLRegion={_MTLOrigin=III}{_MTLSize=III}}' type64='{_MTLRegion={_MTLOrigin=QQQ}{_MTLSize=QQQ}}'/>
+</method>
+<method selector='setViewport:'>
+<arg index='0' type='{_MTLViewport=dddddd}'/>
+</method>
+<method selector='supportsFeatureSet:'>
+<retval type='B'/>
+</method>
+<method selector='supportsTextureSampleCount:'>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='MTLBlitCommandEncoder'>
+<method selector='copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:' type='v60@0:4@8I12I16I20{?=III}24@36I40I44{?=III}48' type64='v120@0:8@16Q24Q32Q40{?=QQQ}48@72Q80Q88{?=QQQ}96'/>
+<method selector='copyFromBuffer:sourceOffset:sourceBytesPerRow:sourceBytesPerImage:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:options:' type='v64@0:4@8I12I16I20{?=III}24@36I40I44{?=III}48I60' type64='v128@0:8@16Q24Q32Q40{?=QQQ}48@72Q80Q88{?=QQQ}96Q120'/>
+<method selector='copyFromBuffer:sourceOffset:toBuffer:destinationOffset:size:' type='v28@0:4@8I12@16I20I24' type64='v56@0:8@16Q24@32Q40Q48'/>
+<method selector='copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:' type='v60@0:4@8I12I16{?=III}20{?=III}32@44I48I52I56' type64='v120@0:8@16Q24Q32{?=QQQ}40{?=QQQ}64@88Q96Q104Q112'/>
+<method selector='copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toBuffer:destinationOffset:destinationBytesPerRow:destinationBytesPerImage:options:' type='v64@0:4@8I12I16{?=III}20{?=III}32@44I48I52I56I60' type64='v128@0:8@16Q24Q32{?=QQQ}40{?=QQQ}64@88Q96Q104Q112Q120'/>
+<method selector='copyFromTexture:sourceSlice:sourceLevel:sourceOrigin:sourceSize:toTexture:destinationSlice:destinationLevel:destinationOrigin:' type='v68@0:4@8I12I16{?=III}20{?=III}32@44I48I52{?=III}56' type64='v136@0:8@16Q24Q32{?=QQQ}40{?=QQQ}64@88Q96Q104{?=QQQ}112'/>
+<method selector='fillBuffer:range:value:' type='v24@0:4@8{_NSRange=II}12C20' type64='v44@0:8@16{_NSRange=QQ}24C40'/>
+<method selector='generateMipmapsForTexture:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='synchronizeResource:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='synchronizeTexture:slice:level:' type='v20@0:4@8I12I16' type64='v40@0:8@16Q24Q32'/>
+</informal_protocol>
+<informal_protocol name='MTLBuffer'>
+<method selector='addDebugMarker:range:' type='v20@0:4@8{_NSRange=II}12' type64='v40@0:8@16{_NSRange=QQ}24'/>
+<method selector='contents' type='^v8@0:4' type64='^v16@0:8'/>
+<method selector='didModifyRange:' type='v16@0:4{_NSRange=II}8' type64='v32@0:8{_NSRange=QQ}16'/>
+<method selector='length' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='removeAllDebugMarkers' type='v8@0:4' type64='v16@0:8'/>
+</informal_protocol>
+<informal_protocol name='MTLCommandBuffer'>
+<method selector='GPUEndTime' type='d8@0:4' type64='d16@0:8'/>
+<method selector='GPUStartTime' type='d8@0:4' type64='d16@0:8'/>
+<method selector='addCompletedHandler:' type='v12@0:4@?8' type64='v24@0:8@?16'/>
+<method selector='addScheduledHandler:' type='v12@0:4@?8' type64='v24@0:8@?16'/>
+<method selector='blitCommandEncoder' type='@8@0:4' type64='@16@0:8'/>
+<method selector='commandQueue' type='@8@0:4' type64='@16@0:8'/>
+<method selector='commit' type='v8@0:4' type64='v16@0:8'/>
+<method selector='computeCommandEncoder' type='@8@0:4' type64='@16@0:8'/>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='enqueue' type='v8@0:4' type64='v16@0:8'/>
+<method selector='error' type='@8@0:4' type64='@16@0:8'/>
+<method selector='kernelEndTime' type='d8@0:4' type64='d16@0:8'/>
+<method selector='kernelStartTime' type='d8@0:4' type64='d16@0:8'/>
+<method selector='label' type='@8@0:4' type64='@16@0:8'/>
+<method selector='parallelRenderCommandEncoderWithDescriptor:' type='@12@0:4@8' type64='@24@0:8@16'/>
+<method selector='presentDrawable:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='presentDrawable:atTime:' type='v20@0:4@8d12' type64='v32@0:8@16d24'/>
+<method selector='renderCommandEncoderWithDescriptor:' type='@12@0:4@8' type64='@24@0:8@16'/>
+<method selector='retainedReferences' type='B8@0:4' type64='B16@0:8'/>
+<method selector='setError:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='setLabel:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='status' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='waitUntilCompleted' type='v8@0:4' type64='v16@0:8'/>
+<method selector='waitUntilScheduled' type='v8@0:4' type64='v16@0:8'/>
+</informal_protocol>
+<informal_protocol name='MTLCommandEncoder'>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='endEncoding' type='v8@0:4' type64='v16@0:8'/>
+<method selector='insertDebugSignpost:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='label' type='@8@0:4' type64='@16@0:8'/>
+<method selector='popDebugGroup' type='v8@0:4' type64='v16@0:8'/>
+<method selector='pushDebugGroup:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='setLabel:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='MTLCommandQueue'>
+<method selector='commandBuffer' type='@8@0:4' type64='@16@0:8'/>
+<method selector='commandBufferWithUnretainedReferences' type='@8@0:4' type64='@16@0:8'/>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='insertDebugCaptureBoundary' type='v8@0:4' type64='v16@0:8'/>
+<method selector='label' type='@8@0:4' type64='@16@0:8'/>
+<method selector='setLabel:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='MTLComputeCommandEncoder'>
+<method selector='dispatchThreadgroups:threadsPerThreadgroup:' type='v32@0:4{?=III}8{?=III}20' type64='v64@0:8{?=QQQ}16{?=QQQ}40'/>
+<method selector='dispatchThreadgroupsWithIndirectBuffer:indirectBufferOffset:threadsPerThreadgroup:' type='v28@0:4@8I12{?=III}16' type64='v56@0:8@16Q24{?=QQQ}32'/>
+<method selector='setBuffer:offset:atIndex:' type='v20@0:4@8I12I16' type64='v40@0:8@16Q24Q32'/>
+<method selector='setBufferOffset:atIndex:' type='v16@0:4I8I12' type64='v32@0:8Q16Q24'/>
+<method selector='setBuffers:offsets:withRange:' type='v24@0:4r^@8r^I12{_NSRange=II}16' type64='v48@0:8r^@16r^Q24{_NSRange=QQ}32'/>
+<method selector='setBytes:length:atIndex:' type='v20@0:4r^v8I12I16' type64='v40@0:8r^v16Q24Q32'/>
+<method selector='setComputePipelineState:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='setSamplerState:atIndex:' type='v16@0:4@8I12' type64='v32@0:8@16Q24'/>
+<method selector='setSamplerState:lodMinClamp:lodMaxClamp:atIndex:' type='v24@0:4@8f12f16I20' type64='v40@0:8@16f24f28Q32'/>
+<method selector='setSamplerStates:lodMinClamps:lodMaxClamps:withRange:' type='v28@0:4r^@8r^f12r^f16{_NSRange=II}20' type64='v56@0:8r^@16r^f24r^f32{_NSRange=QQ}40'/>
+<method selector='setSamplerStates:withRange:' type='v20@0:4r^@8{_NSRange=II}12' type64='v40@0:8r^@16{_NSRange=QQ}24'/>
+<method selector='setStageInRegion:' type='v32@0:4{?={?=III}{?=III}}8' type64='v64@0:8{?={?=QQQ}{?=QQQ}}16'/>
+<method selector='setTexture:atIndex:' type='v16@0:4@8I12' type64='v32@0:8@16Q24'/>
+<method selector='setTextures:withRange:' type='v20@0:4r^@8{_NSRange=II}12' type64='v40@0:8r^@16{_NSRange=QQ}24'/>
+<method selector='setThreadgroupMemoryLength:atIndex:' type='v16@0:4I8I12' type64='v32@0:8Q16Q24'/>
+</informal_protocol>
+<informal_protocol name='MTLComputePipelineState'>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='maxTotalThreadsPerThreadgroup' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='threadExecutionWidth' type='I8@0:4' type64='Q16@0:8'/>
+</informal_protocol>
+<informal_protocol name='MTLDepthStencilState'>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='label' type='@8@0:4' type64='@16@0:8'/>
+<method selector='setLabel:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='MTLDevice'>
+<method selector='isDepth24Stencil8PixelFormatSupported' type='B8@0:4' type64='B16@0:8'/>
+<method selector='isHeadless' type='B8@0:4' type64='B16@0:8'/>
+<method selector='isLowPower' type='B8@0:4' type64='B16@0:8'/>
+<method selector='maxThreadsPerThreadgroup' type='{?=III}8@0:4' type64='{?=QQQ}16@0:8'/>
+<method selector='name' type='@8@0:4' type64='@16@0:8'/>
+<method selector='newBufferWithBytes:length:options:' type='@20@0:4r^v8I12I16' type64='@40@0:8r^v16Q24Q32'/>
+<method selector='newBufferWithBytesNoCopy:length:options:deallocator:' type='@24@0:4^v8I12I16@?20' type64='@48@0:8^v16Q24Q32@?40'/>
+<method selector='newBufferWithLength:options:' type='@16@0:4I8I12' type64='@32@0:8Q16Q24'/>
+<method selector='newCommandQueue' type='@8@0:4' type64='@16@0:8'/>
+<method selector='newCommandQueueWithMaxCommandBufferCount:' type='@12@0:4I8' type64='@24@0:8Q16'/>
+<method selector='newComputePipelineStateWithDescriptor:options:completionHandler:' type='v20@0:4@8I12@?16' type64='v40@0:8@16Q24@?32'/>
+<method selector='newComputePipelineStateWithDescriptor:options:reflection:error:' type='@24@0:4@8I12^@16^@20' type64='@48@0:8@16Q24^@32^@40'/>
+<method selector='newComputePipelineStateWithFunction:completionHandler:' type='v16@0:4@8@?12' type64='v32@0:8@16@?24'/>
+<method selector='newComputePipelineStateWithFunction:error:' type='@16@0:4@8^@12' type64='@32@0:8@16^@24'/>
+<method selector='newComputePipelineStateWithFunction:options:completionHandler:' type='v20@0:4@8I12@?16' type64='v40@0:8@16Q24@?32'/>
+<method selector='newComputePipelineStateWithFunction:options:reflection:error:' type='@24@0:4@8I12^@16^@20' type64='@48@0:8@16Q24^@32^@40'/>
+<method selector='newDefaultLibrary' type='@8@0:4' type64='@16@0:8'/>
+<method selector='newDefaultLibraryWithBundle:error:' type='@16@0:4@8^@12' type64='@32@0:8@16^@24'/>
+<method selector='newDepthStencilStateWithDescriptor:' type='@12@0:4@8' type64='@24@0:8@16'/>
+<method selector='newLibraryWithData:error:' type='@16@0:4@8^@12' type64='@32@0:8@16^@24'/>
+<method selector='newLibraryWithFile:error:' type='@16@0:4@8^@12' type64='@32@0:8@16^@24'/>
+<method selector='newLibraryWithSource:options:completionHandler:' type='v20@0:4@8@12@?16' type64='v40@0:8@16@24@?32'/>
+<method selector='newLibraryWithSource:options:error:' type='@20@0:4@8@12^@16' type64='@40@0:8@16@24^@32'/>
+<method selector='newRenderPipelineStateWithDescriptor:completionHandler:' type='v16@0:4@8@?12' type64='v32@0:8@16@?24'/>
+<method selector='newRenderPipelineStateWithDescriptor:error:' type='@16@0:4@8^@12' type64='@32@0:8@16^@24'/>
+<method selector='newRenderPipelineStateWithDescriptor:options:completionHandler:' type='v20@0:4@8I12@?16' type64='v40@0:8@16Q24@?32'/>
+<method selector='newRenderPipelineStateWithDescriptor:options:reflection:error:' type='@24@0:4@8I12^@16^@20' type64='@48@0:8@16Q24^@32^@40'/>
+<method selector='newSamplerStateWithDescriptor:' type='@12@0:4@8' type64='@24@0:8@16'/>
+<method selector='newTextureWithDescriptor:' type='@12@0:4@8' type64='@24@0:8@16'/>
+<method selector='newTextureWithDescriptor:iosurface:plane:' type='@20@0:4@8^{__IOSurface=}12I16' type64='@40@0:8@16^{__IOSurface=}24Q32'/>
+<method selector='recommendedMaxWorkingSetSize' type='Q8@0:4' type64='Q16@0:8'/>
+<method selector='setName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='supportsFeatureSet:' type='B12@0:4I8' type64='B24@0:8Q16'/>
+<method selector='supportsTextureSampleCount:' type='B12@0:4I8' type64='B24@0:8Q16'/>
+</informal_protocol>
+<informal_protocol name='MTLDrawable'>
+<method selector='present' type='v8@0:4' type64='v16@0:8'/>
+<method selector='presentAtTime:' type='v16@0:4d8' type64='v24@0:8d16'/>
+</informal_protocol>
+<informal_protocol name='MTLFunction'>
+<method selector='MTLFunctionConstant' type='{NSDictionary=}8@0:4' type64='{NSDictionary=}16@0:8'/>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='functionType' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='label' type='@8@0:4' type64='@16@0:8'/>
+<method selector='name' type='@8@0:4' type64='@16@0:8'/>
+<method selector='patchControlPointCount' type='i8@0:4' type64='q16@0:8'/>
+<method selector='patchType' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='setLabel:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='MTLLibrary'>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='label' type='@8@0:4' type64='@16@0:8'/>
+<method selector='newFunctionWithName:' type='@12@0:4@8' type64='@24@0:8@16'/>
+<method selector='newFunctionWithName:constantValues:completionHandler:' type='v20@0:4@8@12@?16' type64='v40@0:8@16@24@?32'/>
+<method selector='newFunctionWithName:constantValues:error:' type='@20@0:4@8@12^@16' type64='@40@0:8@16@24^@32'/>
+<method selector='setLabel:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='MTLParallelRenderCommandEncoder'>
+<method selector='renderCommandEncoder' type='@8@0:4' type64='@16@0:8'/>
+<method selector='setColorStoreAction:atIndex:' type='v16@0:4I8I12' type64='v32@0:8Q16Q24'/>
+<method selector='setDepthStoreAction:' type='v12@0:4I8' type64='v24@0:8Q16'/>
+<method selector='setStencilStoreAction:' type='v12@0:4I8' type64='v24@0:8Q16'/>
+</informal_protocol>
+<informal_protocol name='MTLRenderCommandEncoder'>
+<method selector='drawIndexedPatches:patchIndexBuffer:patchIndexBufferOffset:controlPointIndexBuffer:controlPointIndexBufferOffset:indirectBuffer:indirectBufferOffset:' type='v36@0:4I8@12I16@20I24@28I32' type64='v72@0:8Q16@24Q32@40Q48@56Q64'/>
+<method selector='drawIndexedPatches:patchStart:patchCount:patchIndexBuffer:patchIndexBufferOffset:controlPointIndexBuffer:controlPointIndexBufferOffset:instanceCount:baseInstance:' type='v44@0:4I8I12I16@20I24@28I32I36I40' type64='v88@0:8Q16Q24Q32@40Q48@56Q64Q72Q80'/>
+<method selector='drawIndexedPrimitives:indexCount:indexType:indexBuffer:indexBufferOffset:' type='v28@0:4I8I12I16@20I24' type64='v56@0:8Q16Q24Q32@40Q48'/>
+<method selector='drawIndexedPrimitives:indexCount:indexType:indexBuffer:indexBufferOffset:instanceCount:' type='v32@0:4I8I12I16@20I24I28' type64='v64@0:8Q16Q24Q32@40Q48Q56'/>
+<method selector='drawIndexedPrimitives:indexCount:indexType:indexBuffer:indexBufferOffset:instanceCount:baseVertex:baseInstance:' type='v40@0:4I8I12I16@20I24I28i32I36' type64='v80@0:8Q16Q24Q32@40Q48Q56q64Q72'/>
+<method selector='drawIndexedPrimitives:indexType:indexBuffer:indexBufferOffset:indirectBuffer:indirectBufferOffset:' type='v32@0:4I8I12@16I20@24I28' type64='v64@0:8Q16Q24@32Q40@48Q56'/>
+<method selector='drawPatches:patchIndexBuffer:patchIndexBufferOffset:indirectBuffer:indirectBufferOffset:' type='v28@0:4I8@12I16@20I24' type64='v56@0:8Q16@24Q32@40Q48'/>
+<method selector='drawPatches:patchStart:patchCount:patchIndexBuffer:patchIndexBufferOffset:instanceCount:baseInstance:' type='v36@0:4I8I12I16@20I24I28I32' type64='v72@0:8Q16Q24Q32@40Q48Q56Q64'/>
+<method selector='drawPrimitives:indirectBuffer:indirectBufferOffset:' type='v20@0:4I8@12I16' type64='v40@0:8Q16@24Q32'/>
+<method selector='drawPrimitives:vertexStart:vertexCount:' type='v20@0:4I8I12I16' type64='v40@0:8Q16Q24Q32'/>
+<method selector='drawPrimitives:vertexStart:vertexCount:instanceCount:' type='v24@0:4I8I12I16I20' type64='v48@0:8Q16Q24Q32Q40'/>
+<method selector='drawPrimitives:vertexStart:vertexCount:instanceCount:baseInstance:' type='v28@0:4I8I12I16I20I24' type64='v56@0:8Q16Q24Q32Q40Q48'/>
+<method selector='setBlendColorRed:green:blue:alpha:' type='v24@0:4f8f12f16f20' type64='v32@0:8f16f20f24f28'/>
+<method selector='setColorStoreAction:atIndex:' type='v16@0:4I8I12' type64='v32@0:8Q16Q24'/>
+<method selector='setCullMode:' type='v12@0:4I8' type64='v24@0:8Q16'/>
+<method selector='setDepthBias:slopeScale:clamp:' type='v20@0:4f8f12f16' type64='v28@0:8f16f20f24'/>
+<method selector='setDepthClipMode:' type='v12@0:4I8' type64='v24@0:8Q16'/>
+<method selector='setDepthStencilState:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='setDepthStoreAction:' type='v12@0:4I8' type64='v24@0:8Q16'/>
+<method selector='setFragmentBuffer:offset:atIndex:' type='v20@0:4@8I12I16' type64='v40@0:8@16Q24Q32'/>
+<method selector='setFragmentBufferOffset:atIndex:' type='v16@0:4I8I12' type64='v32@0:8Q16Q24'/>
+<method selector='setFragmentBuffers:offsets:withRange:' type='v24@0:4r^@8r^I12{_NSRange=II}16' type64='v48@0:8r^@16r^Q24{_NSRange=QQ}32'/>
+<method selector='setFragmentBytes:length:atIndex:' type='v20@0:4r^v8I12I16' type64='v40@0:8r^v16Q24Q32'/>
+<method selector='setFragmentSamplerState:atIndex:' type='v16@0:4@8I12' type64='v32@0:8@16Q24'/>
+<method selector='setFragmentSamplerState:lodMinClamp:lodMaxClamp:atIndex:' type='v24@0:4@8f12f16I20' type64='v40@0:8@16f24f28Q32'/>
+<method selector='setFragmentSamplerStates:lodMinClamps:lodMaxClamps:withRange:' type='v28@0:4r^@8r^f12r^f16{_NSRange=II}20' type64='v56@0:8r^@16r^f24r^f32{_NSRange=QQ}40'/>
+<method selector='setFragmentSamplerStates:withRange:' type='v20@0:4r^@8{_NSRange=II}12' type64='v40@0:8r^@16{_NSRange=QQ}24'/>
+<method selector='setFragmentTexture:atIndex:' type='v16@0:4@8I12' type64='v32@0:8@16Q24'/>
+<method selector='setFragmentTextures:withRange:' type='v20@0:4r^@8{_NSRange=II}12' type64='v40@0:8r^@16{_NSRange=QQ}24'/>
+<method selector='setFrontFacingWinding:' type='v12@0:4I8' type64='v24@0:8Q16'/>
+<method selector='setRenderPipelineState:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='setScissorRect:' type='v24@0:4{?=IIII}8' type64='v48@0:8{?=QQQQ}16'/>
+<method selector='setStencilFrontReferenceValue:backReferenceValue:' type='v16@0:4I8I12' type64='v24@0:8I16I20'/>
+<method selector='setStencilReferenceValue:' type='v12@0:4I8' type64='v20@0:8I16'/>
+<method selector='setStencilStoreAction:' type='v12@0:4I8' type64='v24@0:8Q16'/>
+<method selector='setTessellationFactorBuffer:offset:instanceStride:' type='v20@0:4@8I12I16' type64='v40@0:8@16Q24Q32'/>
+<method selector='setTessellationFactorScale:' type='v12@0:4f8' type64='v20@0:8f16'/>
+<method selector='setTriangleFillMode:' type='v12@0:4I8' type64='v24@0:8Q16'/>
+<method selector='setVertexBuffer:offset:atIndex:' type='v20@0:4@8I12I16' type64='v40@0:8@16Q24Q32'/>
+<method selector='setVertexBufferOffset:atIndex:' type='v16@0:4I8I12' type64='v32@0:8Q16Q24'/>
+<method selector='setVertexBuffers:offsets:withRange:' type='v24@0:4r^@8r^I12{_NSRange=II}16' type64='v48@0:8r^@16r^Q24{_NSRange=QQ}32'/>
+<method selector='setVertexBytes:length:atIndex:' type='v20@0:4r^v8I12I16' type64='v40@0:8r^v16Q24Q32'/>
+<method selector='setVertexSamplerState:atIndex:' type='v16@0:4@8I12' type64='v32@0:8@16Q24'/>
+<method selector='setVertexSamplerState:lodMinClamp:lodMaxClamp:atIndex:' type='v24@0:4@8f12f16I20' type64='v40@0:8@16f24f28Q32'/>
+<method selector='setVertexSamplerStates:lodMinClamps:lodMaxClamps:withRange:' type='v28@0:4r^@8r^f12r^f16{_NSRange=II}20' type64='v56@0:8r^@16r^f24r^f32{_NSRange=QQ}40'/>
+<method selector='setVertexSamplerStates:withRange:' type='v20@0:4r^@8{_NSRange=II}12' type64='v40@0:8r^@16{_NSRange=QQ}24'/>
+<method selector='setVertexTexture:atIndex:' type='v16@0:4@8I12' type64='v32@0:8@16Q24'/>
+<method selector='setVertexTextures:withRange:' type='v20@0:4r^@8{_NSRange=II}12' type64='v40@0:8r^@16{_NSRange=QQ}24'/>
+<method selector='setViewport:' type='v56@0:4{?=dddddd}8' type64='v64@0:8{?=dddddd}16'/>
+<method selector='setVisibilityResultMode:offset:' type='v16@0:4I8I12' type64='v32@0:8Q16Q24'/>
+<method selector='textureBarrier' type='v8@0:4' type64='v16@0:8'/>
+</informal_protocol>
+<informal_protocol name='MTLRenderPipelineState'>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='label' type='@8@0:4' type64='@16@0:8'/>
+<method selector='setLabel:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='MTLResource'>
+<method selector='cpuCacheMode' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='heap' type='@8@0:4' type64='@16@0:8'/>
+<method selector='label' type='@8@0:4' type64='@16@0:8'/>
+<method selector='setLabel:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='setPurgeableState:' type='I12@0:4I8' type64='Q24@0:8Q16'/>
+<method selector='storageMode' type='I8@0:4' type64='Q16@0:8'/>
+</informal_protocol>
+<informal_protocol name='MTLSamplerState'>
+<method selector='device' type='@8@0:4' type64='@16@0:8'/>
+<method selector='label' type='@8@0:4' type64='@16@0:8'/>
+<method selector='setLabel:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='MTLTexture'>
+<method selector='arrayLength' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='buffer' type='@8@0:4' type64='@16@0:8'/>
+<method selector='bufferBytesPerRow' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='bufferOffset' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='depth' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='getBytes:bytesPerRow:bytesPerImage:fromRegion:mipmapLevel:slice:' type='v52@0:4^v8I12I16{?={?=III}{?=III}}20I44I48' type64='v104@0:8^v16Q24Q32{?={?=QQQ}{?=QQQ}}40Q88Q96'/>
+<method selector='getBytes:bytesPerRow:fromRegion:mipmapLevel:' type='v44@0:4^v8I12{?={?=III}{?=III}}16I40' type64='v88@0:8^v16Q24{?={?=QQQ}{?=QQQ}}32Q80'/>
+<method selector='height' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='iosurface' type='^{__IOSurface=}8@0:4' type64='^{__IOSurface=}16@0:8'/>
+<method selector='iosurfacePlane' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='isFramebufferOnly' type='B8@0:4' type64='B16@0:8'/>
+<method selector='mipmapLevelCount' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='newTextureViewWithPixelFormat:' type='@12@0:4I8' type64='@24@0:8Q16'/>
+<method selector='newTextureViewWithPixelFormat:textureType:levels:slices:' type='@32@0:4I8I12{_NSRange=II}16{_NSRange=II}24' type64='@64@0:8Q16Q24{_NSRange=QQ}32{_NSRange=QQ}48'/>
+<method selector='parentRelativeLevel' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='parentRelativeSlice' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='parentTexture' type='@8@0:4' type64='@16@0:8'/>
+<method selector='pixelFormat' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='replaceRegion:mipmapLevel:slice:withBytes:bytesPerRow:bytesPerImage:' type='v52@0:4{?={?=III}{?=III}}8I32I36r^v40I44I48' type64='v104@0:8{?={?=QQQ}{?=QQQ}}16Q64Q72r^v80Q88Q96'/>
+<method selector='replaceRegion:mipmapLevel:withBytes:bytesPerRow:' type='v44@0:4{?={?=III}{?=III}}8I32r^v36I40' type64='v88@0:8{?={?=QQQ}{?=QQQ}}16Q64r^v72Q80'/>
+<method selector='rootResource' type='@8@0:4' type64='@16@0:8'/>
+<method selector='sampleCount' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='setBuffer:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='setIosurface:' type='v12@0:4^{__IOSurface=}8' type64='v24@0:8^{__IOSurface=}16'/>
+<method selector='setParentTexture:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='setRootResource:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='textureType' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='usage' type='I8@0:4' type64='Q16@0:8'/>
+<method selector='width' type='I8@0:4' type64='Q16@0:8'/>
+</informal_protocol>
+</signatures>

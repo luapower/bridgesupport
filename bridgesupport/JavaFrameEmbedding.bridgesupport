@@ -1,0 +1,14 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/JavaVM.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/JavaVM.framework/Versions/A/Frameworks/JavaNativeFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='JavaFrameViewDidCreateJavaFrame' type='@'/>
+<informal_protocol name='JavaFrameViewDelegate'>
+<method selector='javaFrameView:didCreateJavaFrame:withJNIEnv:' type='v20@0:4@8^{_jobject=}12r^^{JNINativeInterface_}16' type64='v40@0:8@16^{_jobject=}24r^^{JNINativeInterface_}32'/>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,195 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Accounts.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='CNContactBirthdayKey' type64='@'/>
+<constant name='CNContactDatesKey' type64='@'/>
+<constant name='CNContactDepartmentNameKey' type64='@'/>
+<constant name='CNContactEmailAddressesKey' type64='@'/>
+<constant name='CNContactFamilyNameKey' type64='@'/>
+<constant name='CNContactGivenNameKey' type64='@'/>
+<constant name='CNContactIdentifierKey' type64='@'/>
+<constant name='CNContactImageDataAvailableKey' type64='@'/>
+<constant name='CNContactImageDataKey' type64='@'/>
+<constant name='CNContactInstantMessageAddressesKey' type64='@'/>
+<constant name='CNContactJobTitleKey' type64='@'/>
+<constant name='CNContactMiddleNameKey' type64='@'/>
+<constant name='CNContactNamePrefixKey' type64='@'/>
+<constant name='CNContactNameSuffixKey' type64='@'/>
+<constant name='CNContactNicknameKey' type64='@'/>
+<constant name='CNContactNonGregorianBirthdayKey' type64='@'/>
+<constant name='CNContactNoteKey' type64='@'/>
+<constant name='CNContactOrganizationNameKey' type64='@'/>
+<constant name='CNContactPhoneNumbersKey' type64='@'/>
+<constant name='CNContactPhoneticFamilyNameKey' type64='@'/>
+<constant name='CNContactPhoneticGivenNameKey' type64='@'/>
+<constant name='CNContactPhoneticMiddleNameKey' type64='@'/>
+<constant name='CNContactPhoneticOrganizationNameKey' type64='@'/>
+<constant name='CNContactPostalAddressesKey' type64='@'/>
+<constant name='CNContactPreviousFamilyNameKey' type64='@'/>
+<constant name='CNContactPropertyAttribute' type64='@'/>
+<constant name='CNContactPropertyNotFetchedExceptionName' type64='@'/>
+<constant name='CNContactRelationsKey' type64='@'/>
+<constant name='CNContactSocialProfilesKey' type64='@'/>
+<constant name='CNContactStoreDidChangeNotification' type64='@'/>
+<constant name='CNContactThumbnailImageDataKey' type64='@'/>
+<constant name='CNContactTypeKey' type64='@'/>
+<constant name='CNContactUrlAddressesKey' type64='@'/>
+<constant name='CNContainerIdentifierKey' type64='@'/>
+<constant name='CNContainerNameKey' type64='@'/>
+<constant name='CNContainerTypeKey' type64='@'/>
+<constant name='CNErrorDomain' type64='@'/>
+<constant name='CNErrorUserInfoAffectedRecordIdentifiersKey' type64='@'/>
+<constant name='CNErrorUserInfoAffectedRecordsKey' type64='@'/>
+<constant name='CNErrorUserInfoKeyPathsKey' type64='@'/>
+<constant name='CNErrorUserInfoValidationErrorsKey' type64='@'/>
+<constant name='CNGroupIdentifierKey' type64='@'/>
+<constant name='CNGroupNameKey' type64='@'/>
+<constant name='CNInstantMessageAddressServiceKey' type64='@'/>
+<constant name='CNInstantMessageAddressUsernameKey' type64='@'/>
+<constant name='CNInstantMessageServiceAIM' type64='@'/>
+<constant name='CNInstantMessageServiceFacebook' type64='@'/>
+<constant name='CNInstantMessageServiceGaduGadu' type64='@'/>
+<constant name='CNInstantMessageServiceGoogleTalk' type64='@'/>
+<constant name='CNInstantMessageServiceICQ' type64='@'/>
+<constant name='CNInstantMessageServiceJabber' type64='@'/>
+<constant name='CNInstantMessageServiceMSN' type64='@'/>
+<constant name='CNInstantMessageServiceQQ' type64='@'/>
+<constant name='CNInstantMessageServiceSkype' type64='@'/>
+<constant name='CNInstantMessageServiceYahoo' type64='@'/>
+<constant name='CNLabelContactRelationAssistant' type64='@'/>
+<constant name='CNLabelContactRelationBrother' type64='@'/>
+<constant name='CNLabelContactRelationChild' type64='@'/>
+<constant name='CNLabelContactRelationFather' type64='@'/>
+<constant name='CNLabelContactRelationFriend' type64='@'/>
+<constant name='CNLabelContactRelationManager' type64='@'/>
+<constant name='CNLabelContactRelationMother' type64='@'/>
+<constant name='CNLabelContactRelationParent' type64='@'/>
+<constant name='CNLabelContactRelationPartner' type64='@'/>
+<constant name='CNLabelContactRelationSister' type64='@'/>
+<constant name='CNLabelContactRelationSpouse' type64='@'/>
+<constant name='CNLabelDateAnniversary' type64='@'/>
+<constant name='CNLabelEmailiCloud' type64='@'/>
+<constant name='CNLabelHome' type64='@'/>
+<constant name='CNLabelOther' type64='@'/>
+<constant name='CNLabelPhoneNumberHomeFax' type64='@'/>
+<constant name='CNLabelPhoneNumberMain' type64='@'/>
+<constant name='CNLabelPhoneNumberMobile' type64='@'/>
+<constant name='CNLabelPhoneNumberOtherFax' type64='@'/>
+<constant name='CNLabelPhoneNumberPager' type64='@'/>
+<constant name='CNLabelPhoneNumberWorkFax' type64='@'/>
+<constant name='CNLabelPhoneNumberiPhone' type64='@'/>
+<constant name='CNLabelURLAddressHomePage' type64='@'/>
+<constant name='CNLabelWork' type64='@'/>
+<constant name='CNPostalAddressCityKey' type64='@'/>
+<constant name='CNPostalAddressCountryKey' type64='@'/>
+<constant name='CNPostalAddressISOCountryCodeKey' type64='@'/>
+<constant name='CNPostalAddressLocalizedPropertyNameAttribute' type64='@'/>
+<constant name='CNPostalAddressPostalCodeKey' type64='@'/>
+<constant name='CNPostalAddressPropertyAttribute' type64='@'/>
+<constant name='CNPostalAddressStateKey' type64='@'/>
+<constant name='CNPostalAddressStreetKey' type64='@'/>
+<constant name='CNPostalAddressSubAdministrativeAreaKey' type64='@'/>
+<constant name='CNPostalAddressSubLocalityKey' type64='@'/>
+<constant name='CNSocialProfileServiceFacebook' type64='@'/>
+<constant name='CNSocialProfileServiceFlickr' type64='@'/>
+<constant name='CNSocialProfileServiceGameCenter' type64='@'/>
+<constant name='CNSocialProfileServiceKey' type64='@'/>
+<constant name='CNSocialProfileServiceLinkedIn' type64='@'/>
+<constant name='CNSocialProfileServiceMySpace' type64='@'/>
+<constant name='CNSocialProfileServiceSinaWeibo' type64='@'/>
+<constant name='CNSocialProfileServiceTencentWeibo' type64='@'/>
+<constant name='CNSocialProfileServiceTwitter' type64='@'/>
+<constant name='CNSocialProfileServiceYelp' type64='@'/>
+<constant name='CNSocialProfileURLStringKey' type64='@'/>
+<constant name='CNSocialProfileUserIdentifierKey' type64='@'/>
+<constant name='CNSocialProfileUsernameKey' type64='@'/>
+<enum name='CNAuthorizationStatusAuthorized' value64='3'/>
+<enum name='CNAuthorizationStatusDenied' value64='2'/>
+<enum name='CNAuthorizationStatusNotDetermined' value64='0'/>
+<enum name='CNAuthorizationStatusRestricted' value64='1'/>
+<enum name='CNContactDisplayNameOrderFamilyNameFirst' value64='2'/>
+<enum name='CNContactDisplayNameOrderGivenNameFirst' value64='1'/>
+<enum name='CNContactDisplayNameOrderUserDefault' value64='0'/>
+<enum name='CNContactFormatterStyleFullName' value64='0'/>
+<enum name='CNContactFormatterStylePhoneticFullName' value64='1'/>
+<enum name='CNContactSortOrderFamilyName' value64='3'/>
+<enum name='CNContactSortOrderGivenName' value64='2'/>
+<enum name='CNContactSortOrderNone' value64='0'/>
+<enum name='CNContactSortOrderUserDefault' value64='1'/>
+<enum name='CNContactTypeOrganization' value64='1'/>
+<enum name='CNContactTypePerson' value64='0'/>
+<enum name='CNContainerTypeCardDAV' value64='3'/>
+<enum name='CNContainerTypeExchange' value64='2'/>
+<enum name='CNContainerTypeLocal' value64='1'/>
+<enum name='CNContainerTypeUnassigned' value64='0'/>
+<enum name='CNEntityTypeContacts' value64='0'/>
+<enum name='CNErrorCodeAuthorizationDenied' value64='100'/>
+<enum name='CNErrorCodeCommunicationError' value64='1'/>
+<enum name='CNErrorCodeContainmentCycle' value64='202'/>
+<enum name='CNErrorCodeContainmentScope' value64='203'/>
+<enum name='CNErrorCodeDataAccessError' value64='2'/>
+<enum name='CNErrorCodeInsertedRecordAlreadyExists' value64='201'/>
+<enum name='CNErrorCodeParentRecordDoesNotExist' value64='204'/>
+<enum name='CNErrorCodePolicyViolation' value64='500'/>
+<enum name='CNErrorCodePredicateInvalid' value64='400'/>
+<enum name='CNErrorCodeRecordDoesNotExist' value64='200'/>
+<enum name='CNErrorCodeValidationConfigurationError' value64='302'/>
+<enum name='CNErrorCodeValidationMultipleErrors' value64='300'/>
+<enum name='CNErrorCodeValidationTypeMismatch' value64='301'/>
+<enum name='CNPostalAddressFormatterStyleMailingAddress' value64='0'/>
+<class name='CNContact'>
+<method selector='areKeysAvailable:'>
+<retval type64='B'/>
+</method>
+<method selector='imageDataAvailable'>
+<retval type64='B'/>
+</method>
+<method selector='isKeyAvailable:'>
+<retval type64='B'/>
+</method>
+<method selector='isUnifiedWithContactWithIdentifier:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CNContactFetchRequest'>
+<method selector='mutableObjects'>
+<retval type64='B'/>
+</method>
+<method selector='setMutableObjects:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setUnifyResults:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='unifyResults'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CNContactStore'>
+<method selector='enumerateContactsWithFetchRequest:error:usingBlock:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='@'/>
+<arg type64='^B'/>
+<retval type64='v'/>
+</arg>
+<retval type64='B'/>
+</method>
+<method selector='executeSaveRequest:error:'>
+<retval type64='B'/>
+</method>
+<method selector='requestAccessForEntityType:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+</signatures>

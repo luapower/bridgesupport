@@ -1,0 +1,504 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='AVAudio3DAngularOrientation' type='{AVAudio3DAngularOrientation=&quot;yaw&quot;f&quot;pitch&quot;f&quot;roll&quot;f}'/>
+<struct name='AVAudio3DPoint' type='{AVAudio3DPoint=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'/>
+<struct name='AVAudio3DVector' type='{AVAudio3DPoint=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}'/>
+<struct name='AVAudio3DVectorOrientation' type='{AVAudio3DVectorOrientation=&quot;forward&quot;{AVAudio3DPoint=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}&quot;up&quot;{AVAudio3DPoint=&quot;x&quot;f&quot;y&quot;f&quot;z&quot;f}}'/>
+<struct name='AVAudioConverterPrimeInfo' type='{AVAudioConverterPrimeInfo=&quot;leadingFrames&quot;I&quot;trailingFrames&quot;I}'/>
+<struct name='AVBeatRange' type='{_AVBeatRange=&quot;start&quot;d&quot;length&quot;d}'/>
+<constant name='AVAudioBitRateStrategy_Constant' type='@'/>
+<constant name='AVAudioBitRateStrategy_LongTermAverage' type='@'/>
+<constant name='AVAudioBitRateStrategy_Variable' type='@'/>
+<constant name='AVAudioBitRateStrategy_VariableConstrained' type='@'/>
+<constant name='AVAudioEngineConfigurationChangeNotification' type='@'/>
+<constant name='AVAudioUnitComponentTagsDidChangeNotification' type='@'/>
+<constant name='AVAudioUnitManufacturerNameApple' type='@'/>
+<constant name='AVAudioUnitTypeEffect' type='@'/>
+<constant name='AVAudioUnitTypeFormatConverter' type='@'/>
+<constant name='AVAudioUnitTypeGenerator' type='@'/>
+<constant name='AVAudioUnitTypeMIDIProcessor' type='@'/>
+<constant name='AVAudioUnitTypeMixer' type='@'/>
+<constant name='AVAudioUnitTypeMusicDevice' type='@'/>
+<constant name='AVAudioUnitTypeMusicEffect' type='@'/>
+<constant name='AVAudioUnitTypeOfflineEffect' type='@'/>
+<constant name='AVAudioUnitTypeOutput' type='@'/>
+<constant name='AVAudioUnitTypePanner' type='@'/>
+<constant name='AVChannelLayoutKey' type='@'/>
+<constant name='AVEncoderAudioQualityForVBRKey' type='@'/>
+<constant name='AVEncoderAudioQualityKey' type='@'/>
+<constant name='AVEncoderBitDepthHintKey' type='@'/>
+<constant name='AVEncoderBitRateKey' type='@'/>
+<constant name='AVEncoderBitRatePerChannelKey' type='@'/>
+<constant name='AVEncoderBitRateStrategyKey' type='@'/>
+<constant name='AVFormatIDKey' type='@'/>
+<constant name='AVLinearPCMBitDepthKey' type='@'/>
+<constant name='AVLinearPCMIsBigEndianKey' type='@'/>
+<constant name='AVLinearPCMIsFloatKey' type='@'/>
+<constant name='AVLinearPCMIsNonInterleaved' type='@'/>
+<constant name='AVNumberOfChannelsKey' type='@'/>
+<constant name='AVSampleRateConverterAlgorithmKey' type='@'/>
+<constant name='AVSampleRateConverterAlgorithm_Mastering' type='@'/>
+<constant name='AVSampleRateConverterAlgorithm_MinimumPhase' type='@'/>
+<constant name='AVSampleRateConverterAlgorithm_Normal' type='@'/>
+<constant name='AVSampleRateConverterAudioQualityKey' type='@'/>
+<constant name='AVSampleRateKey' type='@'/>
+<enum name='AVAUDIOENGINE_HAVE_MUSICPLAYER' value='1'/>
+<enum name='AVAUDIOFORMAT_HAVE_CMFORMATDESCRIPTION' value='1'/>
+<enum name='AVAUDIOIONODE_HAVE_AUDIOUNIT' value='1'/>
+<enum name='AVAUDIOUNITCOMPONENT_HAVE_AUDIOCOMPONENT' value='1'/>
+<enum name='AVAUDIOUNIT_HAVE_AUDIOUNIT' value='1'/>
+<enum name='AVAudio3DMixingRenderingAlgorithmEqualPowerPanning' value='0'/>
+<enum name='AVAudio3DMixingRenderingAlgorithmHRTF' value='2'/>
+<enum name='AVAudio3DMixingRenderingAlgorithmSoundField' value='3'/>
+<enum name='AVAudio3DMixingRenderingAlgorithmSphericalHead' value='1'/>
+<enum name='AVAudio3DMixingRenderingAlgorithmStereoPassThrough' value='5'/>
+<enum name='AVAudioConverterInputStatus_EndOfStream' value='2'/>
+<enum name='AVAudioConverterInputStatus_HaveData' value='0'/>
+<enum name='AVAudioConverterInputStatus_NoDataNow' value='1'/>
+<enum name='AVAudioConverterOutputStatus_EndOfStream' value='2'/>
+<enum name='AVAudioConverterOutputStatus_Error' value='3'/>
+<enum name='AVAudioConverterOutputStatus_HaveData' value='0'/>
+<enum name='AVAudioConverterOutputStatus_InputRanDry' value='1'/>
+<enum name='AVAudioConverterPrimeMethod_None' value='2'/>
+<enum name='AVAudioConverterPrimeMethod_Normal' value='1'/>
+<enum name='AVAudioConverterPrimeMethod_Pre' value='0'/>
+<enum name='AVAudioEnvironmentDistanceAttenuationModelExponential' value='1'/>
+<enum name='AVAudioEnvironmentDistanceAttenuationModelInverse' value='2'/>
+<enum name='AVAudioEnvironmentDistanceAttenuationModelLinear' value='3'/>
+<enum name='AVAudioOtherFormat' value='0'/>
+<enum name='AVAudioPCMFormatFloat32' value='1'/>
+<enum name='AVAudioPCMFormatFloat64' value='2'/>
+<enum name='AVAudioPCMFormatInt16' value='3'/>
+<enum name='AVAudioPCMFormatInt32' value='4'/>
+<enum name='AVAudioPlayerNodeBufferInterrupts' value='2'/>
+<enum name='AVAudioPlayerNodeBufferInterruptsAtLoop' value='4'/>
+<enum name='AVAudioPlayerNodeBufferLoops' value='1'/>
+<enum name='AVAudioQualityHigh' value='96'/>
+<enum name='AVAudioQualityLow' value='32'/>
+<enum name='AVAudioQualityMax' value='127'/>
+<enum name='AVAudioQualityMedium' value='64'/>
+<enum name='AVAudioQualityMin' value='0'/>
+<enum name='AVAudioUnitDistortionPresetDrumsBitBrush' value='0'/>
+<enum name='AVAudioUnitDistortionPresetDrumsBufferBeats' value='1'/>
+<enum name='AVAudioUnitDistortionPresetDrumsLoFi' value='2'/>
+<enum name='AVAudioUnitDistortionPresetMultiBrokenSpeaker' value='3'/>
+<enum name='AVAudioUnitDistortionPresetMultiCellphoneConcert' value='4'/>
+<enum name='AVAudioUnitDistortionPresetMultiDecimated1' value='5'/>
+<enum name='AVAudioUnitDistortionPresetMultiDecimated2' value='6'/>
+<enum name='AVAudioUnitDistortionPresetMultiDecimated3' value='7'/>
+<enum name='AVAudioUnitDistortionPresetMultiDecimated4' value='8'/>
+<enum name='AVAudioUnitDistortionPresetMultiDistortedCubed' value='10'/>
+<enum name='AVAudioUnitDistortionPresetMultiDistortedFunk' value='9'/>
+<enum name='AVAudioUnitDistortionPresetMultiDistortedSquared' value='11'/>
+<enum name='AVAudioUnitDistortionPresetMultiEcho1' value='12'/>
+<enum name='AVAudioUnitDistortionPresetMultiEcho2' value='13'/>
+<enum name='AVAudioUnitDistortionPresetMultiEchoTight1' value='14'/>
+<enum name='AVAudioUnitDistortionPresetMultiEchoTight2' value='15'/>
+<enum name='AVAudioUnitDistortionPresetMultiEverythingIsBroken' value='16'/>
+<enum name='AVAudioUnitDistortionPresetSpeechAlienChatter' value='17'/>
+<enum name='AVAudioUnitDistortionPresetSpeechCosmicInterference' value='18'/>
+<enum name='AVAudioUnitDistortionPresetSpeechGoldenPi' value='19'/>
+<enum name='AVAudioUnitDistortionPresetSpeechRadioTower' value='20'/>
+<enum name='AVAudioUnitDistortionPresetSpeechWaves' value='21'/>
+<enum name='AVAudioUnitEQFilterTypeBandPass' value='5'/>
+<enum name='AVAudioUnitEQFilterTypeBandStop' value='6'/>
+<enum name='AVAudioUnitEQFilterTypeHighPass' value='2'/>
+<enum name='AVAudioUnitEQFilterTypeHighShelf' value='8'/>
+<enum name='AVAudioUnitEQFilterTypeLowPass' value='1'/>
+<enum name='AVAudioUnitEQFilterTypeLowShelf' value='7'/>
+<enum name='AVAudioUnitEQFilterTypeParametric' value='0'/>
+<enum name='AVAudioUnitEQFilterTypeResonantHighPass' value='4'/>
+<enum name='AVAudioUnitEQFilterTypeResonantHighShelf' value='10'/>
+<enum name='AVAudioUnitEQFilterTypeResonantLowPass' value='3'/>
+<enum name='AVAudioUnitEQFilterTypeResonantLowShelf' value='9'/>
+<enum name='AVAudioUnitReverbPresetCathedral' value='8'/>
+<enum name='AVAudioUnitReverbPresetLargeChamber' value='7'/>
+<enum name='AVAudioUnitReverbPresetLargeHall' value='4'/>
+<enum name='AVAudioUnitReverbPresetLargeHall2' value='12'/>
+<enum name='AVAudioUnitReverbPresetLargeRoom' value='2'/>
+<enum name='AVAudioUnitReverbPresetLargeRoom2' value='9'/>
+<enum name='AVAudioUnitReverbPresetMediumChamber' value='6'/>
+<enum name='AVAudioUnitReverbPresetMediumHall' value='3'/>
+<enum name='AVAudioUnitReverbPresetMediumHall2' value='10'/>
+<enum name='AVAudioUnitReverbPresetMediumHall3' value='11'/>
+<enum name='AVAudioUnitReverbPresetMediumRoom' value='1'/>
+<enum name='AVAudioUnitReverbPresetPlate' value='5'/>
+<enum name='AVAudioUnitReverbPresetSmallRoom' value='0'/>
+<enum name='AVMusicSequenceLoadSMF_ChannelsToTracks' value='1'/>
+<enum name='AVMusicSequenceLoadSMF_PreserveTracks' value='0'/>
+<enum name='AVMusicTrackLoopCountForever' value='-1'/>
+<function inline='true' name='AVAudioMake3DAngularOrientation'>
+<arg type='f'/>
+<arg type='f'/>
+<arg type='f'/>
+<retval type='{AVAudio3DAngularOrientation=fff}'/>
+</function>
+<function inline='true' name='AVAudioMake3DPoint'>
+<arg type='f'/>
+<arg type='f'/>
+<arg type='f'/>
+<retval type='{AVAudio3DPoint=fff}'/>
+</function>
+<function inline='true' name='AVAudioMake3DVector'>
+<arg type='f'/>
+<arg type='f'/>
+<arg type='f'/>
+<retval type='{AVAudio3DPoint=fff}'/>
+</function>
+<function inline='true' name='AVAudioMake3DVectorOrientation'>
+<arg type='{AVAudio3DPoint=fff}'/>
+<arg type='{AVAudio3DPoint=fff}'/>
+<retval type='{AVAudio3DVectorOrientation={AVAudio3DPoint=fff}{AVAudio3DPoint=fff}}'/>
+</function>
+<function inline='true' name='AVMakeBeatRange'>
+<arg type='d'/>
+<arg type='d'/>
+<retval type='{_AVBeatRange=dd}'/>
+</function>
+<class name='AVAudioChannelLayout'>
+<method selector='isEqual:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='AVAudioConverter'>
+<method selector='convertToBuffer:error:withInputFromBlock:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='I'/>
+<arg type='^i' type64='^q'/>
+<retval type='@'/>
+</arg>
+</method>
+<method selector='convertToBuffer:fromBuffer:error:'>
+<retval type='B'/>
+</method>
+<method selector='dither'>
+<retval type='B'/>
+</method>
+<method selector='downmix'>
+<retval type='B'/>
+</method>
+<method selector='setDither:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setDownmix:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='AVAudioEngine'>
+<method selector='isRunning'>
+<retval type='B'/>
+</method>
+<method selector='startAndReturnError:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='AVAudioEnvironmentReverbParameters'>
+<method selector='enable'>
+<retval type='B'/>
+</method>
+<method selector='setEnable:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='AVAudioFile'>
+<method selector='initForReading:commonFormat:interleaved:error:'>
+<arg index='2' type='B'/>
+</method>
+<method selector='initForWriting:settings:commonFormat:interleaved:error:'>
+<arg index='3' type='B'/>
+</method>
+<method selector='readIntoBuffer:error:'>
+<retval type='B'/>
+</method>
+<method selector='readIntoBuffer:frameCount:error:'>
+<retval type='B'/>
+</method>
+<method selector='writeFromBuffer:error:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='AVAudioFormat'>
+<method selector='initWithCommonFormat:sampleRate:channels:interleaved:'>
+<arg index='3' type='B'/>
+</method>
+<method selector='initWithCommonFormat:sampleRate:interleaved:channelLayout:'>
+<arg index='2' type='B'/>
+</method>
+<method selector='isEqual:'>
+<retval type='B'/>
+</method>
+<method selector='isInterleaved'>
+<retval type='B'/>
+</method>
+<method selector='isStandard'>
+<retval type='B'/>
+</method>
+</class>
+<class name='AVAudioNode'>
+<method selector='installTapOnBus:bufferSize:format:block:'>
+<arg function_pointer='true' index='3' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='AVAudioPlayer'>
+<method selector='enableRate'>
+<retval type='B'/>
+</method>
+<method selector='isMeteringEnabled'>
+<retval type='B'/>
+</method>
+<method selector='isPlaying'>
+<retval type='B'/>
+</method>
+<method selector='play'>
+<retval type='B'/>
+</method>
+<method selector='playAtTime:'>
+<retval type='B'/>
+</method>
+<method selector='prepareToPlay'>
+<retval type='B'/>
+</method>
+<method selector='setEnableRate:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setMeteringEnabled:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='AVAudioPlayerNode'>
+<method selector='isPlaying'>
+<retval type='B'/>
+</method>
+<method selector='scheduleBuffer:atTime:options:completionHandler:'>
+<arg function_pointer='true' index='3' type='@?'>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='scheduleBuffer:completionHandler:'>
+<arg function_pointer='true' index='1' type='@?'>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='scheduleFile:atTime:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='scheduleSegment:startingFrame:frameCount:atTime:completionHandler:'>
+<arg function_pointer='true' index='4' type='@?'>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='AVAudioRecorder'>
+<method selector='deleteRecording'>
+<retval type='B'/>
+</method>
+<method selector='isMeteringEnabled'>
+<retval type='B'/>
+</method>
+<method selector='isRecording'>
+<retval type='B'/>
+</method>
+<method selector='prepareToRecord'>
+<retval type='B'/>
+</method>
+<method selector='record'>
+<retval type='B'/>
+</method>
+<method selector='recordForDuration:'>
+<retval type='B'/>
+</method>
+<method selector='setMeteringEnabled:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='AVAudioSequencer'>
+<method selector='isPlaying'>
+<retval type='B'/>
+</method>
+<method selector='loadFromData:options:error:'>
+<retval type='B'/>
+</method>
+<method selector='loadFromURL:options:error:'>
+<retval type='B'/>
+</method>
+<method selector='startAndReturnError:'>
+<retval type='B'/>
+</method>
+<method selector='writeToURL:SMPTEResolution:replaceExisting:error:'>
+<arg index='2' type='B'/>
+<retval type='B'/>
+</method>
+</class>
+<class name='AVAudioTime'>
+<method selector='isHostTimeValid'>
+<retval type='B'/>
+</method>
+<method selector='isSampleTimeValid'>
+<retval type='B'/>
+</method>
+</class>
+<class name='AVAudioUnit'>
+<method class_method='true' selector='instantiateWithComponentDescription:options:completionHandler:'>
+<arg function_pointer='true' index='2' type='@?'>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='v'/>
+</arg>
+</method>
+<method selector='loadAudioUnitPresetAtURL:error:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='AVAudioUnitComponent'>
+<method selector='hasCustomView'>
+<retval type='B'/>
+</method>
+<method selector='hasMIDIInput'>
+<retval type='B'/>
+</method>
+<method selector='hasMIDIOutput'>
+<retval type='B'/>
+</method>
+<method selector='isSandboxSafe'>
+<retval type='B'/>
+</method>
+<method selector='passesAUVal'>
+<retval type='B'/>
+</method>
+<method selector='supportsNumberInputChannels:outputChannels:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='AVAudioUnitComponentManager'>
+<method selector='componentsPassingTest:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='@'/>
+<arg type='^B'/>
+<retval type='B'/>
+</arg>
+</method>
+</class>
+<class name='AVAudioUnitEQFilterParameters'>
+<method selector='bypass'>
+<retval type='B'/>
+</method>
+<method selector='setBypass:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='AVAudioUnitEffect'>
+<method selector='bypass'>
+<retval type='B'/>
+</method>
+<method selector='setBypass:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='AVAudioUnitGenerator'>
+<method selector='bypass'>
+<retval type='B'/>
+</method>
+<method selector='setBypass:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='AVAudioUnitSampler'>
+<method selector='loadAudioFilesAtURLs:error:'>
+<retval type='B'/>
+</method>
+<method selector='loadInstrumentAtURL:error:'>
+<retval type='B'/>
+</method>
+<method selector='loadSoundBankInstrumentAtURL:program:bankMSB:bankLSB:error:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='AVAudioUnitTimeEffect'>
+<method selector='bypass'>
+<retval type='B'/>
+</method>
+<method selector='setBypass:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='AVMIDIPlayer'>
+<method selector='isPlaying'>
+<retval type='B'/>
+</method>
+<method selector='play:'>
+<arg function_pointer='true' index='0' type='@?'>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='AVMusicTrack'>
+<method selector='isLoopingEnabled'>
+<retval type='B'/>
+</method>
+<method selector='isMuted'>
+<retval type='B'/>
+</method>
+<method selector='isSoloed'>
+<retval type='B'/>
+</method>
+<method selector='setLoopingEnabled:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setMuted:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setSoloed:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='audioPlayerDidFinishPlaying:successfully:'>
+<arg index='1' type='B'/>
+</method>
+<method selector='audioRecorderDidFinishRecording:successfully:'>
+<arg index='1' type='B'/>
+</method>
+</class>
+<informal_protocol name='AVAudio3DMixing'>
+<method selector='obstruction' type='f8@0:4' type64='f16@0:8'/>
+<method selector='occlusion' type='f8@0:4' type64='f16@0:8'/>
+<method selector='position' type='{AVAudio3DPoint=fff}8@0:4' type64='{AVAudio3DPoint=fff}16@0:8'/>
+<method selector='rate' type='f8@0:4' type64='f16@0:8'/>
+<method selector='renderingAlgorithm' type='i8@0:4' type64='q16@0:8'/>
+<method selector='reverbBlend' type='f8@0:4' type64='f16@0:8'/>
+<method selector='setObstruction:' type='v12@0:4f8' type64='v20@0:8f16'/>
+<method selector='setOcclusion:' type='v12@0:4f8' type64='v20@0:8f16'/>
+<method selector='setPosition:' type='v20@0:4{AVAudio3DPoint=fff}8' type64='v28@0:8{AVAudio3DPoint=fff}16'/>
+<method selector='setRate:' type='v12@0:4f8' type64='v20@0:8f16'/>
+<method selector='setRenderingAlgorithm:' type='v12@0:4i8' type64='v24@0:8q16'/>
+<method selector='setReverbBlend:' type='v12@0:4f8' type64='v20@0:8f16'/>
+</informal_protocol>
+<informal_protocol name='AVAudioMixing'>
+<method selector='destinationForMixer:bus:' type='@16@0:4@8I12' type64='@32@0:8@16Q24'/>
+<method selector='setVolume:' type='v12@0:4f8' type64='v20@0:8f16'/>
+<method selector='volume' type='f8@0:4' type64='f16@0:8'/>
+</informal_protocol>
+<informal_protocol name='AVAudioPlayerDelegate'>
+<method selector='audioPlayerDecodeErrorDidOccur:error:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='audioPlayerDidFinishPlaying:successfully:' type='v16@0:4@8B12' type64='v28@0:8@16B24'/>
+</informal_protocol>
+<informal_protocol name='AVAudioRecorderDelegate'>
+<method selector='audioRecorderDidFinishRecording:successfully:' type='v16@0:4@8B12' type64='v28@0:8@16B24'/>
+<method selector='audioRecorderEncodeErrorDidOccur:error:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+</informal_protocol>
+<informal_protocol name='AVAudioStereoMixing'>
+<method selector='pan' type='f8@0:4' type64='f16@0:8'/>
+<method selector='setPan:' type='v12@0:4f8' type64='v20@0:8f16'/>
+</informal_protocol>
+</signatures>

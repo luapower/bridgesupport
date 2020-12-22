@@ -1,0 +1,677 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Contacts.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreWLAN.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/Quartz.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<struct name='MKCoordinateRegion' type64='{_MKCoordinateRegion=&quot;center&quot;{CLLocationCoordinate2D=&quot;latitude&quot;d&quot;longitude&quot;d}&quot;span&quot;{_MKCoordinateSpan=&quot;latitudeDelta&quot;d&quot;longitudeDelta&quot;d}}'/>
+<struct name='MKCoordinateSpan' type64='{_MKCoordinateSpan=&quot;latitudeDelta&quot;d&quot;longitudeDelta&quot;d}'/>
+<struct name='MKMapPoint' type64='{_MKMapPoint=&quot;x&quot;d&quot;y&quot;d}'/>
+<struct name='MKMapRect' type64='{_MKMapRect=&quot;origin&quot;{_MKMapPoint=&quot;x&quot;d&quot;y&quot;d}&quot;size&quot;{_MKMapSize=&quot;width&quot;d&quot;height&quot;d}}'/>
+<struct name='MKMapSize' type64='{_MKMapSize=&quot;width&quot;d&quot;height&quot;d}'/>
+<struct name='MKTileOverlayPath' type64='{_MKTileOverlayPath=&quot;x&quot;q&quot;y&quot;q&quot;z&quot;q&quot;contentScaleFactor&quot;d}'/>
+<constant name='MKAnnotationCalloutInfoDidChangeNotification' type64='@'/>
+<constant name='MKErrorDomain' type64='@'/>
+<constant name='MKLaunchOptionsCameraKey' type64='@'/>
+<constant name='MKLaunchOptionsDirectionsModeDefault' type64='@'/>
+<constant name='MKLaunchOptionsDirectionsModeDriving' type64='@'/>
+<constant name='MKLaunchOptionsDirectionsModeKey' type64='@'/>
+<constant name='MKLaunchOptionsDirectionsModeTransit' type64='@'/>
+<constant name='MKLaunchOptionsDirectionsModeWalking' type64='@'/>
+<constant name='MKLaunchOptionsMapCenterKey' type64='@'/>
+<constant name='MKLaunchOptionsMapSpanKey' type64='@'/>
+<constant name='MKLaunchOptionsMapTypeKey' type64='@'/>
+<constant name='MKLaunchOptionsShowsTrafficKey' type64='@'/>
+<constant name='MKMapRectNull' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<constant name='MKMapRectWorld' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<constant name='MKMapSizeWorld' type64='{_MKMapSize=dd}'/>
+<enum name='MKAnnotationViewDragStateCanceling' value64='3'/>
+<enum name='MKAnnotationViewDragStateDragging' value64='2'/>
+<enum name='MKAnnotationViewDragStateEnding' value64='4'/>
+<enum name='MKAnnotationViewDragStateNone' value64='0'/>
+<enum name='MKAnnotationViewDragStateStarting' value64='1'/>
+<enum name='MKDirectionsTransportTypeAny' value64='268435455'/>
+<enum name='MKDirectionsTransportTypeAutomobile' value64='1'/>
+<enum name='MKDirectionsTransportTypeTransit' value64='4'/>
+<enum name='MKDirectionsTransportTypeWalking' value64='2'/>
+<enum name='MKDistanceFormatterUnitStyleAbbreviated' value64='1'/>
+<enum name='MKDistanceFormatterUnitStyleDefault' value64='0'/>
+<enum name='MKDistanceFormatterUnitStyleFull' value64='2'/>
+<enum name='MKDistanceFormatterUnitsDefault' value64='0'/>
+<enum name='MKDistanceFormatterUnitsImperial' value64='2'/>
+<enum name='MKDistanceFormatterUnitsImperialWithYards' value64='3'/>
+<enum name='MKDistanceFormatterUnitsMetric' value64='1'/>
+<enum name='MKErrorDirectionsNotFound' value64='5'/>
+<enum name='MKErrorLoadingThrottled' value64='3'/>
+<enum name='MKErrorPlacemarkNotFound' value64='4'/>
+<enum name='MKErrorServerFailure' value64='2'/>
+<enum name='MKErrorUnknown' value64='1'/>
+<enum name='MKMapTypeHybrid' value64='2'/>
+<enum name='MKMapTypeHybridFlyover' value64='4'/>
+<enum name='MKMapTypeSatellite' value64='1'/>
+<enum name='MKMapTypeSatelliteFlyover' value64='3'/>
+<enum name='MKMapTypeStandard' value64='0'/>
+<enum name='MKOverlayLevelAboveLabels' value64='1'/>
+<enum name='MKOverlayLevelAboveRoads' value64='0'/>
+<enum name='MKPinAnnotationColorGreen' value64='1'/>
+<enum name='MKPinAnnotationColorPurple' value64='2'/>
+<enum name='MKPinAnnotationColorRed' value64='0'/>
+<enum name='MKSearchCompletionFilterTypeLocationsAndQueries' value64='0'/>
+<enum name='MKSearchCompletionFilterTypeLocationsOnly' value64='1'/>
+<enum name='MKUserTrackingModeFollow' value64='1'/>
+<enum name='MKUserTrackingModeFollowWithHeading' value64='2'/>
+<enum name='MKUserTrackingModeNone' value64='0'/>
+<function name='MKCoordinateForMapPoint'>
+<arg type64='{_MKMapPoint=dd}'/>
+<retval type64='{CLLocationCoordinate2D=dd}'/>
+</function>
+<function name='MKCoordinateRegionForMapRect'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</function>
+<function inline='true' name='MKCoordinateRegionMake'>
+<arg type64='{CLLocationCoordinate2D=dd}'/>
+<arg type64='{_MKCoordinateSpan=dd}'/>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</function>
+<function name='MKCoordinateRegionMakeWithDistance'>
+<arg type64='{CLLocationCoordinate2D=dd}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</function>
+<function inline='true' name='MKCoordinateSpanMake'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{_MKCoordinateSpan=dd}'/>
+</function>
+<function inline='true' name='MKMapPointEqualToPoint'>
+<arg type64='{_MKMapPoint=dd}'/>
+<arg type64='{_MKMapPoint=dd}'/>
+<retval type64='B'/>
+</function>
+<function name='MKMapPointForCoordinate'>
+<arg type64='{CLLocationCoordinate2D=dd}'/>
+<retval type64='{_MKMapPoint=dd}'/>
+</function>
+<function inline='true' name='MKMapPointMake'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{_MKMapPoint=dd}'/>
+</function>
+<function name='MKMapPointsPerMeterAtLatitude'>
+<arg type64='d'/>
+<retval type64='d'/>
+</function>
+<function name='MKMapRectContainsPoint'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='{_MKMapPoint=dd}'/>
+<retval type64='B'/>
+</function>
+<function name='MKMapRectContainsRect'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function name='MKMapRectDivide'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='^{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='^{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='d'/>
+<arg type64='I'/>
+<retval type64='v'/>
+</function>
+<function inline='true' name='MKMapRectEqualToRect'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function inline='true' name='MKMapRectGetHeight'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMaxX'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMaxY'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMidX'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMidY'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMinX'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetMinY'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function inline='true' name='MKMapRectGetWidth'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='d'/>
+</function>
+<function name='MKMapRectInset'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectIntersection'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectIntersectsRect'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function inline='true' name='MKMapRectIsEmpty'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function inline='true' name='MKMapRectIsNull'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function inline='true' name='MKMapRectMake'>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectOffset'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectRemainder'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function name='MKMapRectSpans180thMeridian'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='B'/>
+</function>
+<function name='MKMapRectUnion'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</function>
+<function inline='true' name='MKMapSizeEqualToSize'>
+<arg type64='{_MKMapSize=dd}'/>
+<arg type64='{_MKMapSize=dd}'/>
+<retval type64='B'/>
+</function>
+<function inline='true' name='MKMapSizeMake'>
+<arg type64='d'/>
+<arg type64='d'/>
+<retval type64='{_MKMapSize=dd}'/>
+</function>
+<function name='MKMetersBetweenMapPoints'>
+<arg type64='{_MKMapPoint=dd}'/>
+<arg type64='{_MKMapPoint=dd}'/>
+<retval type64='d'/>
+</function>
+<function name='MKMetersPerMapPointAtLatitude'>
+<arg type64='d'/>
+<retval type64='d'/>
+</function>
+<function name='MKRoadWidthAtZoomScale'>
+<arg type64='d'/>
+<retval type64='d'/>
+</function>
+<function inline='true' name='MKStringFromMapPoint'>
+<arg type64='{_MKMapPoint=dd}'/>
+<retval type64='@'/>
+</function>
+<function inline='true' name='MKStringFromMapRect'>
+<arg type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='@'/>
+</function>
+<function inline='true' name='MKStringFromMapSize'>
+<arg type64='{_MKMapSize=dd}'/>
+<retval type64='@'/>
+</function>
+<class name='MKAnnotationView'>
+<method selector='canShowCallout'>
+<retval type64='B'/>
+</method>
+<method selector='isDraggable'>
+<retval type64='B'/>
+</method>
+<method selector='isEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='isHighlighted'>
+<retval type64='B'/>
+</method>
+<method selector='isSelected'>
+<retval type64='B'/>
+</method>
+<method selector='setCanShowCallout:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setDragState:animated:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='setDraggable:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setHighlighted:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setSelected:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setSelected:animated:'>
+<arg index='0' type64='B'/>
+<arg index='1' type64='B'/>
+</method>
+</class>
+<class name='MKCircle'>
+<method selector='boundingMapRect'>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method class_method='true' selector='circleWithMapRect:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+</class>
+<class name='MKDirections'>
+<method selector='calculateDirectionsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='calculateETAWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='isCalculating'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MKDirectionsRequest'>
+<method class_method='true' selector='isDirectionsRequestURL:'>
+<retval type64='B'/>
+</method>
+<method selector='requestsAlternateRoutes'>
+<retval type64='B'/>
+</method>
+<method selector='setRequestsAlternateRoutes:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='MKGeodesicPolyline'>
+<method class_method='true' selector='polylineWithPoints:count:'>
+<arg index='0' type64='^{_MKMapPoint=dd}'/>
+</method>
+</class>
+<class name='MKLocalSearch'>
+<method selector='isSearching'>
+<retval type64='B'/>
+</method>
+<method selector='startWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='MKLocalSearchCompleter'>
+<method selector='isSearching'>
+<retval type64='B'/>
+</method>
+<method selector='region'>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='setRegion:'>
+<arg index='0' type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+</class>
+<class name='MKLocalSearchRequest'>
+<method selector='region'>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='setRegion:'>
+<arg index='0' type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+</class>
+<class name='MKLocalSearchResponse'>
+<method selector='boundingRegion'>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+</class>
+<class name='MKMapItem'>
+<method selector='isCurrentLocation'>
+<retval type64='B'/>
+</method>
+<method selector='openInMapsWithLaunchOptions:'>
+<retval type64='B'/>
+</method>
+<method class_method='true' selector='openMapsWithItems:launchOptions:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MKMapSnapshotOptions'>
+<method selector='mapRect'>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='region'>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='setMapRect:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='setRegion:'>
+<arg index='0' type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='setShowsBuildings:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsPointsOfInterest:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='showsBuildings'>
+<retval type64='B'/>
+</method>
+<method selector='showsPointsOfInterest'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MKMapSnapshotter'>
+<method selector='isLoading'>
+<retval type64='B'/>
+</method>
+<method selector='startWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='startWithQueue:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='MKMapView'>
+<method selector='convertRect:toRegionFromView:'>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='convertRegion:toRectToView:'>
+<arg index='0' type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='deselectAnnotation:animated:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='isPitchEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='isRotateEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='isScrollEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='isUserLocationVisible'>
+<retval type64='B'/>
+</method>
+<method selector='isZoomEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='mapRectThatFits:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='mapRectThatFits:edgePadding:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='region'>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='regionThatFits:'>
+<arg index='0' type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+<retval type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='selectAnnotation:animated:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='setCamera:animated:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='setCenterCoordinate:animated:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='setPitchEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setRegion:'>
+<arg index='0' type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+</method>
+<method selector='setRegion:animated:'>
+<arg index='0' type64='{_MKCoordinateRegion={CLLocationCoordinate2D=dd}{_MKCoordinateSpan=dd}}'/>
+<arg index='1' type64='B'/>
+</method>
+<method selector='setRotateEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setScrollEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsBuildings:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsCompass:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsPointsOfInterest:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsScale:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsTraffic:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsUserLocation:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsZoomControls:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setVisibleMapRect:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='setVisibleMapRect:animated:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg index='1' type64='B'/>
+</method>
+<method selector='setVisibleMapRect:edgePadding:animated:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<arg index='2' type64='B'/>
+</method>
+<method selector='setZoomEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='showAnnotations:animated:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='showsBuildings'>
+<retval type64='B'/>
+</method>
+<method selector='showsCompass'>
+<retval type64='B'/>
+</method>
+<method selector='showsPointsOfInterest'>
+<retval type64='B'/>
+</method>
+<method selector='showsScale'>
+<retval type64='B'/>
+</method>
+<method selector='showsTraffic'>
+<retval type64='B'/>
+</method>
+<method selector='showsUserLocation'>
+<retval type64='B'/>
+</method>
+<method selector='showsZoomControls'>
+<retval type64='B'/>
+</method>
+<method selector='visibleMapRect'>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+</class>
+<class name='MKMultiPoint'>
+<method selector='points'>
+<retval type64='^{_MKMapPoint=dd}'/>
+</method>
+</class>
+<class name='MKOverlayRenderer'>
+<method selector='canDrawMapRect:zoomScale:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='B'/>
+</method>
+<method selector='drawMapRect:zoomScale:inContext:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='mapPointForPoint:'>
+<retval type64='{_MKMapPoint=dd}'/>
+</method>
+<method selector='mapRectForRect:'>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='pointForMapPoint:'>
+<arg index='0' type64='{_MKMapPoint=dd}'/>
+</method>
+<method selector='rectForMapRect:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='setNeedsDisplayInMapRect:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='setNeedsDisplayInMapRect:zoomScale:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+</class>
+<class name='MKPinAnnotationView'>
+<method selector='animatesDrop'>
+<retval type64='B'/>
+</method>
+<method selector='setAnimatesDrop:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='MKPolygon'>
+<method class_method='true' selector='polygonWithPoints:count:'>
+<arg index='0' type64='^{_MKMapPoint=dd}'/>
+</method>
+<method class_method='true' selector='polygonWithPoints:count:interiorPolygons:'>
+<arg index='0' type64='^{_MKMapPoint=dd}'/>
+</method>
+</class>
+<class name='MKPolyline'>
+<method class_method='true' selector='polylineWithPoints:count:'>
+<arg index='0' type64='^{_MKMapPoint=dd}'/>
+</method>
+</class>
+<class name='MKTileOverlay'>
+<method selector='URLForTilePath:'>
+<arg index='0' type64='{_MKTileOverlayPath=qqqd}'/>
+</method>
+<method selector='canReplaceMapContent'>
+<retval type64='B'/>
+</method>
+<method selector='isGeometryFlipped'>
+<retval type64='B'/>
+</method>
+<method selector='loadTileAtPath:result:'>
+<arg index='0' type64='{_MKTileOverlayPath=qqqd}'/>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setCanReplaceMapContent:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setGeometryFlipped:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='MKUserLocation'>
+<method selector='isUpdating'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='boundingMapRect'>
+<retval type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+</method>
+<method selector='canReplaceMapContent'>
+<retval type64='B'/>
+</method>
+<method selector='intersectsMapRect:'>
+<arg index='0' type64='{_MKMapRect={_MKMapPoint=dd}{_MKMapSize=dd}}'/>
+<retval type64='B'/>
+</method>
+<method selector='mapView:regionDidChangeAnimated:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='mapView:regionWillChangeAnimated:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='mapViewDidFinishRenderingMap:fullyRendered:'>
+<arg index='1' type64='B'/>
+</method>
+</class>
+<class name='NSValue'>
+<method selector='MKCoordinateSpanValue'>
+<retval type64='{_MKCoordinateSpan=dd}'/>
+</method>
+<method class_method='true' selector='valueWithMKCoordinateSpan:'>
+<arg index='0' type64='{_MKCoordinateSpan=dd}'/>
+</method>
+</class>
+<informal_protocol name='MKOverlay'>
+<method selector='boundingMapRect' type64='{?={?=dd}{?=dd}}16@0:8'/>
+<method selector='canReplaceMapContent' type64='B16@0:8'/>
+<method selector='intersectsMapRect:' type64='B48@0:8{?={?=dd}{?=dd}}16'/>
+</informal_protocol>
+</signatures>

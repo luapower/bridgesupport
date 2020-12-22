@@ -1,0 +1,271 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='INIntentErrorDomain' type64='@'/>
+<constant name='INPersonHandleLabelHome' type64='@'/>
+<constant name='INPersonHandleLabelHomeFax' type64='@'/>
+<constant name='INPersonHandleLabelMain' type64='@'/>
+<constant name='INPersonHandleLabelMobile' type64='@'/>
+<constant name='INPersonHandleLabelOther' type64='@'/>
+<constant name='INPersonHandleLabelPager' type64='@'/>
+<constant name='INPersonHandleLabelWork' type64='@'/>
+<constant name='INPersonHandleLabelWorkFax' type64='@'/>
+<constant name='INPersonHandleLabeliPhone' type64='@'/>
+<constant name='INPersonRelationshipAssistant' type64='@'/>
+<constant name='INPersonRelationshipBrother' type64='@'/>
+<constant name='INPersonRelationshipChild' type64='@'/>
+<constant name='INPersonRelationshipFather' type64='@'/>
+<constant name='INPersonRelationshipFriend' type64='@'/>
+<constant name='INPersonRelationshipManager' type64='@'/>
+<constant name='INPersonRelationshipMother' type64='@'/>
+<constant name='INPersonRelationshipParent' type64='@'/>
+<constant name='INPersonRelationshipPartner' type64='@'/>
+<constant name='INPersonRelationshipSister' type64='@'/>
+<constant name='INPersonRelationshipSpouse' type64='@'/>
+<constant name='IntentsVersionNumber' type64='d'/>
+<constant name='IntentsVersionString' type64='^C'/>
+<enum name='INCallCapabilityOptionAudioCall' value64='1'/>
+<enum name='INCallCapabilityOptionVideoCall' value64='2'/>
+<enum name='INCallRecordTypeMissed' value64='2'/>
+<enum name='INCallRecordTypeOutgoing' value64='1'/>
+<enum name='INCallRecordTypeReceived' value64='3'/>
+<enum name='INCallRecordTypeUnknown' value64='0'/>
+<enum name='INConditionalOperatorAll' value64='0'/>
+<enum name='INConditionalOperatorAny' value64='1'/>
+<enum name='INConditionalOperatorNone' value64='2'/>
+<enum name='INIntentErrorDeletingAllInteractions' value64='1902'/>
+<enum name='INIntentErrorDeletingInteractionWithGroupIdentifier' value64='1904'/>
+<enum name='INIntentErrorDeletingInteractionWithIdentifiers' value64='1903'/>
+<enum name='INIntentErrorDonatingInteraction' value64='1901'/>
+<enum name='INIntentErrorExtensionBringUpFailed' value64='5001'/>
+<enum name='INIntentErrorExtensionLaunchingTimeout' value64='5000'/>
+<enum name='INIntentErrorIntentSupportedByMultipleExtension' value64='2001'/>
+<enum name='INIntentErrorInteractionOperationNotSupported' value64='1900'/>
+<enum name='INIntentErrorInvalidIntentName' value64='2004'/>
+<enum name='INIntentErrorInvalidUserVocabularyFileLocation' value64='4000'/>
+<enum name='INIntentErrorNoHandlerProvidedForIntent' value64='2003'/>
+<enum name='INIntentErrorRequestTimedOut' value64='3001'/>
+<enum name='INIntentErrorRestrictedIntentsNotSupportedByExtension' value64='2002'/>
+<enum name='INIntentHandlingStatusDeferredToApplication' value64='5'/>
+<enum name='INIntentHandlingStatusFailure' value64='4'/>
+<enum name='INIntentHandlingStatusInProgress' value64='2'/>
+<enum name='INIntentHandlingStatusReady' value64='1'/>
+<enum name='INIntentHandlingStatusSuccess' value64='3'/>
+<enum name='INIntentHandlingStatusUnspecified' value64='0'/>
+<enum name='INInteractionDirectionIncoming' value64='2'/>
+<enum name='INInteractionDirectionOutgoing' value64='1'/>
+<enum name='INInteractionDirectionUnspecified' value64='0'/>
+<enum name='INMessageAttributeOptionFlagged' value64='4'/>
+<enum name='INMessageAttributeOptionRead' value64='1'/>
+<enum name='INMessageAttributeOptionUnflagged' value64='8'/>
+<enum name='INMessageAttributeOptionUnread' value64='2'/>
+<enum name='INPersonHandleTypeEmailAddress' value64='1'/>
+<enum name='INPersonHandleTypePhoneNumber' value64='2'/>
+<enum name='INPersonHandleTypeUnknown' value64='0'/>
+<enum name='INPersonSuggestionTypeInstantMessageAddress' value64='2'/>
+<enum name='INPersonSuggestionTypeSocialProfile' value64='1'/>
+<enum name='INSearchCallHistoryIntentResponseCodeContinueInApp' value64='2'/>
+<enum name='INSearchCallHistoryIntentResponseCodeFailure' value64='3'/>
+<enum name='INSearchCallHistoryIntentResponseCodeFailureAppConfigurationRequired' value64='5'/>
+<enum name='INSearchCallHistoryIntentResponseCodeFailureRequiringAppLaunch' value64='4'/>
+<enum name='INSearchCallHistoryIntentResponseCodeReady' value64='1'/>
+<enum name='INSearchCallHistoryIntentResponseCodeUnspecified' value64='0'/>
+<enum name='INSearchForMessagesIntentResponseCodeFailure' value64='4'/>
+<enum name='INSearchForMessagesIntentResponseCodeFailureMessageServiceNotAvailable' value64='6'/>
+<enum name='INSearchForMessagesIntentResponseCodeFailureRequiringAppLaunch' value64='5'/>
+<enum name='INSearchForMessagesIntentResponseCodeInProgress' value64='2'/>
+<enum name='INSearchForMessagesIntentResponseCodeReady' value64='1'/>
+<enum name='INSearchForMessagesIntentResponseCodeSuccess' value64='3'/>
+<enum name='INSearchForMessagesIntentResponseCodeUnspecified' value64='0'/>
+<enum name='INSendMessageIntentResponseCodeFailure' value64='4'/>
+<enum name='INSendMessageIntentResponseCodeFailureMessageServiceNotAvailable' value64='6'/>
+<enum name='INSendMessageIntentResponseCodeFailureRequiringAppLaunch' value64='5'/>
+<enum name='INSendMessageIntentResponseCodeInProgress' value64='2'/>
+<enum name='INSendMessageIntentResponseCodeReady' value64='1'/>
+<enum name='INSendMessageIntentResponseCodeSuccess' value64='3'/>
+<enum name='INSendMessageIntentResponseCodeUnspecified' value64='0'/>
+<enum name='INStartAudioCallIntentResponseCodeContinueInApp' value64='2'/>
+<enum name='INStartAudioCallIntentResponseCodeFailure' value64='3'/>
+<enum name='INStartAudioCallIntentResponseCodeFailureAppConfigurationRequired' value64='5'/>
+<enum name='INStartAudioCallIntentResponseCodeFailureCallingServiceNotAvailable' value64='6'/>
+<enum name='INStartAudioCallIntentResponseCodeFailureRequiringAppLaunch' value64='4'/>
+<enum name='INStartAudioCallIntentResponseCodeReady' value64='1'/>
+<enum name='INStartAudioCallIntentResponseCodeUnspecified' value64='0'/>
+<enum name='INStartVideoCallIntentResponseCodeContinueInApp' value64='2'/>
+<enum name='INStartVideoCallIntentResponseCodeFailure' value64='3'/>
+<enum name='INStartVideoCallIntentResponseCodeFailureAppConfigurationRequired' value64='5'/>
+<enum name='INStartVideoCallIntentResponseCodeFailureCallingServiceNotAvailable' value64='6'/>
+<enum name='INStartVideoCallIntentResponseCodeFailureRequiringAppLaunch' value64='4'/>
+<enum name='INStartVideoCallIntentResponseCodeReady' value64='1'/>
+<enum name='INStartVideoCallIntentResponseCodeUnspecified' value64='0'/>
+<class name='INInteraction'>
+<method class_method='true' selector='deleteAllInteractionsWithCompletion:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method class_method='true' selector='deleteInteractionsWithGroupIdentifier:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method class_method='true' selector='deleteInteractionsWithIdentifiers:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='donateInteractionWithCompletion:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='confirmSearchCallHistory:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='confirmSearchForMessages:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='confirmSendMessage:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='confirmStartAudioCall:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='confirmStartVideoCall:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='handleSearchCallHistory:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='handleSearchForMessages:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='handleSendMessage:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='handleStartAudioCall:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='handleStartVideoCall:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveAttributesForSearchForMessages:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveCallTypeForSearchCallHistory:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveContactsForStartAudioCall:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveContactsForStartVideoCall:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveContentForSendMessage:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveDateCreatedForSearchCallHistory:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveDateTimeRangeForSearchForMessages:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveGroupNameForSendMessage:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveGroupNamesForSearchForMessages:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveRecipientForSearchCallHistory:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveRecipientsForSearchForMessages:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveRecipientsForSendMessage:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='resolveSendersForSearchForMessages:withCompletion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+</signatures>

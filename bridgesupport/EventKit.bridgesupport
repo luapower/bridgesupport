@@ -1,0 +1,260 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Contacts.framework'/>
+<depends_on path='/System/Library/Frameworks/AddressBook.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Accounts.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<constant name='EKErrorDomain' type64='@'/>
+<constant name='EKEventStoreChangedNotification' type64='@'/>
+<enum name='EKAlarmProximityEnter' value64='1'/>
+<enum name='EKAlarmProximityLeave' value64='2'/>
+<enum name='EKAlarmProximityNone' value64='0'/>
+<enum name='EKAlarmTypeAudio' value64='1'/>
+<enum name='EKAlarmTypeDisplay' value64='0'/>
+<enum name='EKAlarmTypeEmail' value64='3'/>
+<enum name='EKAlarmTypeProcedure' value64='2'/>
+<enum name='EKAuthorizationStatusAuthorized' value64='3'/>
+<enum name='EKAuthorizationStatusDenied' value64='2'/>
+<enum name='EKAuthorizationStatusNotDetermined' value64='0'/>
+<enum name='EKAuthorizationStatusRestricted' value64='1'/>
+<enum name='EKCalendarEventAvailabilityBusy' value64='1'/>
+<enum name='EKCalendarEventAvailabilityFree' value64='2'/>
+<enum name='EKCalendarEventAvailabilityNone' value64='0'/>
+<enum name='EKCalendarEventAvailabilityTentative' value64='4'/>
+<enum name='EKCalendarEventAvailabilityUnavailable' value64='8'/>
+<enum name='EKCalendarTypeBirthday' value64='4'/>
+<enum name='EKCalendarTypeCalDAV' value64='1'/>
+<enum name='EKCalendarTypeExchange' value64='2'/>
+<enum name='EKCalendarTypeLocal' value64='0'/>
+<enum name='EKCalendarTypeSubscription' value64='3'/>
+<enum name='EKEntityMaskEvent' value64='1'/>
+<enum name='EKEntityMaskReminder' value64='2'/>
+<enum name='EKEntityTypeEvent' value64='0'/>
+<enum name='EKEntityTypeReminder' value64='1'/>
+<enum name='EKErrorAlarmGreaterThanRecurrence' value64='8'/>
+<enum name='EKErrorAlarmProximityNotSupported' value64='21'/>
+<enum name='EKErrorCalendarDoesNotAllowEvents' value64='22'/>
+<enum name='EKErrorCalendarDoesNotAllowReminders' value64='23'/>
+<enum name='EKErrorCalendarHasNoSource' value64='14'/>
+<enum name='EKErrorCalendarIsImmutable' value64='16'/>
+<enum name='EKErrorCalendarReadOnly' value64='6'/>
+<enum name='EKErrorCalendarSourceCannotBeModified' value64='15'/>
+<enum name='EKErrorDatesInverted' value64='4'/>
+<enum name='EKErrorDurationGreaterThanRecurrence' value64='7'/>
+<enum name='EKErrorEventNotMutable' value64='0'/>
+<enum name='EKErrorEventStoreNotAuthorized' value64='29'/>
+<enum name='EKErrorInternalFailure' value64='5'/>
+<enum name='EKErrorInvalidEntityType' value64='27'/>
+<enum name='EKErrorInvalidSpan' value64='13'/>
+<enum name='EKErrorInvitesCannotBeMoved' value64='12'/>
+<enum name='EKErrorLast' value64='31'/>
+<enum name='EKErrorNoCalendar' value64='1'/>
+<enum name='EKErrorNoEndDate' value64='3'/>
+<enum name='EKErrorNoStartDate' value64='2'/>
+<enum name='EKErrorOSNotSupported' value64='30'/>
+<enum name='EKErrorObjectBelongsToDifferentStore' value64='11'/>
+<enum name='EKErrorPriorityIsInvalid' value64='26'/>
+<enum name='EKErrorProcedureAlarmsNotMutable' value64='28'/>
+<enum name='EKErrorRecurringReminderRequiresDueDate' value64='18'/>
+<enum name='EKErrorReminderLocationsNotSupported' value64='20'/>
+<enum name='EKErrorSourceDoesNotAllowCalendarAddDelete' value64='17'/>
+<enum name='EKErrorSourceDoesNotAllowEvents' value64='25'/>
+<enum name='EKErrorSourceDoesNotAllowReminders' value64='24'/>
+<enum name='EKErrorStartDateCollidesWithOtherOccurrence' value64='10'/>
+<enum name='EKErrorStartDateTooFarInFuture' value64='9'/>
+<enum name='EKErrorStructuredLocationsNotSupported' value64='19'/>
+<enum name='EKEventAvailabilityBusy' value64='0'/>
+<enum name='EKEventAvailabilityFree' value64='1'/>
+<enum name='EKEventAvailabilityNotSupported' value64='-1'/>
+<enum name='EKEventAvailabilityTentative' value64='2'/>
+<enum name='EKEventAvailabilityUnavailable' value64='3'/>
+<enum name='EKEventStatusCanceled' value64='3'/>
+<enum name='EKEventStatusConfirmed' value64='1'/>
+<enum name='EKEventStatusNone' value64='0'/>
+<enum name='EKEventStatusTentative' value64='2'/>
+<enum name='EKFriday' value64='6'/>
+<enum name='EKMonday' value64='2'/>
+<enum name='EKParticipantRoleChair' value64='3'/>
+<enum name='EKParticipantRoleNonParticipant' value64='4'/>
+<enum name='EKParticipantRoleOptional' value64='2'/>
+<enum name='EKParticipantRoleRequired' value64='1'/>
+<enum name='EKParticipantRoleUnknown' value64='0'/>
+<enum name='EKParticipantScheduleStatusCannotDeliver' value64='7'/>
+<enum name='EKParticipantScheduleStatusDelivered' value64='3'/>
+<enum name='EKParticipantScheduleStatusDeliveryFailed' value64='6'/>
+<enum name='EKParticipantScheduleStatusNoPrivileges' value64='5'/>
+<enum name='EKParticipantScheduleStatusNone' value64='0'/>
+<enum name='EKParticipantScheduleStatusPending' value64='1'/>
+<enum name='EKParticipantScheduleStatusRecipientNotAllowed' value64='8'/>
+<enum name='EKParticipantScheduleStatusRecipientNotRecognized' value64='4'/>
+<enum name='EKParticipantScheduleStatusSent' value64='2'/>
+<enum name='EKParticipantStatusAccepted' value64='2'/>
+<enum name='EKParticipantStatusCompleted' value64='6'/>
+<enum name='EKParticipantStatusDeclined' value64='3'/>
+<enum name='EKParticipantStatusDelegated' value64='5'/>
+<enum name='EKParticipantStatusInProcess' value64='7'/>
+<enum name='EKParticipantStatusPending' value64='1'/>
+<enum name='EKParticipantStatusTentative' value64='4'/>
+<enum name='EKParticipantStatusUnknown' value64='0'/>
+<enum name='EKParticipantTypeGroup' value64='4'/>
+<enum name='EKParticipantTypePerson' value64='1'/>
+<enum name='EKParticipantTypeResource' value64='3'/>
+<enum name='EKParticipantTypeRoom' value64='2'/>
+<enum name='EKParticipantTypeUnknown' value64='0'/>
+<enum name='EKRecurrenceFrequencyDaily' value64='0'/>
+<enum name='EKRecurrenceFrequencyMonthly' value64='2'/>
+<enum name='EKRecurrenceFrequencyWeekly' value64='1'/>
+<enum name='EKRecurrenceFrequencyYearly' value64='3'/>
+<enum name='EKReminderPriorityHigh' value64='1'/>
+<enum name='EKReminderPriorityLow' value64='9'/>
+<enum name='EKReminderPriorityMedium' value64='5'/>
+<enum name='EKReminderPriorityNone' value64='0'/>
+<enum name='EKSaturday' value64='7'/>
+<enum name='EKSourceTypeBirthdays' value64='5'/>
+<enum name='EKSourceTypeCalDAV' value64='2'/>
+<enum name='EKSourceTypeExchange' value64='1'/>
+<enum name='EKSourceTypeLocal' value64='0'/>
+<enum name='EKSourceTypeMobileMe' value64='3'/>
+<enum name='EKSourceTypeSubscribed' value64='4'/>
+<enum name='EKSpanFutureEvents' value64='1'/>
+<enum name='EKSpanThisEvent' value64='0'/>
+<enum name='EKSunday' value64='1'/>
+<enum name='EKThursday' value64='5'/>
+<enum name='EKTuesday' value64='3'/>
+<enum name='EKWednesday' value64='4'/>
+<enum name='EKWeekdayFriday' value64='6'/>
+<enum name='EKWeekdayMonday' value64='2'/>
+<enum name='EKWeekdaySaturday' value64='7'/>
+<enum name='EKWeekdaySunday' value64='1'/>
+<enum name='EKWeekdayThursday' value64='5'/>
+<enum name='EKWeekdayTuesday' value64='3'/>
+<enum name='EKWeekdayWednesday' value64='4'/>
+<function inline='true' name='DATETIME_COMPONENTS_DO_NOT_USE'>
+<retval type64='v'/>
+</function>
+<function inline='true' name='DATE_COMPONENTS_DO_NOT_USE'>
+<retval type64='v'/>
+</function>
+<function inline='true' name='EK_LOSE_FRACTIONAL_SECONDS_DO_NOT_USE'>
+<retval type64='v'/>
+</function>
+<class name='EKCalendar'>
+<method selector='allowsContentModifications'>
+<retval type64='B'/>
+</method>
+<method selector='isImmutable'>
+<retval type64='B'/>
+</method>
+<method selector='isSubscribed'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='EKCalendarItem'>
+<method selector='hasAlarms'>
+<retval type64='B'/>
+</method>
+<method selector='hasAttendees'>
+<retval type64='B'/>
+</method>
+<method selector='hasNotes'>
+<retval type64='B'/>
+</method>
+<method selector='hasRecurrenceRules'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='EKEvent'>
+<method selector='isAllDay'>
+<retval type64='B'/>
+</method>
+<method selector='isDetached'>
+<retval type64='B'/>
+</method>
+<method selector='refresh'>
+<retval type64='B'/>
+</method>
+<method selector='setAllDay:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='EKEventStore'>
+<method selector='commit:'>
+<retval type64='B'/>
+</method>
+<method selector='enumerateEventsMatchingPredicate:usingBlock:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='^B'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchRemindersMatchingPredicate:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='removeCalendar:commit:error:'>
+<arg index='1' type64='B'/>
+<retval type64='B'/>
+</method>
+<method selector='removeEvent:span:commit:error:'>
+<arg index='2' type64='B'/>
+<retval type64='B'/>
+</method>
+<method selector='removeReminder:commit:error:'>
+<arg index='1' type64='B'/>
+<retval type64='B'/>
+</method>
+<method selector='requestAccessToEntityType:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='saveCalendar:commit:error:'>
+<arg index='1' type64='B'/>
+<retval type64='B'/>
+</method>
+<method selector='saveEvent:span:commit:error:'>
+<arg index='2' type64='B'/>
+<retval type64='B'/>
+</method>
+<method selector='saveReminder:commit:error:'>
+<arg index='1' type64='B'/>
+<retval type64='B'/>
+</method>
+</class>
+<class name='EKObject'>
+<method selector='hasChanges'>
+<retval type64='B'/>
+</method>
+<method selector='isNew'>
+<retval type64='B'/>
+</method>
+<method selector='refresh'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='EKParticipant'>
+<method selector='isCurrentUser'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='EKReminder'>
+<method selector='isCompleted'>
+<retval type64='B'/>
+</method>
+<method selector='setCompleted:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+</signatures>

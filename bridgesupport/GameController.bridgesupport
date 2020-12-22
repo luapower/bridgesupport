@@ -1,0 +1,173 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreBluetooth.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/IOBluetooth.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<struct name='GCAcceleration' type64='{_GCAcceleration=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'/>
+<struct name='GCEulerAngles' type64='{_GCEulerAngles=&quot;pitch&quot;d&quot;yaw&quot;d&quot;roll&quot;d}'/>
+<struct name='GCExtendedGamepadSnapShotDataV100' type64='{_GCExtendedGamepadSnapShotDataV100=&quot;version&quot;S&quot;size&quot;S&quot;dpadX&quot;f&quot;dpadY&quot;f&quot;buttonA&quot;f&quot;buttonB&quot;f&quot;buttonX&quot;f&quot;buttonY&quot;f&quot;leftShoulder&quot;f&quot;rightShoulder&quot;f&quot;leftThumbstickX&quot;f&quot;leftThumbstickY&quot;f&quot;rightThumbstickX&quot;f&quot;rightThumbstickY&quot;f&quot;leftTrigger&quot;f&quot;rightTrigger&quot;f}'/>
+<struct name='GCGamepadSnapShotDataV100' type64='{_GCGamepadSnapShotDataV100=&quot;version&quot;S&quot;size&quot;S&quot;dpadX&quot;f&quot;dpadY&quot;f&quot;buttonA&quot;f&quot;buttonB&quot;f&quot;buttonX&quot;f&quot;buttonY&quot;f&quot;leftShoulder&quot;f&quot;rightShoulder&quot;f}'/>
+<struct name='GCMicroGamepadSnapShotDataV100' type64='{_GCMicroGamepadSnapShotDataV100=&quot;version&quot;S&quot;size&quot;S&quot;dpadX&quot;f&quot;dpadY&quot;f&quot;buttonA&quot;f&quot;buttonX&quot;f}'/>
+<struct name='GCQuaternion' type64='{GCQuaternion=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d&quot;w&quot;d}'/>
+<struct name='GCRotationRate' type64='{_GCRotationRate=&quot;x&quot;d&quot;y&quot;d&quot;z&quot;d}'/>
+<constant name='GCControllerDidConnectNotification' type64='@'/>
+<constant name='GCControllerDidDisconnectNotification' type64='@'/>
+<enum name='GCControllerPlayerIndex1' value64='0'/>
+<enum name='GCControllerPlayerIndex2' value64='1'/>
+<enum name='GCControllerPlayerIndex3' value64='2'/>
+<enum name='GCControllerPlayerIndex4' value64='3'/>
+<enum name='GCControllerPlayerIndexUnset' value64='-1'/>
+<function name='GCExtendedGamepadSnapShotDataV100FromNSData'>
+<arg type64='^{_GCExtendedGamepadSnapShotDataV100=SSffffffffffffff}'/>
+<arg type64='@'/>
+<retval type64='B'/>
+</function>
+<function name='GCGamepadSnapShotDataV100FromNSData'>
+<arg type64='^{_GCGamepadSnapShotDataV100=SSffffffff}'/>
+<arg type64='@'/>
+<retval type64='B'/>
+</function>
+<function name='GCMicroGamepadSnapShotDataV100FromNSData'>
+<arg type64='^{_GCMicroGamepadSnapShotDataV100=SSffff}'/>
+<arg type64='@'/>
+<retval type64='B'/>
+</function>
+<function name='NSDataFromGCExtendedGamepadSnapShotDataV100'>
+<arg type64='^{_GCExtendedGamepadSnapShotDataV100=SSffffffffffffff}'/>
+<retval type64='@'/>
+</function>
+<function name='NSDataFromGCGamepadSnapShotDataV100'>
+<arg type64='^{_GCGamepadSnapShotDataV100=SSffffffff}'/>
+<retval type64='@'/>
+</function>
+<function name='NSDataFromGCMicroGamepadSnapShotDataV100'>
+<arg type64='^{_GCMicroGamepadSnapShotDataV100=SSffff}'/>
+<retval type64='@'/>
+</function>
+<class name='GCController'>
+<method selector='isAttachedToDevice'>
+<retval type64='B'/>
+</method>
+<method selector='setControllerPausedHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='GCControllerAxisInput'>
+<method selector='setValueChangedHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='f'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='GCControllerButtonInput'>
+<method selector='isPressed'>
+<retval type64='B'/>
+</method>
+<method selector='setPressedChangedHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='f'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setValueChangedHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='f'/>
+<arg type64='B'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='GCControllerDirectionPad'>
+<method selector='setValueChangedHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='f'/>
+<arg type64='f'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='GCControllerElement'>
+<method selector='isAnalog'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='GCEventViewController'>
+<method selector='controllerUserInteractionEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='setControllerUserInteractionEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='GCExtendedGamepad'>
+<method selector='setValueChangedHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='GCGamepad'>
+<method selector='setValueChangedHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='GCMicroGamepad'>
+<method selector='allowsRotation'>
+<retval type64='B'/>
+</method>
+<method selector='reportsAbsoluteDpadValues'>
+<retval type64='B'/>
+</method>
+<method selector='setAllowsRotation:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setReportsAbsoluteDpadValues:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setValueChangedHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='GCMotion'>
+<method selector='gravity'>
+<retval type64='{_GCAcceleration=ddd}'/>
+</method>
+<method selector='rotationRate'>
+<retval type64='{_GCRotationRate=ddd}'/>
+</method>
+<method selector='setValueChangedHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='userAcceleration'>
+<retval type64='{_GCAcceleration=ddd}'/>
+</method>
+</class>
+</signatures>

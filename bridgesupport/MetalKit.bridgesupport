@@ -1,0 +1,94 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/ModelIO.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Metal.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<constant name='MTKModelErrorDomain' type64='@'/>
+<constant name='MTKModelErrorKey' type64='@'/>
+<constant name='MTKTextureLoaderCubeLayoutVertical' type64='@'/>
+<constant name='MTKTextureLoaderErrorDomain' type64='@'/>
+<constant name='MTKTextureLoaderErrorKey' type64='@'/>
+<constant name='MTKTextureLoaderOptionAllocateMipmaps' type64='@'/>
+<constant name='MTKTextureLoaderOptionCubeLayout' type64='@'/>
+<constant name='MTKTextureLoaderOptionGenerateMipmaps' type64='@'/>
+<constant name='MTKTextureLoaderOptionOrigin' type64='@'/>
+<constant name='MTKTextureLoaderOptionSRGB' type64='@'/>
+<constant name='MTKTextureLoaderOptionTextureCPUCacheMode' type64='@'/>
+<constant name='MTKTextureLoaderOptionTextureStorageMode' type64='@'/>
+<constant name='MTKTextureLoaderOptionTextureUsage' type64='@'/>
+<constant name='MTKTextureLoaderOriginBottomLeft' type64='@'/>
+<constant name='MTKTextureLoaderOriginFlippedVertically' type64='@'/>
+<constant name='MTKTextureLoaderOriginTopLeft' type64='@'/>
+<function name='MTKMetalVertexDescriptorFromModelIO'>
+<arg type64='@'/>
+<retval type64='@'/>
+</function>
+<function name='MTKMetalVertexDescriptorFromModelIOWithError'>
+<arg type64='@'/>
+<arg type64='^@'/>
+<retval type64='@'/>
+</function>
+<function name='MTKMetalVertexFormatFromModelIO'>
+<arg type64='Q'/>
+<retval type64='Q'/>
+</function>
+<function name='MTKModelIOVertexDescriptorFromMetal'>
+<arg type64='@'/>
+<retval type64='@'/>
+</function>
+<function name='MTKModelIOVertexDescriptorFromMetalWithError'>
+<arg type64='@'/>
+<arg type64='^@'/>
+<retval type64='@'/>
+</function>
+<function name='MTKModelIOVertexFormatFromMetal'>
+<arg type64='Q'/>
+<retval type64='Q'/>
+</function>
+<class name='MTKView'>
+<method selector='autoResizeDrawable'>
+<retval type64='B'/>
+</method>
+<method selector='clearColor'>
+<retval type64='{_MTLClearColor=dddd}'/>
+</method>
+<method selector='enableSetNeedsDisplay'>
+<retval type64='B'/>
+</method>
+<method selector='framebufferOnly'>
+<retval type64='B'/>
+</method>
+<method selector='isPaused'>
+<retval type64='B'/>
+</method>
+<method selector='presentsWithTransaction'>
+<retval type64='B'/>
+</method>
+<method selector='setAutoResizeDrawable:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setClearColor:'>
+<arg index='0' type64='{_MTLClearColor=dddd}'/>
+</method>
+<method selector='setEnableSetNeedsDisplay:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setFramebufferOnly:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setPaused:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setPresentsWithTransaction:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+</signatures>

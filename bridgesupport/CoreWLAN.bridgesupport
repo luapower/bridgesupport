@@ -1,0 +1,342 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/SecurityFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='CWBSSIDDidChangeNotification' type='@'/>
+<constant name='CWCountryCodeDidChangeNotification' type='@'/>
+<constant name='CWErrorDomain' type='@'/>
+<constant name='CWLinkDidChangeNotification' type='@'/>
+<constant name='CWLinkQualityDidChangeNotification' type='@'/>
+<constant name='CWLinkQualityNotificationRSSIKey' type='@'/>
+<constant name='CWLinkQualityNotificationTransmitRateKey' type='@'/>
+<constant name='CWModeDidChangeNotification' type='@'/>
+<constant name='CWPowerDidChangeNotification' type='@'/>
+<constant name='CWSSIDDidChangeNotification' type='@'/>
+<constant name='CWScanCacheDidUpdateNotification' type='@'/>
+<enum name='CWEventTypeBSSIDDidChange' value='3'/>
+<enum name='CWEventTypeCountryCodeDidChange' value='4'/>
+<enum name='CWEventTypeLinkDidChange' value='5'/>
+<enum name='CWEventTypeLinkQualityDidChange' value='6'/>
+<enum name='CWEventTypeModeDidChange' value='7'/>
+<enum name='CWEventTypeNone' value='0'/>
+<enum name='CWEventTypePowerDidChange' value='1'/>
+<enum name='CWEventTypeRangingReportEvent' value='10'/>
+<enum name='CWEventTypeSSIDDidChange' value='2'/>
+<enum name='CWEventTypeScanCacheUpdated' value='8'/>
+<enum name='CWEventTypeUnknown' value='2147483647' value64='9223372036854775807'/>
+<enum name='CWEventTypeVirtualInterfaceStateChanged' value='9'/>
+<enum name='kCWAPFullErr' value='-3913'/>
+<enum name='kCWAssociationDeniedErr' value='-3909'/>
+<enum name='kCWAuthenticationAlgorithmUnsupportedErr' value='-3910'/>
+<enum name='kCWChallengeFailureErr' value='-3912'/>
+<enum name='kCWChannelBand2GHz' value='1'/>
+<enum name='kCWChannelBand5GHz' value='2'/>
+<enum name='kCWChannelBandUnknown' value='0'/>
+<enum name='kCWChannelWidth160MHz' value='4'/>
+<enum name='kCWChannelWidth20MHz' value='1'/>
+<enum name='kCWChannelWidth40MHz' value='2'/>
+<enum name='kCWChannelWidth80MHz' value='3'/>
+<enum name='kCWChannelWidthUnknown' value='0'/>
+<enum name='kCWCipherKeyFlagsMulticast' value='4'/>
+<enum name='kCWCipherKeyFlagsNone' value='0'/>
+<enum name='kCWCipherKeyFlagsRx' value='16'/>
+<enum name='kCWCipherKeyFlagsTx' value='8'/>
+<enum name='kCWCipherKeyFlagsUnicast' value='2'/>
+<enum name='kCWCipherSuiteRejectedErr' value='-3923'/>
+<enum name='kCWDSSSOFDMUnsupportedErr' value='-3916'/>
+<enum name='kCWEAPOLErr' value='1'/>
+<enum name='kCWErr' value='-3931'/>
+<enum name='kCWHTFeaturesNotSupportedErr' value='-3926'/>
+<enum name='kCWIBSSModeSecurityNone' value='0'/>
+<enum name='kCWIBSSModeSecurityWEP104' value='2'/>
+<enum name='kCWIBSSModeSecurityWEP40' value='1'/>
+<enum name='kCWIPCFailureErr' value='-3929'/>
+<enum name='kCWInterfaceModeHostAP' value='3'/>
+<enum name='kCWInterfaceModeIBSS' value='2'/>
+<enum name='kCWInterfaceModeNone' value='0'/>
+<enum name='kCWInterfaceModeStation' value='1'/>
+<enum name='kCWInvalidAKMPErr' value='-3920'/>
+<enum name='kCWInvalidAuthenticationSequenceNumberErr' value='-3911'/>
+<enum name='kCWInvalidFormatErr' value='-3904'/>
+<enum name='kCWInvalidGroupCipherErr' value='-3918'/>
+<enum name='kCWInvalidInformationElementErr' value='-3917'/>
+<enum name='kCWInvalidPMKErr' value='-3924'/>
+<enum name='kCWInvalidPairwiseCipherErr' value='-3919'/>
+<enum name='kCWInvalidParameterErr' value='-3900'/>
+<enum name='kCWInvalidRSNCapabilitiesErr' value='-3922'/>
+<enum name='kCWKeychainDomainNone' value='0'/>
+<enum name='kCWKeychainDomainSystem' value='2'/>
+<enum name='kCWKeychainDomainUser' value='1'/>
+<enum name='kCWNoErr' value='0'/>
+<enum name='kCWNoMemoryErr' value='-3901'/>
+<enum name='kCWNotSupportedErr' value='-3903'/>
+<enum name='kCWOperationNotPermittedErr' value='-3930'/>
+<enum name='kCWPCOTransitionTimeNotSupportedErr' value='-3927'/>
+<enum name='kCWPHYMode11a' value='1'/>
+<enum name='kCWPHYMode11ac' value='5'/>
+<enum name='kCWPHYMode11b' value='2'/>
+<enum name='kCWPHYMode11g' value='3'/>
+<enum name='kCWPHYMode11n' value='4'/>
+<enum name='kCWPHYModeNone' value='0'/>
+<enum name='kCWReassociationDeniedErr' value='-3908'/>
+<enum name='kCWReferenceNotBoundErr' value='-3928'/>
+<enum name='kCWSecurityDynamicWEP' value='6'/>
+<enum name='kCWSecurityEnterprise' value='10'/>
+<enum name='kCWSecurityNone' value='0'/>
+<enum name='kCWSecurityPersonal' value='5'/>
+<enum name='kCWSecurityUnknown' value='2147483647' value64='9223372036854775807'/>
+<enum name='kCWSecurityWEP' value='1'/>
+<enum name='kCWSecurityWPA2Enterprise' value='9'/>
+<enum name='kCWSecurityWPA2Personal' value='4'/>
+<enum name='kCWSecurityWPAEnterprise' value='7'/>
+<enum name='kCWSecurityWPAEnterpriseMixed' value='8'/>
+<enum name='kCWSecurityWPAPersonal' value='2'/>
+<enum name='kCWSecurityWPAPersonalMixed' value='3'/>
+<enum name='kCWShortSlotUnsupportedErr' value='-3915'/>
+<enum name='kCWSupplicantTimeoutErr' value='-3925'/>
+<enum name='kCWTimeoutErr' value='-3905'/>
+<enum name='kCWUnknownErr' value='-3902'/>
+<enum name='kCWUnspecifiedFailureErr' value='-3906'/>
+<enum name='kCWUnsupportedCapabilitiesErr' value='-3907'/>
+<enum name='kCWUnsupportedRSNVersionErr' value='-3921'/>
+<enum name='kCWUnsupportedRateSetErr' value='-3914'/>
+<function name='CWKeychainCopyEAPIdentity'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{OpaqueSecIdentityRef}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainCopyEAPIdentityList'>
+<arg type='^^{__CFArray}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainCopyEAPUsernameAndPassword'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{__CFString}'/>
+<arg type='^^{__CFString}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainCopyPassword'>
+<arg type='^{__CFData=}'/>
+<arg type='^^{__CFString}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainCopyWiFiEAPIdentity'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<arg type='^^{OpaqueSecIdentityRef}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainDeleteEAPUsernameAndPassword'>
+<arg type='^{__CFData=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainDeletePassword'>
+<arg type='^{__CFData=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainDeleteWiFiEAPUsernameAndPassword'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainDeleteWiFiPassword'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainFindWiFiEAPUsernameAndPassword'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<arg type='^@'/>
+<arg type='^@'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainFindWiFiPassword'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<arg type='^@'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainSetEAPIdentity'>
+<arg type='^{__CFData=}'/>
+<arg type='^{OpaqueSecIdentityRef=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainSetEAPUsernameAndPassword'>
+<arg type='^{__CFData=}'/>
+<arg type='^{__CFString=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainSetPassword'>
+<arg type='^{__CFData=}'/>
+<arg type='^{__CFString=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainSetWiFiEAPIdentity'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<arg type='^{OpaqueSecIdentityRef=}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainSetWiFiEAPUsernameAndPassword'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='CWKeychainSetWiFiPassword'>
+<arg type='i' type64='q'/>
+<arg type='@'/>
+<arg type='@'/>
+<retval type='l' type64='i'/>
+</function>
+<class name='CWChannel'>
+<method selector='isEqualToChannel:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CWConfiguration'>
+<method selector='isEqualToConfiguration:'>
+<retval type='B'/>
+</method>
+<method selector='rememberJoinedNetworks'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForAssociation'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForIBSSMode'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForPower'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CWInterface'>
+<method selector='associateToEnterpriseNetwork:identity:username:password:error:'>
+<arg index='4' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='associateToNetwork:password:error:'>
+<arg index='2' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='commitConfiguration:authorization:error:'>
+<arg index='2' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='powerOn'>
+<retval type='B'/>
+</method>
+<method selector='scanForNetworksWithName:error:'>
+<arg index='1' type_modifier='o'/>
+</method>
+<method selector='scanForNetworksWithSSID:error:'>
+<arg index='1' type_modifier='o'/>
+</method>
+<method selector='serviceActive'>
+<retval type='B'/>
+</method>
+<method selector='setPairwiseMasterKey:error:'>
+<arg index='1' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='setPower:error:'>
+<arg index='0' type='B'/>
+<arg index='1' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='setWEPKey:flags:index:error:'>
+<arg index='3' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='setWLANChannel:error:'>
+<arg index='1' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='startIBSSModeWithSSID:security:channel:password:error:'>
+<arg index='4' type_modifier='o'/>
+<retval type='B'/>
+</method>
+</class>
+<class name='CWMutableConfiguration'>
+<method selector='rememberJoinedNetworks'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForAssociation'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForIBSSMode'>
+<retval type='B'/>
+</method>
+<method selector='requireAdministratorForPower'>
+<retval type='B'/>
+</method>
+<method selector='setRememberJoinedNetworks:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setRequireAdministratorForAssociation:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setRequireAdministratorForIBSSMode:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='setRequireAdministratorForPower:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='CWNetwork'>
+<method selector='ibss'>
+<retval type='B'/>
+</method>
+<method selector='isEqualToNetwork:'>
+<retval type='B'/>
+</method>
+<method selector='supportsPHYMode:'>
+<retval type='B'/>
+</method>
+<method selector='supportsSecurity:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CWNetworkProfile'>
+<method selector='isEqualToNetworkProfile:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CWWiFiClient'>
+<method selector='startMonitoringEventWithType:error:'>
+<arg index='1' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='stopMonitoringAllEventsAndReturnError:'>
+<arg index='0' type_modifier='o'/>
+<retval type='B'/>
+</method>
+<method selector='stopMonitoringEventWithType:error:'>
+<arg index='1' type_modifier='o'/>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='CWEventDelegate'>
+<method selector='bssidDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='clientConnectionInterrupted' type='v8@0:4' type64='v16@0:8'/>
+<method selector='clientConnectionInvalidated' type='v8@0:4' type64='v16@0:8'/>
+<method selector='countryCodeDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='linkDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='linkQualityDidChangeForWiFiInterfaceWithName:rssi:transmitRate:' type='v24@0:4@8i12d16' type64='v40@0:8@16q24d32'/>
+<method selector='modeDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='powerStateDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='rangingReportEventForWiFiInterfaceWithName:data:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='scanCacheUpdatedForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='ssidDidChangeForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='virtualInterfaceStateChangedForWiFiInterfaceWithName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+</signatures>

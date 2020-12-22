@@ -1,0 +1,179 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='CBATTErrorDomain' type='@'/>
+<constant name='CBAdvertisementDataIsConnectable' type='@'/>
+<constant name='CBAdvertisementDataLocalNameKey' type='@'/>
+<constant name='CBAdvertisementDataManufacturerDataKey' type='@'/>
+<constant name='CBAdvertisementDataOverflowServiceUUIDsKey' type='@'/>
+<constant name='CBAdvertisementDataServiceDataKey' type='@'/>
+<constant name='CBAdvertisementDataServiceUUIDsKey' type='@'/>
+<constant name='CBAdvertisementDataSolicitedServiceUUIDsKey' type='@'/>
+<constant name='CBAdvertisementDataTxPowerLevelKey' type='@'/>
+<constant name='CBCentralManagerOptionShowPowerAlertKey' type='@'/>
+<constant name='CBCentralManagerScanOptionAllowDuplicatesKey' type='@'/>
+<constant name='CBCentralManagerScanOptionSolicitedServiceUUIDsKey' type='@'/>
+<constant name='CBConnectPeripheralOptionNotifyOnDisconnectionKey' type='@'/>
+<constant name='CBErrorDomain' type='@'/>
+<constant name='CBPeripheralManagerOptionShowPowerAlertKey' type='@'/>
+<constant name='CBUUIDAppearanceString' type='@'/>
+<constant name='CBUUIDCharacteristicAggregateFormatString' type='@'/>
+<constant name='CBUUIDCharacteristicExtendedPropertiesString' type='@'/>
+<constant name='CBUUIDCharacteristicFormatString' type='@'/>
+<constant name='CBUUIDCharacteristicUserDescriptionString' type='@'/>
+<constant name='CBUUIDClientCharacteristicConfigurationString' type='@'/>
+<constant name='CBUUIDDeviceNameString' type='@'/>
+<constant name='CBUUIDGenericAccessProfileString' type='@'/>
+<constant name='CBUUIDGenericAttributeProfileString' type='@'/>
+<constant name='CBUUIDPeripheralPreferredConnectionParametersString' type='@'/>
+<constant name='CBUUIDPeripheralPrivacyFlagString' type='@'/>
+<constant name='CBUUIDReconnectionAddressString' type='@'/>
+<constant name='CBUUIDServerCharacteristicConfigurationString' type='@'/>
+<constant name='CBUUIDServiceChangedString' type='@'/>
+<constant name='CBUUIDValidRangeString' type='@'/>
+<enum name='CBATTErrorAttributeNotFound' value='10'/>
+<enum name='CBATTErrorAttributeNotLong' value='11'/>
+<enum name='CBATTErrorInsufficientAuthentication' value='5'/>
+<enum name='CBATTErrorInsufficientAuthorization' value='8'/>
+<enum name='CBATTErrorInsufficientEncryption' value='15'/>
+<enum name='CBATTErrorInsufficientEncryptionKeySize' value='12'/>
+<enum name='CBATTErrorInsufficientResources' value='17'/>
+<enum name='CBATTErrorInvalidAttributeValueLength' value='13'/>
+<enum name='CBATTErrorInvalidHandle' value='1'/>
+<enum name='CBATTErrorInvalidOffset' value='7'/>
+<enum name='CBATTErrorInvalidPdu' value='4'/>
+<enum name='CBATTErrorPrepareQueueFull' value='9'/>
+<enum name='CBATTErrorReadNotPermitted' value='2'/>
+<enum name='CBATTErrorRequestNotSupported' value='6'/>
+<enum name='CBATTErrorSuccess' value='0'/>
+<enum name='CBATTErrorUnlikelyError' value='14'/>
+<enum name='CBATTErrorUnsupportedGroupType' value='16'/>
+<enum name='CBATTErrorWriteNotPermitted' value='3'/>
+<enum name='CBAttributePermissionsReadEncryptionRequired' value='4'/>
+<enum name='CBAttributePermissionsReadable' value='1'/>
+<enum name='CBAttributePermissionsWriteEncryptionRequired' value='8'/>
+<enum name='CBAttributePermissionsWriteable' value='2'/>
+<enum name='CBCentralManagerStatePoweredOff' value='4'/>
+<enum name='CBCentralManagerStatePoweredOn' value='5'/>
+<enum name='CBCentralManagerStateResetting' value='1'/>
+<enum name='CBCentralManagerStateUnauthorized' value='3'/>
+<enum name='CBCentralManagerStateUnknown' value='0'/>
+<enum name='CBCentralManagerStateUnsupported' value='2'/>
+<enum name='CBCharacteristicPropertyAuthenticatedSignedWrites' value='64'/>
+<enum name='CBCharacteristicPropertyBroadcast' value='1'/>
+<enum name='CBCharacteristicPropertyExtendedProperties' value='128'/>
+<enum name='CBCharacteristicPropertyIndicate' value='32'/>
+<enum name='CBCharacteristicPropertyIndicateEncryptionRequired' value='512'/>
+<enum name='CBCharacteristicPropertyNotify' value='16'/>
+<enum name='CBCharacteristicPropertyNotifyEncryptionRequired' value='256'/>
+<enum name='CBCharacteristicPropertyRead' value='2'/>
+<enum name='CBCharacteristicPropertyWrite' value='8'/>
+<enum name='CBCharacteristicPropertyWriteWithoutResponse' value='4'/>
+<enum name='CBCharacteristicWriteWithResponse' value='0'/>
+<enum name='CBCharacteristicWriteWithoutResponse' value='1'/>
+<enum name='CBErrorAlreadyAdvertising' value='9'/>
+<enum name='CBErrorConnectionTimeout' value='6'/>
+<enum name='CBErrorInvalidHandle' value='2'/>
+<enum name='CBErrorInvalidParameters' value='1'/>
+<enum name='CBErrorMaxConnection' value='10'/>
+<enum name='CBErrorNotConnected' value='3'/>
+<enum name='CBErrorOperationCancelled' value='5'/>
+<enum name='CBErrorOutOfSpace' value='4'/>
+<enum name='CBErrorPeripheralDisconnected' value='7'/>
+<enum name='CBErrorUUIDNotAllowed' value='8'/>
+<enum name='CBErrorUnknown' value='0'/>
+<enum name='CBPeripheralAuthorizationStatusAuthorized' value='3'/>
+<enum name='CBPeripheralAuthorizationStatusDenied' value='2'/>
+<enum name='CBPeripheralAuthorizationStatusNotDetermined' value='0'/>
+<enum name='CBPeripheralAuthorizationStatusRestricted' value='1'/>
+<enum name='CBPeripheralManagerConnectionLatencyHigh' value='2'/>
+<enum name='CBPeripheralManagerConnectionLatencyLow' value='0'/>
+<enum name='CBPeripheralManagerConnectionLatencyMedium' value='1'/>
+<enum name='CBPeripheralManagerStatePoweredOff' value='4'/>
+<enum name='CBPeripheralManagerStatePoweredOn' value='5'/>
+<enum name='CBPeripheralManagerStateResetting' value='1'/>
+<enum name='CBPeripheralManagerStateUnauthorized' value='3'/>
+<enum name='CBPeripheralManagerStateUnknown' value='0'/>
+<enum name='CBPeripheralManagerStateUnsupported' value='2'/>
+<enum name='CBPeripheralStateConnected' value='2'/>
+<enum name='CBPeripheralStateConnecting' value='1'/>
+<enum name='CBPeripheralStateDisconnected' value='0'/>
+<class name='CBCharacteristic'>
+<method selector='isBroadcasted'>
+<retval type='B'/>
+</method>
+<method selector='isNotifying'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CBMutableService'>
+<method selector='initWithType:primary:'>
+<arg index='1' type='B'/>
+</method>
+<method selector='isPrimary'>
+<retval type='B'/>
+</method>
+<method selector='setIsPrimary:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='CBPeripheral'>
+<method selector='isConnected'>
+<retval type='B'/>
+</method>
+<method selector='setNotifyValue:forCharacteristic:'>
+<arg index='0' type='B'/>
+</method>
+</class>
+<class name='CBPeripheralManager'>
+<method selector='isAdvertising'>
+<retval type='B'/>
+</method>
+<method selector='updateValue:forCharacteristic:onSubscribedCentrals:'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CBService'>
+<method selector='isPrimary'>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='CBCentralManagerDelegate'>
+<method selector='centralManager:didConnectPeripheral:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='centralManager:didDisconnectPeripheral:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='centralManager:didDiscoverPeripheral:advertisementData:RSSI:' type='v24@0:4@8@12@16@20' type64='v48@0:8@16@24@32@40'/>
+<method selector='centralManager:didFailToConnectPeripheral:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='centralManager:didRetrieveConnectedPeripherals:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='centralManager:didRetrievePeripherals:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='centralManager:willRestoreState:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='centralManagerDidUpdateState:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='CBPeripheralDelegate'>
+<method selector='peripheral:didDiscoverCharacteristicsForService:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheral:didDiscoverDescriptorsForCharacteristic:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheral:didDiscoverIncludedServicesForService:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheral:didDiscoverServices:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='peripheral:didModifyServices:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='peripheral:didUpdateNotificationStateForCharacteristic:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheral:didUpdateValueForCharacteristic:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheral:didUpdateValueForDescriptor:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheral:didWriteValueForCharacteristic:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheral:didWriteValueForDescriptor:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheralDidUpdateName:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='peripheralDidUpdateRSSI:error:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+</informal_protocol>
+<informal_protocol name='CBPeripheralManagerDelegate'>
+<method selector='peripheralManager:central:didSubscribeToCharacteristic:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheralManager:central:didUnsubscribeFromCharacteristic:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheralManager:didAddService:error:' type='v20@0:4@8@12@16' type64='v40@0:8@16@24@32'/>
+<method selector='peripheralManager:didReceiveReadRequest:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='peripheralManager:didReceiveWriteRequests:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='peripheralManager:willRestoreState:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='peripheralManagerDidStartAdvertising:error:' type='v16@0:4@8@12' type64='v32@0:8@16@24'/>
+<method selector='peripheralManagerDidUpdateState:' type='v12@0:4@8' type64='v24@0:8@16'/>
+<method selector='peripheralManagerIsReadyToUpdateSubscribers:' type='v12@0:4@8' type64='v24@0:8@16'/>
+</informal_protocol>
+</signatures>

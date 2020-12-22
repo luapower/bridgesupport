@@ -1,0 +1,77 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<opaque name='InstallerPane_Private' type64='^{InstallerPane_Private=}'/>
+<opaque name='InstallerSection_Private' type64='^{InstallerSection_Private=}'/>
+<opaque name='InstallerState_Private' type64='^{InstallerState_Private=}'/>
+<constant name='InstallerState_Choice_CustomLocation' type64='@'/>
+<constant name='InstallerState_Choice_Identifier' type64='@'/>
+<constant name='InstallerState_Choice_Installed' type64='@'/>
+<enum name='InstallerDirectionBackward' value64='1'/>
+<enum name='InstallerDirectionForward' value64='0'/>
+<enum name='InstallerDirectionUndefined' value64='2'/>
+<class name='InstallerPane'>
+<method selector='gotoNextPane'>
+<retval type64='B'/>
+</method>
+<method selector='gotoPreviousPane'>
+<retval type64='B'/>
+</method>
+<method selector='nextEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='previousEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='setGotoNextPane:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setGotoPreviousPane:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setNextEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setPreviousEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldExitPane:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='InstallerSection'>
+<method selector='gotoPane:'>
+<retval type64='B'/>
+</method>
+<method selector='setShouldLoad:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldLoad'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='InstallerState'>
+<method selector='installStarted'>
+<retval type64='B'/>
+</method>
+<method selector='installSucceeded'>
+<retval type64='B'/>
+</method>
+<method selector='licenseAgreed'>
+<retval type64='B'/>
+</method>
+<method selector='setInstallStarted:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setInstallSucceeded:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setLicenseAgreed:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+</signatures>

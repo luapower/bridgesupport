@@ -1,0 +1,72 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/LocalAuthentication.framework/Support/SharedUtils.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='LAErrorDomain' type64='@'/>
+<constant name='LATouchIDAuthenticationMaximumAllowableReuseDuration' type64='d'/>
+<string_constant name='kLAErrorDomain' value='com.apple.LocalAuthentication'/>
+<enum name='LAAccessControlOperationCreateItem' value64='0'/>
+<enum name='LAAccessControlOperationCreateKey' value64='2'/>
+<enum name='LAAccessControlOperationUseItem' value64='1'/>
+<enum name='LAAccessControlOperationUseKeyDecrypt' value64='4'/>
+<enum name='LAAccessControlOperationUseKeyKeyExchange' value64='5'/>
+<enum name='LAAccessControlOperationUseKeySign' value64='3'/>
+<enum name='LACredentialTypeApplicationPassword' value64='0'/>
+<enum name='LAErrorAppCancel' value64='-9'/>
+<enum name='LAErrorAuthenticationFailed' value64='-1'/>
+<enum name='LAErrorInvalidContext' value64='-10'/>
+<enum name='LAErrorPasscodeNotSet' value64='-5'/>
+<enum name='LAErrorSystemCancel' value64='-4'/>
+<enum name='LAErrorTouchIDLockout' value64='-8'/>
+<enum name='LAErrorTouchIDNotAvailable' value64='-6'/>
+<enum name='LAErrorTouchIDNotEnrolled' value64='-7'/>
+<enum name='LAErrorUserCancel' value64='-2'/>
+<enum name='LAErrorUserFallback' value64='-3'/>
+<enum name='LAPolicyDeviceOwnerAuthentication' value64='2'/>
+<enum name='LAPolicyDeviceOwnerAuthenticationWithBiometrics' value64='1'/>
+<enum name='kLACredentialCTKPIN' value64='-3'/>
+<enum name='kLACredentialTypePasscode' value64='-1'/>
+<enum name='kLACredentialTypePassphrase' value64='-2'/>
+<enum name='kLAErrorAppCancel' value64='-9'/>
+<enum name='kLAErrorAuthenticationFailed' value64='-1'/>
+<enum name='kLAErrorInvalidContext' value64='-10'/>
+<enum name='kLAErrorPasscodeNotSet' value64='-5'/>
+<enum name='kLAErrorSystemCancel' value64='-4'/>
+<enum name='kLAErrorTouchIDLockout' value64='-8'/>
+<enum name='kLAErrorTouchIDNotAvailable' value64='-6'/>
+<enum name='kLAErrorTouchIDNotEnrolled' value64='-7'/>
+<enum name='kLAErrorUserCancel' value64='-2'/>
+<enum name='kLAErrorUserFallback' value64='-3'/>
+<enum name='kLAOptionAuthenticationReason' value64='2'/>
+<enum name='kLAOptionUserFallback' value64='1'/>
+<enum name='kLAPolicyDeviceOwnerAuthentication' value64='2'/>
+<enum name='kLAPolicyDeviceOwnerAuthenticationWithBiometrics' value64='1'/>
+<class name='LAContext'>
+<method selector='canEvaluatePolicy:error:'>
+<retval type64='B'/>
+</method>
+<method selector='evaluateAccessControl:operation:localizedReason:reply:'>
+<arg function_pointer='true' index='3' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='evaluatePolicy:localizedReason:reply:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='isCredentialSet:'>
+<retval type64='B'/>
+</method>
+<method selector='setCredential:type:'>
+<retval type64='B'/>
+</method>
+</class>
+</signatures>

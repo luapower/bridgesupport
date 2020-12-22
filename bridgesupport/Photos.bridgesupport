@@ -1,0 +1,126 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<constant name='PHLivePhotoEditingErrorDomain' type64='@'/>
+<constant name='PHLivePhotoShouldRenderAtPlaybackTime' type64='@'/>
+<enum name='PHAssetBurstSelectionTypeAutoPick' value64='1'/>
+<enum name='PHAssetBurstSelectionTypeNone' value64='0'/>
+<enum name='PHAssetBurstSelectionTypeUserPick' value64='2'/>
+<enum name='PHAssetCollectionSubtypeAlbumCloudShared' value64='101'/>
+<enum name='PHAssetCollectionSubtypeAlbumImported' value64='6'/>
+<enum name='PHAssetCollectionSubtypeAlbumMyPhotoStream' value64='100'/>
+<enum name='PHAssetCollectionSubtypeAlbumRegular' value64='2'/>
+<enum name='PHAssetCollectionSubtypeAlbumSyncedAlbum' value64='5'/>
+<enum name='PHAssetCollectionSubtypeAlbumSyncedEvent' value64='3'/>
+<enum name='PHAssetCollectionSubtypeAlbumSyncedFaces' value64='4'/>
+<enum name='PHAssetCollectionSubtypeAny' value64='9223372036854775807'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumAllHidden' value64='205'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumBursts' value64='207'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumFavorites' value64='203'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumGeneric' value64='200'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumPanoramas' value64='201'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumRecentlyAdded' value64='206'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumScreenshots' value64='211'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumSelfPortraits' value64='210'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumSlomoVideos' value64='208'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumTimelapses' value64='204'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumUserLibrary' value64='209'/>
+<enum name='PHAssetCollectionSubtypeSmartAlbumVideos' value64='202'/>
+<enum name='PHAssetCollectionTypeAlbum' value64='1'/>
+<enum name='PHAssetCollectionTypeMoment' value64='3'/>
+<enum name='PHAssetCollectionTypeSmartAlbum' value64='2'/>
+<enum name='PHAssetEditOperationContent' value64='2'/>
+<enum name='PHAssetEditOperationDelete' value64='1'/>
+<enum name='PHAssetEditOperationProperties' value64='3'/>
+<enum name='PHAssetMediaSubtypeNone' value64='0'/>
+<enum name='PHAssetMediaSubtypePhotoDepthEffect' value64='9'/>
+<enum name='PHAssetMediaSubtypePhotoHDR' value64='2'/>
+<enum name='PHAssetMediaSubtypePhotoLive' value64='8'/>
+<enum name='PHAssetMediaSubtypePhotoPanorama' value64='1'/>
+<enum name='PHAssetMediaSubtypePhotoScreenshot' value64='4'/>
+<enum name='PHAssetMediaTypeAudio' value64='3'/>
+<enum name='PHAssetMediaTypeImage' value64='1'/>
+<enum name='PHAssetMediaTypeUnknown' value64='0'/>
+<enum name='PHAssetMediaTypeVideo' value64='2'/>
+<enum name='PHAssetResourceTypeAdjustmentBasePhoto' value64='8'/>
+<enum name='PHAssetResourceTypeAdjustmentData' value64='7'/>
+<enum name='PHAssetResourceTypeAlternatePhoto' value64='4'/>
+<enum name='PHAssetResourceTypeAudio' value64='3'/>
+<enum name='PHAssetResourceTypeFullSizePhoto' value64='5'/>
+<enum name='PHAssetResourceTypeFullSizeVideo' value64='6'/>
+<enum name='PHAssetResourceTypePairedVideo' value64='9'/>
+<enum name='PHAssetResourceTypePhoto' value64='1'/>
+<enum name='PHAssetResourceTypeVideo' value64='2'/>
+<enum name='PHAssetSourceTypeCloudShared' value64='2'/>
+<enum name='PHAssetSourceTypeNone' value64='0'/>
+<enum name='PHAssetSourceTypeUserLibrary' value64='1'/>
+<enum name='PHAssetSourceTypeiTunesSynced' value64='4'/>
+<enum name='PHCollectionEditOperationAddContent' value64='3'/>
+<enum name='PHCollectionEditOperationCreateContent' value64='4'/>
+<enum name='PHCollectionEditOperationDelete' value64='6'/>
+<enum name='PHCollectionEditOperationDeleteContent' value64='1'/>
+<enum name='PHCollectionEditOperationRearrangeContent' value64='5'/>
+<enum name='PHCollectionEditOperationRemoveContent' value64='2'/>
+<enum name='PHCollectionEditOperationRename' value64='7'/>
+<enum name='PHCollectionListSubtypeAny' value64='9223372036854775807'/>
+<enum name='PHCollectionListSubtypeMomentListCluster' value64='1'/>
+<enum name='PHCollectionListSubtypeMomentListYear' value64='2'/>
+<enum name='PHCollectionListSubtypeRegularFolder' value64='100'/>
+<enum name='PHCollectionListSubtypeSmartFolderEvents' value64='200'/>
+<enum name='PHCollectionListSubtypeSmartFolderFaces' value64='201'/>
+<enum name='PHCollectionListTypeFolder' value64='2'/>
+<enum name='PHCollectionListTypeMomentList' value64='1'/>
+<enum name='PHCollectionListTypeSmartFolder' value64='3'/>
+<enum name='PHImageContentModeAspectFill' value64='1'/>
+<enum name='PHImageContentModeAspectFit' value64='0'/>
+<enum name='PHImageContentModeDefault' value64='0'/>
+<enum name='PHLivePhotoEditingErrorCodeAborted' value64='1'/>
+<enum name='PHLivePhotoEditingErrorCodeUnknown' value64='0'/>
+<enum name='PHLivePhotoFrameTypePhoto' value64='0'/>
+<enum name='PHLivePhotoFrameTypeVideo' value64='1'/>
+<class name='NSObject'>
+<method selector='time'>
+<retval type64='{_CMTime=qiIq}'/>
+</method>
+</class>
+<class name='PHLivePhotoEditingContext'>
+<method selector='duration'>
+<retval type64='{_CMTime=qiIq}'/>
+</method>
+<method selector='photoTime'>
+<retval type64='{_CMTime=qiIq}'/>
+</method>
+<method selector='prepareLivePhotoForPlaybackWithTargetSize:options:completionHandler:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='saveLivePhotoToOutput:options:completionHandler:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setFrameProcessor:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='^@'/>
+<retval type64='@'/>
+</arg>
+</method>
+</class>
+<informal_protocol name='PHLivePhotoFrame'>
+<method selector='time' type64='{?=qiIq}16@0:8'/>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,109 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<constant name='MAMediaCharacteristicDescribesMusicAndSoundForAccessibility' type='^{__CFString=}'/>
+<constant name='MAMediaCharacteristicDescribesVideoForAccessibility' type='^{__CFString=}'/>
+<constant name='MAMediaCharacteristicTranscribesSpokenDialogForAccessibility' type='^{__CFString=}'/>
+<constant name='kMAAudibleMediaSettingsChangedNotification' type='^{__CFString=}'/>
+<constant name='kMACaptionAppearanceSettingsChangedNotification' type='^{__CFString=}'/>
+<enum name='kMACaptionAppearanceBehaviorUseContentIfAvailable' value='1'/>
+<enum name='kMACaptionAppearanceBehaviorUseValue' value='0'/>
+<enum name='kMACaptionAppearanceDisplayTypeAlwaysOn' value='2'/>
+<enum name='kMACaptionAppearanceDisplayTypeAutomatic' value='1'/>
+<enum name='kMACaptionAppearanceDisplayTypeForcedOnly' value='0'/>
+<enum name='kMACaptionAppearanceDomainDefault' value='0'/>
+<enum name='kMACaptionAppearanceDomainUser' value='1'/>
+<enum name='kMACaptionAppearanceFontStyleCasual' value='5'/>
+<enum name='kMACaptionAppearanceFontStyleCursive' value='6'/>
+<enum name='kMACaptionAppearanceFontStyleDefault' value='0'/>
+<enum name='kMACaptionAppearanceFontStyleMonospacedWithSerif' value='1'/>
+<enum name='kMACaptionAppearanceFontStyleMonospacedWithoutSerif' value='3'/>
+<enum name='kMACaptionAppearanceFontStyleProportionalWithSerif' value='2'/>
+<enum name='kMACaptionAppearanceFontStyleProportionalWithoutSerif' value='4'/>
+<enum name='kMACaptionAppearanceFontStyleSmallCapital' value='7'/>
+<enum name='kMACaptionAppearanceTextEdgeStyleDepressed' value='3'/>
+<enum name='kMACaptionAppearanceTextEdgeStyleDropShadow' value='5'/>
+<enum name='kMACaptionAppearanceTextEdgeStyleNone' value='1'/>
+<enum name='kMACaptionAppearanceTextEdgeStyleRaised' value='2'/>
+<enum name='kMACaptionAppearanceTextEdgeStyleUndefined' value='0'/>
+<enum name='kMACaptionAppearanceTextEdgeStyleUniform' value='4'/>
+<function name='MAAudibleMediaCopyPreferredCharacteristics'>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='MACaptionAppearanceAddSelectedLanguage'>
+<arg type='l' type64='q'/>
+<arg type='^{__CFString=}'/>
+<retval type='B'/>
+</function>
+<function name='MACaptionAppearanceCopyBackgroundColor'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<retval already_retained='true' type='^{CGColor=}'/>
+</function>
+<function name='MACaptionAppearanceCopyFontDescriptorForStyle'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<arg type='l' type64='q'/>
+<retval already_retained='true' type='^{__CTFontDescriptor=}'/>
+</function>
+<function name='MACaptionAppearanceCopyForegroundColor'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<retval already_retained='true' type='^{CGColor=}'/>
+</function>
+<function name='MACaptionAppearanceCopyPreferredCaptioningMediaCharacteristics'>
+<arg type='l' type64='q'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='MACaptionAppearanceCopySelectedLanguages'>
+<arg type='l' type64='q'/>
+<retval already_retained='true' type='^{__CFArray=}'/>
+</function>
+<function name='MACaptionAppearanceCopyWindowColor'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<retval already_retained='true' type='^{CGColor=}'/>
+</function>
+<function name='MACaptionAppearanceGetBackgroundOpacity'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<retval type='f' type64='d'/>
+</function>
+<function name='MACaptionAppearanceGetDisplayType'>
+<arg type='l' type64='q'/>
+<retval type='l' type64='q'/>
+</function>
+<function name='MACaptionAppearanceGetForegroundOpacity'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<retval type='f' type64='d'/>
+</function>
+<function name='MACaptionAppearanceGetRelativeCharacterSize'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<retval type='f' type64='d'/>
+</function>
+<function name='MACaptionAppearanceGetTextEdgeStyle'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<retval type='l' type64='q'/>
+</function>
+<function name='MACaptionAppearanceGetWindowOpacity'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<retval type='f' type64='d'/>
+</function>
+<function name='MACaptionAppearanceGetWindowRoundedCornerRadius'>
+<arg type='l' type64='q'/>
+<arg type='^i' type64='^q'/>
+<retval type='f' type64='d'/>
+</function>
+<function name='MACaptionAppearanceSetDisplayType'>
+<arg type='l' type64='q'/>
+<arg type='l' type64='q'/>
+</function>
+</signatures>

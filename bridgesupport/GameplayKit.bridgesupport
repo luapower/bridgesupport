@@ -1,0 +1,141 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/SpriteKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<opaque name='GKBox' type64='^{GKBox=}'/>
+<opaque name='GKQuad' type64='^{GKQuad=}'/>
+<opaque name='GKTriangle' type64='^{GKTriangle=}'/>
+<enum name='GKGameModelMaxScore' value64='16777216'/>
+<enum name='GKGameModelMinScore' value64='-16777216'/>
+<enum name='GKMeshGraphTriangulationModeCenters' value64='2'/>
+<enum name='GKMeshGraphTriangulationModeEdgeMidpoints' value64='4'/>
+<enum name='GKMeshGraphTriangulationModeVertices' value64='1'/>
+<enum name='GKRTreeSplitStrategyHalve' value64='0'/>
+<enum name='GKRTreeSplitStrategyLinear' value64='1'/>
+<enum name='GKRTreeSplitStrategyQuadratic' value64='2'/>
+<enum name='GKRTreeSplitStrategyReduceOverlap' value64='3'/>
+<enum name='GK_VERSION' value64='69000000'/>
+<class name='GKAgent3D'>
+<method selector='rightHanded'>
+<retval type64='B'/>
+</method>
+<method selector='setRightHanded:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='GKGoal'>
+<method class_method='true' selector='goalToFollowPath:maxPredictionTime:forward:'>
+<arg index='2' type64='B'/>
+</method>
+</class>
+<class name='GKGraph'>
+<method selector='connectNodeToLowestCostNode:bidirectional:'>
+<arg index='1' type64='B'/>
+</method>
+</class>
+<class name='GKNSPredicateRule'>
+<method selector='evaluatePredicateWithSystem:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='GKNoise'>
+<method selector='remapValuesToTerracesWithPeaks:terracesInverted:'>
+<arg index='1' type64='B'/>
+</method>
+</class>
+<class name='GKNoiseMap'>
+<method selector='initWithNoise:size:origin:sampleCount:seamless:'>
+<arg index='4' type64='B'/>
+</method>
+<method selector='isSeamless'>
+<retval type64='B'/>
+</method>
+<method class_method='true' selector='noiseMapWithNoise:size:origin:sampleCount:seamless:'>
+<arg index='4' type64='B'/>
+</method>
+</class>
+<class name='GKPath'>
+<method selector='initWithFloat3Points:count:radius:cyclical:'>
+<arg index='3' type64='B'/>
+</method>
+<method selector='initWithPoints:count:radius:cyclical:'>
+<arg index='3' type64='B'/>
+</method>
+<method selector='isCyclical'>
+<retval type64='B'/>
+</method>
+<method class_method='true' selector='pathWithFloat3Points:count:radius:cyclical:'>
+<arg index='3' type64='B'/>
+</method>
+<method class_method='true' selector='pathWithPoints:count:radius:cyclical:'>
+<arg index='3' type64='B'/>
+</method>
+<method selector='setCyclical:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='GKRule'>
+<method selector='evaluatePredicateWithSystem:'>
+<retval type64='B'/>
+</method>
+<method class_method='true' selector='ruleWithBlockPredicate:action:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='B'/>
+</arg>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='GKState'>
+<method selector='isValidNextState:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='GKStateMachine'>
+<method selector='canEnterState:'>
+<retval type64='B'/>
+</method>
+<method selector='enterState:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='GKVoronoiNoiseSource'>
+<method selector='initWithFrequency:displacement:distanceEnabled:seed:'>
+<arg index='2' type64='B'/>
+</method>
+<method selector='isDistanceEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='setDistanceEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method class_method='true' selector='voronoiNoiseWithFrequency:displacement:distanceEnabled:seed:'>
+<arg index='2' type64='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='isLossForPlayer:'>
+<retval type64='B'/>
+</method>
+<method selector='isWinForPlayer:'>
+<retval type64='B'/>
+</method>
+<method selector='nextBool'>
+<retval type64='B'/>
+</method>
+</class>
+<informal_protocol name='GKGameModel'>
+<method selector='isLossForPlayer:' type64='B24@0:8@16'/>
+<method selector='isWinForPlayer:' type64='B24@0:8@16'/>
+</informal_protocol>
+<informal_protocol name='GKRandom'>
+<method selector='nextBool' type64='B16@0:8'/>
+</informal_protocol>
+</signatures>

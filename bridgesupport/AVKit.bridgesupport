@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/MediaAccessibility.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<enum name='AVCaptureViewControlsStyleDefault' value64='0'/>
+<enum name='AVCaptureViewControlsStyleFloating' value64='1'/>
+<enum name='AVCaptureViewControlsStyleInline' value64='0'/>
+<enum name='AVCaptureViewControlsStyleInlineDeviceSelection' value64='2'/>
+<enum name='AVPlayerViewControlsStyleDefault' value64='1'/>
+<enum name='AVPlayerViewControlsStyleFloating' value64='2'/>
+<enum name='AVPlayerViewControlsStyleInline' value64='1'/>
+<enum name='AVPlayerViewControlsStyleMinimal' value64='3'/>
+<enum name='AVPlayerViewControlsStyleNone' value64='0'/>
+<enum name='AVPlayerViewTrimCancelButton' value64='1'/>
+<enum name='AVPlayerViewTrimOKButton' value64='0'/>
+<class name='AVCaptureView'>
+<method selector='setSession:showVideoPreview:showAudioPreview:'>
+<arg index='1' type64='B'/>
+<arg index='2' type64='B'/>
+</method>
+</class>
+<class name='AVPlayerView'>
+<method selector='canBeginTrimming'>
+<retval type64='B'/>
+</method>
+<method selector='isReadyForDisplay'>
+<retval type64='B'/>
+</method>
+<method selector='setShowsFrameSteppingButtons:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsFullScreenToggleButton:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsSharingServiceButton:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='showsFrameSteppingButtons'>
+<retval type64='B'/>
+</method>
+<method selector='showsFullScreenToggleButton'>
+<retval type64='B'/>
+</method>
+<method selector='showsSharingServiceButton'>
+<retval type64='B'/>
+</method>
+</class>
+</signatures>

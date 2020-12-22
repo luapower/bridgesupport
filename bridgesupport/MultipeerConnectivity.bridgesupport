@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='MCErrorDomain' type64='@'/>
+<constant name='kMCSessionMaximumNumberOfPeers' type64='Q'/>
+<constant name='kMCSessionMinimumNumberOfPeers' type64='Q'/>
+<enum name='MCEncryptionNone' value64='2'/>
+<enum name='MCEncryptionOptional' value64='0'/>
+<enum name='MCEncryptionRequired' value64='1'/>
+<enum name='MCErrorCancelled' value64='5'/>
+<enum name='MCErrorInvalidParameter' value64='2'/>
+<enum name='MCErrorNotConnected' value64='1'/>
+<enum name='MCErrorTimedOut' value64='4'/>
+<enum name='MCErrorUnavailable' value64='6'/>
+<enum name='MCErrorUnknown' value64='0'/>
+<enum name='MCErrorUnsupported' value64='3'/>
+<enum name='MCSessionSendDataReliable' value64='0'/>
+<enum name='MCSessionSendDataUnreliable' value64='1'/>
+<enum name='MCSessionStateConnected' value64='2'/>
+<enum name='MCSessionStateConnecting' value64='1'/>
+<enum name='MCSessionStateNotConnected' value64='0'/>
+<class name='MCSession'>
+<method selector='nearbyConnectionDataForPeer:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='sendData:toPeers:withMode:error:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='advertiser:didReceiveInvitationFromPeer:withContext:invitationHandler:'>
+<arg function_pointer='true' index='3' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:'>
+<retval type64='B'/>
+</method>
+<method selector='session:didReceiveCertificate:fromPeer:certificateHandler:'>
+<arg function_pointer='true' index='3' type64='@?'>
+<arg type64='B'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<informal_protocol name='MCBrowserViewControllerDelegate'>
+<method selector='browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:' type64='B40@0:8@16@24@32'/>
+</informal_protocol>
+</signatures>

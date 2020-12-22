@@ -1,0 +1,68 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<enum name='NCUpdateResultFailed' value64='2'/>
+<enum name='NCUpdateResultNewData' value64='0'/>
+<enum name='NCUpdateResultNoData' value64='1'/>
+<class name='NCWidgetController'>
+<method selector='setHasContent:forWidgetWithBundleIdentifier:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NCWidgetListViewController'>
+<method selector='editing'>
+<retval type64='B'/>
+</method>
+<method selector='hasDividerLines'>
+<retval type64='B'/>
+</method>
+<method selector='setEditing:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setHasDividerLines:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShowsAddButtonWhenEditing:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='showsAddButtonWhenEditing'>
+<retval type64='B'/>
+</method>
+<method selector='viewControllerAtRow:makeIfNecessary:'>
+<arg index='1' type64='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='widgetAllowsEditing'>
+<retval type64='B'/>
+</method>
+<method selector='widgetList:shouldRemoveRow:'>
+<retval type64='B'/>
+</method>
+<method selector='widgetList:shouldReorderRow:'>
+<retval type64='B'/>
+</method>
+<method selector='widgetPerformUpdateWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='Q'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<informal_protocol name='NCWidgetListViewDelegate'>
+<method selector='widgetList:shouldRemoveRow:' type64='B32@0:8@16Q24'/>
+<method selector='widgetList:shouldReorderRow:' type64='B32@0:8@16Q24'/>
+</informal_protocol>
+<informal_protocol name='NCWidgetProviding'>
+<method selector='widgetAllowsEditing' type64='B16@0:8'/>
+</informal_protocol>
+</signatures>

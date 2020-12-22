@@ -1,0 +1,47 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/Photos.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<enum name='PHLivePhotoViewContentModeAspectFill' value64='1'/>
+<enum name='PHLivePhotoViewContentModeAspectFit' value64='0'/>
+<enum name='PHLivePhotoViewPlaybackStyleFull' value64='1'/>
+<enum name='PHLivePhotoViewPlaybackStyleHint' value64='2'/>
+<enum name='PHLivePhotoViewPlaybackStyleUndefined' value64='0'/>
+<class name='NSObject'>
+<method selector='canHandleAdjustmentData:'>
+<retval type64='B'/>
+</method>
+<method selector='finishContentEditingWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='shouldShowCancelConfirmation'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='PHLivePhotoView'>
+<method selector='isMuted'>
+<retval type64='B'/>
+</method>
+<method selector='setMuted:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='stopPlaybackAnimated:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<informal_protocol name='PHContentEditingController'>
+<method selector='canHandleAdjustmentData:' type64='B24@0:8@16'/>
+<method selector='shouldShowCancelConfirmation' type64='B16@0:8'/>
+</informal_protocol>
+</signatures>

@@ -1,0 +1,517 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='NEAppProxyErrorDomain' type64='@'/>
+<constant name='NEFilterConfigurationDidChangeNotification' type64='@'/>
+<constant name='NEFilterErrorDomain' type64='@'/>
+<constant name='NETunnelProviderErrorDomain' type64='@'/>
+<constant name='NEVPNConfigurationChangeNotification' type64='@'/>
+<constant name='NEVPNConnectionStartOptionPassword' type64='@'/>
+<constant name='NEVPNConnectionStartOptionUsername' type64='@'/>
+<constant name='NEVPNErrorDomain' type64='@'/>
+<constant name='NEVPNStatusDidChangeNotification' type64='@'/>
+<string_constant name='NEFilterProviderRemediationURLFlowURL' nsstring='true' value='NE_FLOW_URL'/>
+<string_constant name='NEFilterProviderRemediationURLFlowURLHostname' nsstring='true' value='NE_FLOW_HOSTNAME'/>
+<string_constant name='NEFilterProviderRemediationURLOrganization' nsstring='true' value='NE_ORGANIZATION'/>
+<string_constant name='NEFilterProviderRemediationURLUsername' nsstring='true' value='NE_USERNAME'/>
+<enum name='NEAppProxyFlowErrorAborted' value64='5'/>
+<enum name='NEAppProxyFlowErrorDatagramTooLarge' value64='9'/>
+<enum name='NEAppProxyFlowErrorHostUnreachable' value64='3'/>
+<enum name='NEAppProxyFlowErrorInternal' value64='8'/>
+<enum name='NEAppProxyFlowErrorInvalidArgument' value64='4'/>
+<enum name='NEAppProxyFlowErrorNotConnected' value64='1'/>
+<enum name='NEAppProxyFlowErrorPeerReset' value64='2'/>
+<enum name='NEAppProxyFlowErrorReadAlreadyPending' value64='10'/>
+<enum name='NEAppProxyFlowErrorRefused' value64='6'/>
+<enum name='NEAppProxyFlowErrorTimedOut' value64='7'/>
+<enum name='NEEvaluateConnectionRuleActionConnectIfNeeded' value64='1'/>
+<enum name='NEEvaluateConnectionRuleActionNeverConnect' value64='2'/>
+<enum name='NEFilterFlowBytesMax' value64='18446744073709551615'/>
+<enum name='NEFilterManagerErrorConfigurationCannotBeRemoved' value64='4'/>
+<enum name='NEFilterManagerErrorConfigurationDisabled' value64='2'/>
+<enum name='NEFilterManagerErrorConfigurationInvalid' value64='1'/>
+<enum name='NEFilterManagerErrorConfigurationStale' value64='3'/>
+<enum name='NEOnDemandRuleActionConnect' value64='1'/>
+<enum name='NEOnDemandRuleActionDisconnect' value64='2'/>
+<enum name='NEOnDemandRuleActionEvaluateConnection' value64='3'/>
+<enum name='NEOnDemandRuleActionIgnore' value64='4'/>
+<enum name='NEOnDemandRuleInterfaceTypeAny' value64='0'/>
+<enum name='NEOnDemandRuleInterfaceTypeCellular' value64='3'/>
+<enum name='NEOnDemandRuleInterfaceTypeEthernet' value64='1'/>
+<enum name='NEOnDemandRuleInterfaceTypeWiFi' value64='2'/>
+<enum name='NEProviderStopReasonAuthenticationCanceled' value64='6'/>
+<enum name='NEProviderStopReasonConfigurationDisabled' value64='9'/>
+<enum name='NEProviderStopReasonConfigurationFailed' value64='7'/>
+<enum name='NEProviderStopReasonConfigurationRemoved' value64='10'/>
+<enum name='NEProviderStopReasonConnectionFailed' value64='14'/>
+<enum name='NEProviderStopReasonIdleTimeout' value64='8'/>
+<enum name='NEProviderStopReasonNoNetworkAvailable' value64='3'/>
+<enum name='NEProviderStopReasonNone' value64='0'/>
+<enum name='NEProviderStopReasonProviderDisabled' value64='5'/>
+<enum name='NEProviderStopReasonProviderFailed' value64='2'/>
+<enum name='NEProviderStopReasonSuperceded' value64='11'/>
+<enum name='NEProviderStopReasonUnrecoverableNetworkChange' value64='4'/>
+<enum name='NEProviderStopReasonUserInitiated' value64='1'/>
+<enum name='NEProviderStopReasonUserLogout' value64='12'/>
+<enum name='NEProviderStopReasonUserSwitch' value64='13'/>
+<enum name='NETunnelProviderErrorNetworkSettingsCanceled' value64='2'/>
+<enum name='NETunnelProviderErrorNetworkSettingsFailed' value64='3'/>
+<enum name='NETunnelProviderErrorNetworkSettingsInvalid' value64='1'/>
+<enum name='NETunnelProviderRoutingMethodDestinationIP' value64='1'/>
+<enum name='NETunnelProviderRoutingMethodSourceApplication' value64='2'/>
+<enum name='NEVPNErrorConfigurationDisabled' value64='2'/>
+<enum name='NEVPNErrorConfigurationInvalid' value64='1'/>
+<enum name='NEVPNErrorConfigurationReadWriteFailed' value64='5'/>
+<enum name='NEVPNErrorConfigurationStale' value64='4'/>
+<enum name='NEVPNErrorConfigurationUnknown' value64='6'/>
+<enum name='NEVPNErrorConnectionFailed' value64='3'/>
+<enum name='NEVPNIKEAuthenticationMethodCertificate' value64='1'/>
+<enum name='NEVPNIKEAuthenticationMethodNone' value64='0'/>
+<enum name='NEVPNIKEAuthenticationMethodSharedSecret' value64='2'/>
+<enum name='NEVPNIKEv2CertificateTypeECDSA256' value64='2'/>
+<enum name='NEVPNIKEv2CertificateTypeECDSA384' value64='3'/>
+<enum name='NEVPNIKEv2CertificateTypeECDSA521' value64='4'/>
+<enum name='NEVPNIKEv2CertificateTypeRSA' value64='1'/>
+<enum name='NEVPNIKEv2DeadPeerDetectionRateHigh' value64='3'/>
+<enum name='NEVPNIKEv2DeadPeerDetectionRateLow' value64='1'/>
+<enum name='NEVPNIKEv2DeadPeerDetectionRateMedium' value64='2'/>
+<enum name='NEVPNIKEv2DeadPeerDetectionRateNone' value64='0'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup1' value64='1'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup14' value64='14'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup15' value64='15'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup16' value64='16'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup17' value64='17'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup18' value64='18'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup19' value64='19'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup2' value64='2'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup20' value64='20'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup21' value64='21'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroup5' value64='5'/>
+<enum name='NEVPNIKEv2DiffieHellmanGroupInvalid' value64='0'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithm3DES' value64='2'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmAES128' value64='3'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmAES128GCM' value64='5'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmAES256' value64='4'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmAES256GCM' value64='6'/>
+<enum name='NEVPNIKEv2EncryptionAlgorithmDES' value64='1'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA160' value64='2'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA256' value64='3'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA384' value64='4'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA512' value64='5'/>
+<enum name='NEVPNIKEv2IntegrityAlgorithmSHA96' value64='1'/>
+<enum name='NEVPNStatusConnected' value64='3'/>
+<enum name='NEVPNStatusConnecting' value64='2'/>
+<enum name='NEVPNStatusDisconnected' value64='1'/>
+<enum name='NEVPNStatusDisconnecting' value64='5'/>
+<enum name='NEVPNStatusInvalid' value64='0'/>
+<enum name='NEVPNStatusReasserting' value64='4'/>
+<enum name='NWPathStatusInvalid' value64='0'/>
+<enum name='NWPathStatusSatisfiable' value64='3'/>
+<enum name='NWPathStatusSatisfied' value64='1'/>
+<enum name='NWPathStatusUnsatisfied' value64='2'/>
+<enum name='NWTCPConnectionStateCancelled' value64='5'/>
+<enum name='NWTCPConnectionStateConnected' value64='3'/>
+<enum name='NWTCPConnectionStateConnecting' value64='1'/>
+<enum name='NWTCPConnectionStateDisconnected' value64='4'/>
+<enum name='NWTCPConnectionStateInvalid' value64='0'/>
+<enum name='NWTCPConnectionStateWaiting' value64='2'/>
+<enum name='NWUDPSessionStateCancelled' value64='5'/>
+<enum name='NWUDPSessionStateFailed' value64='4'/>
+<enum name='NWUDPSessionStateInvalid' value64='0'/>
+<enum name='NWUDPSessionStatePreparing' value64='2'/>
+<enum name='NWUDPSessionStateReady' value64='3'/>
+<enum name='NWUDPSessionStateWaiting' value64='1'/>
+<class name='NEAppProxyFlow'>
+<method selector='openWithLocalEndpoint:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NEAppProxyProvider'>
+<method selector='handleNewFlow:'>
+<retval type64='B'/>
+</method>
+<method selector='startProxyWithOptions:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='stopProxyWithReason:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NEAppProxyProviderManager'>
+<method class_method='true' selector='loadAllFromPreferencesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NEAppProxyTCPFlow'>
+<method selector='readDataWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='writeData:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NEAppProxyUDPFlow'>
+<method selector='readDatagramsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='writeDatagrams:sentByEndpoints:completionHandler:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NEDNSSettings'>
+<method selector='matchDomainsNoSearch'>
+<retval type64='B'/>
+</method>
+<method selector='setMatchDomainsNoSearch:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NEFilterManager'>
+<method selector='isEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='loadFromPreferencesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='removeFromPreferencesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='saveToPreferencesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NEFilterProviderConfiguration'>
+<method selector='filterBrowsers'>
+<retval type64='B'/>
+</method>
+<method selector='filterSockets'>
+<retval type64='B'/>
+</method>
+<method selector='setFilterBrowsers:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setFilterSockets:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NEPacketTunnelFlow'>
+<method selector='readPacketObjectsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='readPacketsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='writePacketObjects:'>
+<retval type64='B'/>
+</method>
+<method selector='writePackets:withProtocols:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='NEPacketTunnelProvider'>
+<method selector='createTCPConnectionThroughTunnelToEndpoint:enableTLS:TLSParameters:delegate:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='startTunnelWithOptions:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='stopTunnelWithReason:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NEProvider'>
+<method selector='createTCPConnectionToEndpoint:enableTLS:TLSParameters:delegate:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='displayMessage:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='B'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='sleepWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NEProxyServer'>
+<method selector='authenticationRequired'>
+<retval type64='B'/>
+</method>
+<method selector='setAuthenticationRequired:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NEProxySettings'>
+<method selector='HTTPEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='HTTPSEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='autoProxyConfigurationEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='excludeSimpleHostnames'>
+<retval type64='B'/>
+</method>
+<method selector='setAutoProxyConfigurationEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setExcludeSimpleHostnames:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setHTTPEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setHTTPSEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NETunnelProvider'>
+<method selector='reasserting'>
+<retval type64='B'/>
+</method>
+<method selector='setReasserting:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NETunnelProviderManager'>
+<method class_method='true' selector='loadAllFromPreferencesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NETunnelProviderSession'>
+<method selector='sendProviderMessage:returnError:responseHandler:'>
+<retval type64='B'/>
+</method>
+<method selector='startTunnelWithOptions:andReturnError:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='NEVPNConnection'>
+<method selector='startVPNTunnelAndReturnError:'>
+<retval type64='B'/>
+</method>
+<method selector='startVPNTunnelWithOptions:andReturnError:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='NEVPNManager'>
+<method selector='isEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='isOnDemandEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='loadFromPreferencesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setOnDemandEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NEVPNProtocol'>
+<method selector='disconnectOnSleep'>
+<retval type64='B'/>
+</method>
+<method selector='setDisconnectOnSleep:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='NEVPNProtocolIKEv2'>
+<method selector='disableMOBIKE'>
+<retval type64='B'/>
+</method>
+<method selector='disableRedirect'>
+<retval type64='B'/>
+</method>
+<method selector='enablePFS'>
+<retval type64='B'/>
+</method>
+<method selector='enableRevocationCheck'>
+<retval type64='B'/>
+</method>
+<method selector='setDisableMOBIKE:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setDisableRedirect:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setEnablePFS:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setEnableRevocationCheck:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setStrictRevocationCheck:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setUseConfigurationAttributeInternalIPSubnet:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='strictRevocationCheck'>
+<retval type64='B'/>
+</method>
+<method selector='useConfigurationAttributeInternalIPSubnet'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='NEVPNProtocolIPSec'>
+<method selector='setUseExtendedAuthentication:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='useExtendedAuthentication'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='evaluateTrustForConnection:peerCertificateChain:completionHandler:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='^{__SecTrust=}'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='provideIdentityForConnection:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='^{OpaqueSecIdentityRef=}'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='shouldEvaluateTrustForConnection:'>
+<retval type64='B'/>
+</method>
+<method selector='shouldProvideIdentityForConnection:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='NWPath'>
+<method selector='isEqualToPath:'>
+<retval type64='B'/>
+</method>
+<method selector='isExpensive'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='NWTCPConnection'>
+<method selector='hasBetterPath'>
+<retval type64='B'/>
+</method>
+<method selector='isViable'>
+<retval type64='B'/>
+</method>
+<method selector='readLength:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='readMinimumLength:maximumLength:completionHandler:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='write:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='NWUDPSession'>
+<method selector='hasBetterPath'>
+<retval type64='B'/>
+</method>
+<method selector='isViable'>
+<retval type64='B'/>
+</method>
+<method selector='setReadHandler:maxDatagrams:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='writeDatagram:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='writeMultipleDatagrams:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<informal_protocol name='NWTCPConnectionAuthenticationDelegate'>
+<method selector='shouldEvaluateTrustForConnection:' type64='B24@0:8@16'/>
+<method selector='shouldProvideIdentityForConnection:' type64='B24@0:8@16'/>
+</informal_protocol>
+</signatures>

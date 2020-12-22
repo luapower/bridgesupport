@@ -1,0 +1,382 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/Accelerate.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreImage.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<struct name='MDLVoxelIndexExtent' type64='{_MDLVoxelIndexExtent=&quot;minimumExtent&quot;i&quot;maximumExtent&quot;i}'/>
+<opaque name='MDLAxisAlignedBoundingBox' type64='^{MDL_EXPORT_CPPCLASS=}'/>
+<constant name='MDLVertexAttributeAnisotropy' type64='@'/>
+<constant name='MDLVertexAttributeBinormal' type64='@'/>
+<constant name='MDLVertexAttributeBitangent' type64='@'/>
+<constant name='MDLVertexAttributeColor' type64='@'/>
+<constant name='MDLVertexAttributeEdgeCrease' type64='@'/>
+<constant name='MDLVertexAttributeJointIndices' type64='@'/>
+<constant name='MDLVertexAttributeJointWeights' type64='@'/>
+<constant name='MDLVertexAttributeNormal' type64='@'/>
+<constant name='MDLVertexAttributeOcclusionValue' type64='@'/>
+<constant name='MDLVertexAttributePosition' type64='@'/>
+<constant name='MDLVertexAttributeShadingBasisU' type64='@'/>
+<constant name='MDLVertexAttributeShadingBasisV' type64='@'/>
+<constant name='MDLVertexAttributeSubdivisionStencil' type64='@'/>
+<constant name='MDLVertexAttributeTangent' type64='@'/>
+<constant name='MDLVertexAttributeTextureCoordinate' type64='@'/>
+<constant name='kUTType3dObject' type64='@'/>
+<constant name='kUTTypeAlembic' type64='@'/>
+<constant name='kUTTypePolygon' type64='@'/>
+<constant name='kUTTypeStereolithography' type64='@'/>
+<constant name='kUTTypeUniversalSceneDescription' type64='@'/>
+<enum name='MDLCameraProjectionOrthographic' value64='1'/>
+<enum name='MDLCameraProjectionPerspective' value64='0'/>
+<enum name='MDLGeometryTypeLines' value64='1'/>
+<enum name='MDLGeometryTypePoints' value64='0'/>
+<enum name='MDLGeometryTypeQuads' value64='4'/>
+<enum name='MDLGeometryTypeTriangleStrips' value64='3'/>
+<enum name='MDLGeometryTypeTriangles' value64='2'/>
+<enum name='MDLGeometryTypeVariableTopology' value64='5'/>
+<enum name='MDLIndexBitDepthInvalid' value64='0'/>
+<enum name='MDLIndexBitDepthUInt16' value64='16'/>
+<enum name='MDLIndexBitDepthUInt32' value64='32'/>
+<enum name='MDLIndexBitDepthUInt8' value64='8'/>
+<enum name='MDLIndexBitDepthUint16' value64='16'/>
+<enum name='MDLIndexBitDepthUint32' value64='32'/>
+<enum name='MDLIndexBitDepthUint8' value64='8'/>
+<enum name='MDLLightTypeAmbient' value64='1'/>
+<enum name='MDLLightTypeDirectional' value64='2'/>
+<enum name='MDLLightTypeDiscArea' value64='6'/>
+<enum name='MDLLightTypeEnvironment' value64='11'/>
+<enum name='MDLLightTypeLinear' value64='5'/>
+<enum name='MDLLightTypePhotometric' value64='9'/>
+<enum name='MDLLightTypePoint' value64='4'/>
+<enum name='MDLLightTypeProbe' value64='10'/>
+<enum name='MDLLightTypeRectangularArea' value64='7'/>
+<enum name='MDLLightTypeSpot' value64='3'/>
+<enum name='MDLLightTypeSuperElliptical' value64='8'/>
+<enum name='MDLLightTypeUnknown' value64='0'/>
+<enum name='MDLMaterialFaceBack' value64='1'/>
+<enum name='MDLMaterialFaceDoubleSided' value64='2'/>
+<enum name='MDLMaterialFaceFront' value64='0'/>
+<enum name='MDLMaterialMipMapFilterModeLinear' value64='1'/>
+<enum name='MDLMaterialMipMapFilterModeNearest' value64='0'/>
+<enum name='MDLMaterialPropertyTypeColor' value64='4'/>
+<enum name='MDLMaterialPropertyTypeFloat' value64='5'/>
+<enum name='MDLMaterialPropertyTypeFloat2' value64='6'/>
+<enum name='MDLMaterialPropertyTypeFloat3' value64='7'/>
+<enum name='MDLMaterialPropertyTypeFloat4' value64='8'/>
+<enum name='MDLMaterialPropertyTypeMatrix44' value64='9'/>
+<enum name='MDLMaterialPropertyTypeNone' value64='0'/>
+<enum name='MDLMaterialPropertyTypeString' value64='1'/>
+<enum name='MDLMaterialPropertyTypeTexture' value64='3'/>
+<enum name='MDLMaterialPropertyTypeURL' value64='2'/>
+<enum name='MDLMaterialSemanticAmbientOcclusion' value64='22'/>
+<enum name='MDLMaterialSemanticAmbientOcclusionScale' value64='23'/>
+<enum name='MDLMaterialSemanticAnisotropic' value64='7'/>
+<enum name='MDLMaterialSemanticAnisotropicRotation' value64='8'/>
+<enum name='MDLMaterialSemanticBaseColor' value64='0'/>
+<enum name='MDLMaterialSemanticBump' value64='14'/>
+<enum name='MDLMaterialSemanticClearcoat' value64='11'/>
+<enum name='MDLMaterialSemanticClearcoatGloss' value64='12'/>
+<enum name='MDLMaterialSemanticDisplacement' value64='20'/>
+<enum name='MDLMaterialSemanticDisplacementScale' value64='21'/>
+<enum name='MDLMaterialSemanticEmission' value64='13'/>
+<enum name='MDLMaterialSemanticInterfaceIndexOfRefraction' value64='16'/>
+<enum name='MDLMaterialSemanticMaterialIndexOfRefraction' value64='17'/>
+<enum name='MDLMaterialSemanticMetallic' value64='2'/>
+<enum name='MDLMaterialSemanticNone' value64='32768'/>
+<enum name='MDLMaterialSemanticObjectSpaceNormal' value64='18'/>
+<enum name='MDLMaterialSemanticOpacity' value64='15'/>
+<enum name='MDLMaterialSemanticRoughness' value64='6'/>
+<enum name='MDLMaterialSemanticSheen' value64='9'/>
+<enum name='MDLMaterialSemanticSheenTint' value64='10'/>
+<enum name='MDLMaterialSemanticSpecular' value64='3'/>
+<enum name='MDLMaterialSemanticSpecularExponent' value64='4'/>
+<enum name='MDLMaterialSemanticSpecularTint' value64='5'/>
+<enum name='MDLMaterialSemanticSubsurface' value64='1'/>
+<enum name='MDLMaterialSemanticTangentSpaceNormal' value64='19'/>
+<enum name='MDLMaterialSemanticUserDefined' value64='32769'/>
+<enum name='MDLMaterialTextureFilterModeLinear' value64='1'/>
+<enum name='MDLMaterialTextureFilterModeNearest' value64='0'/>
+<enum name='MDLMaterialTextureWrapModeClamp' value64='0'/>
+<enum name='MDLMaterialTextureWrapModeMirror' value64='2'/>
+<enum name='MDLMaterialTextureWrapModeRepeat' value64='1'/>
+<enum name='MDLMeshBufferTypeIndex' value64='2'/>
+<enum name='MDLMeshBufferTypeVertex' value64='1'/>
+<enum name='MDLProbePlacementIrradianceDistribution' value64='1'/>
+<enum name='MDLProbePlacementUniformGrid' value64='0'/>
+<enum name='MDLTextureChannelEncodingFloat16' value64='258'/>
+<enum name='MDLTextureChannelEncodingFloat32' value64='260'/>
+<enum name='MDLTextureChannelEncodingUInt16' value64='2'/>
+<enum name='MDLTextureChannelEncodingUInt24' value64='3'/>
+<enum name='MDLTextureChannelEncodingUInt32' value64='4'/>
+<enum name='MDLTextureChannelEncodingUInt8' value64='1'/>
+<enum name='MDLTextureChannelEncodingUint16' value64='2'/>
+<enum name='MDLTextureChannelEncodingUint24' value64='3'/>
+<enum name='MDLTextureChannelEncodingUint32' value64='4'/>
+<enum name='MDLTextureChannelEncodingUint8' value64='1'/>
+<enum name='MDLVertexFormatChar' value64='131073'/>
+<enum name='MDLVertexFormatChar2' value64='131074'/>
+<enum name='MDLVertexFormatChar2Normalized' value64='262146'/>
+<enum name='MDLVertexFormatChar3' value64='131075'/>
+<enum name='MDLVertexFormatChar3Normalized' value64='262147'/>
+<enum name='MDLVertexFormatChar4' value64='131076'/>
+<enum name='MDLVertexFormatChar4Normalized' value64='262148'/>
+<enum name='MDLVertexFormatCharBits' value64='131072'/>
+<enum name='MDLVertexFormatCharNormalized' value64='262145'/>
+<enum name='MDLVertexFormatCharNormalizedBits' value64='262144'/>
+<enum name='MDLVertexFormatFloat' value64='786433'/>
+<enum name='MDLVertexFormatFloat2' value64='786434'/>
+<enum name='MDLVertexFormatFloat3' value64='786435'/>
+<enum name='MDLVertexFormatFloat4' value64='786436'/>
+<enum name='MDLVertexFormatFloatBits' value64='786432'/>
+<enum name='MDLVertexFormatHalf' value64='720897'/>
+<enum name='MDLVertexFormatHalf2' value64='720898'/>
+<enum name='MDLVertexFormatHalf3' value64='720899'/>
+<enum name='MDLVertexFormatHalf4' value64='720900'/>
+<enum name='MDLVertexFormatHalfBits' value64='720896'/>
+<enum name='MDLVertexFormatInt' value64='655361'/>
+<enum name='MDLVertexFormatInt1010102Normalized' value64='659460'/>
+<enum name='MDLVertexFormatInt2' value64='655362'/>
+<enum name='MDLVertexFormatInt3' value64='655363'/>
+<enum name='MDLVertexFormatInt4' value64='655364'/>
+<enum name='MDLVertexFormatIntBits' value64='655360'/>
+<enum name='MDLVertexFormatInvalid' value64='0'/>
+<enum name='MDLVertexFormatPackedBit' value64='4096'/>
+<enum name='MDLVertexFormatShort' value64='393217'/>
+<enum name='MDLVertexFormatShort2' value64='393218'/>
+<enum name='MDLVertexFormatShort2Normalized' value64='524290'/>
+<enum name='MDLVertexFormatShort3' value64='393219'/>
+<enum name='MDLVertexFormatShort3Normalized' value64='524291'/>
+<enum name='MDLVertexFormatShort4' value64='393220'/>
+<enum name='MDLVertexFormatShort4Normalized' value64='524292'/>
+<enum name='MDLVertexFormatShortBits' value64='393216'/>
+<enum name='MDLVertexFormatShortNormalized' value64='524289'/>
+<enum name='MDLVertexFormatShortNormalizedBits' value64='524288'/>
+<enum name='MDLVertexFormatUChar' value64='65537'/>
+<enum name='MDLVertexFormatUChar2' value64='65538'/>
+<enum name='MDLVertexFormatUChar2Normalized' value64='196610'/>
+<enum name='MDLVertexFormatUChar3' value64='65539'/>
+<enum name='MDLVertexFormatUChar3Normalized' value64='196611'/>
+<enum name='MDLVertexFormatUChar4' value64='65540'/>
+<enum name='MDLVertexFormatUChar4Normalized' value64='196612'/>
+<enum name='MDLVertexFormatUCharBits' value64='65536'/>
+<enum name='MDLVertexFormatUCharNormalized' value64='196609'/>
+<enum name='MDLVertexFormatUCharNormalizedBits' value64='196608'/>
+<enum name='MDLVertexFormatUInt' value64='589825'/>
+<enum name='MDLVertexFormatUInt1010102Normalized' value64='593924'/>
+<enum name='MDLVertexFormatUInt2' value64='589826'/>
+<enum name='MDLVertexFormatUInt3' value64='589827'/>
+<enum name='MDLVertexFormatUInt4' value64='589828'/>
+<enum name='MDLVertexFormatUIntBits' value64='589824'/>
+<enum name='MDLVertexFormatUShort' value64='327681'/>
+<enum name='MDLVertexFormatUShort2' value64='327682'/>
+<enum name='MDLVertexFormatUShort2Normalized' value64='458754'/>
+<enum name='MDLVertexFormatUShort3' value64='327683'/>
+<enum name='MDLVertexFormatUShort3Normalized' value64='458755'/>
+<enum name='MDLVertexFormatUShort4' value64='327684'/>
+<enum name='MDLVertexFormatUShort4Normalized' value64='458756'/>
+<enum name='MDLVertexFormatUShortBits' value64='327680'/>
+<enum name='MDLVertexFormatUShortNormalized' value64='458753'/>
+<enum name='MDLVertexFormatUShortNormalizedBits' value64='458752'/>
+<class name='MDLAsset'>
+<method class_method='true' selector='canExportFileExtension:'>
+<retval type64='B'/>
+</method>
+<method class_method='true' selector='canImportFileExtension:'>
+<retval type64='B'/>
+</method>
+<method selector='exportAssetToURL:'>
+<retval type64='B'/>
+</method>
+<method selector='exportAssetToURL:error:'>
+<retval type64='B'/>
+</method>
+<method selector='initWithURL:vertexDescriptor:bufferAllocator:preserveTopology:error:'>
+<arg index='3' type64='B'/>
+</method>
+</class>
+<class name='MDLCamera'>
+<method selector='frameBoundingBox:setNearAndFar:'>
+<arg index='1' type64='B'/>
+</method>
+</class>
+<class name='MDLMaterialPropertyNode'>
+<method selector='initWithInputs:outputs:evaluationFunction:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setEvaluationFunction:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='MDLMesh'>
+<method selector='generateAmbientOcclusionTextureWithQuality:attenuationFactor:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'>
+<retval type64='B'/>
+</method>
+<method selector='generateAmbientOcclusionTextureWithSize:raysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'>
+<retval type64='B'/>
+</method>
+<method selector='generateAmbientOcclusionVertexColorsWithQuality:attenuationFactor:objectsToConsider:vertexAttributeNamed:'>
+<retval type64='B'/>
+</method>
+<method selector='generateAmbientOcclusionVertexColorsWithRaysPerSample:attenuationFactor:objectsToConsider:vertexAttributeNamed:'>
+<retval type64='B'/>
+</method>
+<method selector='generateLightMapTextureWithQuality:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'>
+<retval type64='B'/>
+</method>
+<method selector='generateLightMapTextureWithTextureSize:lightsToConsider:objectsToConsider:vertexAttributeNamed:materialPropertyNamed:'>
+<retval type64='B'/>
+</method>
+<method selector='generateLightMapVertexColorsWithLightsToConsider:objectsToConsider:vertexAttributeNamed:'>
+<retval type64='B'/>
+</method>
+<method selector='initBoxWithExtent:segments:inwardNormals:geometryType:allocator:'>
+<arg index='2' type64='B'/>
+</method>
+<method selector='initCapsuleWithExtent:cylinderSegments:hemisphereSegments:inwardNormals:geometryType:allocator:'>
+<arg index='3' type64='B'/>
+</method>
+<method selector='initConeWithExtent:segments:inwardNormals:cap:geometryType:allocator:'>
+<arg index='2' type64='B'/>
+<arg index='3' type64='B'/>
+</method>
+<method selector='initCylinderWithExtent:segments:inwardNormals:topCap:bottomCap:geometryType:allocator:'>
+<arg index='2' type64='B'/>
+<arg index='3' type64='B'/>
+<arg index='4' type64='B'/>
+</method>
+<method selector='initHemisphereWithExtent:segments:inwardNormals:cap:geometryType:allocator:'>
+<arg index='2' type64='B'/>
+<arg index='3' type64='B'/>
+</method>
+<method selector='initIcosahedronWithExtent:inwardNormals:geometryType:allocator:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='initSphereWithExtent:segments:inwardNormals:geometryType:allocator:'>
+<arg index='2' type64='B'/>
+</method>
+<method class_method='true' selector='newBoxWithDimensions:segments:geometryType:inwardNormals:allocator:'>
+<arg index='3' type64='B'/>
+</method>
+<method class_method='true' selector='newCapsuleWithHeight:radii:radialSegments:verticalSegments:hemisphereSegments:geometryType:inwardNormals:allocator:'>
+<arg index='6' type64='B'/>
+</method>
+<method class_method='true' selector='newCylinderWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:'>
+<arg index='5' type64='B'/>
+</method>
+<method class_method='true' selector='newEllipsoidWithRadii:radialSegments:verticalSegments:geometryType:inwardNormals:hemisphere:allocator:'>
+<arg index='4' type64='B'/>
+<arg index='5' type64='B'/>
+</method>
+<method class_method='true' selector='newEllipticalConeWithHeight:radii:radialSegments:verticalSegments:geometryType:inwardNormals:allocator:'>
+<arg index='5' type64='B'/>
+</method>
+<method class_method='true' selector='newIcosahedronWithRadius:inwardNormals:allocator:'>
+<arg index='1' type64='B'/>
+</method>
+<method class_method='true' selector='newIcosahedronWithRadius:inwardNormals:geometryType:allocator:'>
+<arg index='1' type64='B'/>
+</method>
+</class>
+<class name='MDLNoiseTexture'>
+<method selector='initScalarNoiseWithSmoothness:name:textureDimensions:channelCount:channelEncoding:grayscale:'>
+<arg index='5' type64='B'/>
+</method>
+</class>
+<class name='MDLObject'>
+<method selector='enumerateChildObjectsOfClass:root:usingBlock:stopPointer:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='@'/>
+<arg type64='^B'/>
+<retval type64='v'/>
+</arg>
+<arg index='3' type64='^B'/>
+</method>
+<method selector='hidden'>
+<retval type64='B'/>
+</method>
+<method selector='setHidden:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='MDLTexture'>
+<method selector='hasAlphaValues'>
+<retval type64='B'/>
+</method>
+<method selector='initWithData:topLeftOrigin:name:dimensions:rowStride:channelCount:channelEncoding:isCube:'>
+<arg index='1' type64='B'/>
+<arg index='7' type64='B'/>
+</method>
+<method selector='isCube'>
+<retval type64='B'/>
+</method>
+<method selector='setHasAlphaValues:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setIsCube:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='texelDataWithBottomLeftOriginAtMipLevel:create:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='texelDataWithTopLeftOriginAtMipLevel:create:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='writeToURL:'>
+<retval type64='B'/>
+</method>
+<method selector='writeToURL:type:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MDLTransform'>
+<method selector='initWithMatrix:resetsTransform:'>
+<arg index='1' type64='B'/>
+</method>
+<method selector='initWithTransformComponent:resetsTransform:'>
+<arg index='1' type64='B'/>
+</method>
+</class>
+<class name='MDLVoxelArray'>
+<method selector='isValidSignedShellField'>
+<retval type64='B'/>
+</method>
+<method selector='voxelExistsAtIndex:allowAnyX:allowAnyY:allowAnyZ:allowAnyShell:'>
+<arg index='1' type64='B'/>
+<arg index='2' type64='B'/>
+<arg index='3' type64='B'/>
+<arg index='4' type64='B'/>
+<retval type64='B'/>
+</method>
+<method selector='voxelIndexExtent'>
+<retval type64='{_MDLVoxelIndexExtent=ii}'/>
+</method>
+<method selector='voxelsWithinExtent:'>
+<arg index='0' type64='{_MDLVoxelIndexExtent=ii}'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='resetsTransform'>
+<retval type64='B'/>
+</method>
+<method selector='setResetsTransform:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<informal_protocol name='MDLTransformComponent'>
+<method selector='resetsTransform' type64='B16@0:8'/>
+</informal_protocol>
+</signatures>

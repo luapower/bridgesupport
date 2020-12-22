@@ -1,0 +1,237 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/AVFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<constant name='MPErrorDomain' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicContainsOnlyForcedSubtitles' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicDescribesMusicAndSound' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicDescribesVideo' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicDubbedTranslation' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicEasyToRead' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicIsAuxiliaryContent' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicIsMainProgramContent' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicLanguageTranslation' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicTranscribesSpokenDialog' type64='@'/>
+<constant name='MPLanguageOptionCharacteristicVoiceOverTranslation' type64='@'/>
+<constant name='MPMediaEntityPropertyPersistentID' type64='@'/>
+<constant name='MPMediaItemPropertyAlbumArtist' type64='@'/>
+<constant name='MPMediaItemPropertyAlbumArtistPersistentID' type64='@'/>
+<constant name='MPMediaItemPropertyAlbumPersistentID' type64='@'/>
+<constant name='MPMediaItemPropertyAlbumTitle' type64='@'/>
+<constant name='MPMediaItemPropertyAlbumTrackCount' type64='@'/>
+<constant name='MPMediaItemPropertyAlbumTrackNumber' type64='@'/>
+<constant name='MPMediaItemPropertyArtist' type64='@'/>
+<constant name='MPMediaItemPropertyArtistPersistentID' type64='@'/>
+<constant name='MPMediaItemPropertyArtwork' type64='@'/>
+<constant name='MPMediaItemPropertyAssetURL' type64='@'/>
+<constant name='MPMediaItemPropertyBeatsPerMinute' type64='@'/>
+<constant name='MPMediaItemPropertyBookmarkTime' type64='@'/>
+<constant name='MPMediaItemPropertyComments' type64='@'/>
+<constant name='MPMediaItemPropertyComposer' type64='@'/>
+<constant name='MPMediaItemPropertyComposerPersistentID' type64='@'/>
+<constant name='MPMediaItemPropertyDateAdded' type64='@'/>
+<constant name='MPMediaItemPropertyDiscCount' type64='@'/>
+<constant name='MPMediaItemPropertyDiscNumber' type64='@'/>
+<constant name='MPMediaItemPropertyGenre' type64='@'/>
+<constant name='MPMediaItemPropertyGenrePersistentID' type64='@'/>
+<constant name='MPMediaItemPropertyHasProtectedAsset' type64='@'/>
+<constant name='MPMediaItemPropertyIsCloudItem' type64='@'/>
+<constant name='MPMediaItemPropertyIsCompilation' type64='@'/>
+<constant name='MPMediaItemPropertyIsExplicit' type64='@'/>
+<constant name='MPMediaItemPropertyLastPlayedDate' type64='@'/>
+<constant name='MPMediaItemPropertyLyrics' type64='@'/>
+<constant name='MPMediaItemPropertyMediaType' type64='@'/>
+<constant name='MPMediaItemPropertyPersistentID' type64='@'/>
+<constant name='MPMediaItemPropertyPlayCount' type64='@'/>
+<constant name='MPMediaItemPropertyPlaybackDuration' type64='@'/>
+<constant name='MPMediaItemPropertyPodcastPersistentID' type64='@'/>
+<constant name='MPMediaItemPropertyPodcastTitle' type64='@'/>
+<constant name='MPMediaItemPropertyRating' type64='@'/>
+<constant name='MPMediaItemPropertyReleaseDate' type64='@'/>
+<constant name='MPMediaItemPropertySkipCount' type64='@'/>
+<constant name='MPMediaItemPropertyTitle' type64='@'/>
+<constant name='MPMediaItemPropertyUserGrouping' type64='@'/>
+<constant name='MPNowPlayingInfoCollectionIdentifier' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyAssetURL' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyAvailableLanguageOptions' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyChapterCount' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyChapterNumber' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyCurrentLanguageOptions' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyDefaultPlaybackRate' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyElapsedPlaybackTime' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyExternalContentIdentifier' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyExternalUserProfileIdentifier' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyIsLiveStream' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyMediaType' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyPlaybackProgress' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyPlaybackQueueCount' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyPlaybackQueueIndex' type64='@'/>
+<constant name='MPNowPlayingInfoPropertyPlaybackRate' type64='@'/>
+<enum name='MPChangeLanguageOptionSettingNone' value64='0'/>
+<enum name='MPChangeLanguageOptionSettingNowPlayingItemOnly' value64='1'/>
+<enum name='MPChangeLanguageOptionSettingPermanent' value64='2'/>
+<enum name='MPErrorCancelled' value64='6'/>
+<enum name='MPErrorCloudServiceCapabilityMissing' value64='2'/>
+<enum name='MPErrorNetworkConnectionFailed' value64='3'/>
+<enum name='MPErrorNotFound' value64='4'/>
+<enum name='MPErrorNotSupported' value64='5'/>
+<enum name='MPErrorPermissionDenied' value64='1'/>
+<enum name='MPErrorRequestTimedOut' value64='7'/>
+<enum name='MPErrorUnknown' value64='0'/>
+<enum name='MPMediaTypeAny' value64='18446744073709551615'/>
+<enum name='MPMediaTypeAnyAudio' value64='255'/>
+<enum name='MPMediaTypeAnyVideo' value64='65280'/>
+<enum name='MPMediaTypeAudioBook' value64='4'/>
+<enum name='MPMediaTypeAudioITunesU' value64='8'/>
+<enum name='MPMediaTypeHomeVideo' value64='8192'/>
+<enum name='MPMediaTypeMovie' value64='256'/>
+<enum name='MPMediaTypeMusic' value64='1'/>
+<enum name='MPMediaTypeMusicVideo' value64='2048'/>
+<enum name='MPMediaTypePodcast' value64='2'/>
+<enum name='MPMediaTypeTVShow' value64='512'/>
+<enum name='MPMediaTypeVideoITunesU' value64='4096'/>
+<enum name='MPMediaTypeVideoPodcast' value64='1024'/>
+<enum name='MPNowPlayingInfoLanguageOptionTypeAudible' value64='0'/>
+<enum name='MPNowPlayingInfoLanguageOptionTypeLegible' value64='1'/>
+<enum name='MPNowPlayingInfoMediaTypeAudio' value64='1'/>
+<enum name='MPNowPlayingInfoMediaTypeNone' value64='0'/>
+<enum name='MPNowPlayingInfoMediaTypeVideo' value64='2'/>
+<enum name='MPNowPlayingPlaybackStateInterrupted' value64='4'/>
+<enum name='MPNowPlayingPlaybackStatePaused' value64='2'/>
+<enum name='MPNowPlayingPlaybackStatePlaying' value64='1'/>
+<enum name='MPNowPlayingPlaybackStateStopped' value64='3'/>
+<enum name='MPNowPlayingPlaybackStateUnknown' value64='0'/>
+<enum name='MPRemoteCommandHandlerStatusCommandFailed' value64='200'/>
+<enum name='MPRemoteCommandHandlerStatusNoActionableNowPlayingItem' value64='110'/>
+<enum name='MPRemoteCommandHandlerStatusNoSuchContent' value64='100'/>
+<enum name='MPRemoteCommandHandlerStatusSuccess' value64='0'/>
+<enum name='MPRepeatTypeAll' value64='2'/>
+<enum name='MPRepeatTypeOff' value64='0'/>
+<enum name='MPRepeatTypeOne' value64='1'/>
+<enum name='MPSeekCommandEventTypeBeginSeeking' value64='0'/>
+<enum name='MPSeekCommandEventTypeEndSeeking' value64='1'/>
+<enum name='MPShuffleTypeCollections' value64='2'/>
+<enum name='MPShuffleTypeItems' value64='1'/>
+<enum name='MPShuffleTypeOff' value64='0'/>
+<class name='MPChangeRepeatModeCommandEvent'>
+<method selector='preservesRepeatMode'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MPChangeShuffleModeCommandEvent'>
+<method selector='preservesShuffleMode'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MPContentItem'>
+<method selector='isContainer'>
+<retval type64='B'/>
+</method>
+<method selector='isExplicitContent'>
+<retval type64='B'/>
+</method>
+<method selector='isPlayable'>
+<retval type64='B'/>
+</method>
+<method selector='isStreamingContent'>
+<retval type64='B'/>
+</method>
+<method selector='setContainer:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setExplicitContent:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setPlayable:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setStreamingContent:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='MPFeedbackCommand'>
+<method selector='isActive'>
+<retval type64='B'/>
+</method>
+<method selector='setActive:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='MPFeedbackCommandEvent'>
+<method selector='isNegative'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MPMediaEntity'>
+<method class_method='true' selector='canFilterByProperty:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MPMediaItem'>
+<method selector='hasProtectedAsset'>
+<retval type64='B'/>
+</method>
+<method selector='isCloudItem'>
+<retval type64='B'/>
+</method>
+<method selector='isCompilation'>
+<retval type64='B'/>
+</method>
+<method selector='isExplicitItem'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MPMediaItemArtwork'>
+<method selector='initWithBoundsSize:requestHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='{CGSize=dd}'/>
+<retval type64='@'/>
+</arg>
+</method>
+</class>
+<class name='MPNowPlayingInfoLanguageOption'>
+<method selector='isAutomaticAudibleLanguageOption'>
+<retval type64='B'/>
+</method>
+<method selector='isAutomaticLegibleLanguageOption'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MPNowPlayingInfoLanguageOptionGroup'>
+<method selector='allowEmptySelection'>
+<retval type64='B'/>
+</method>
+<method selector='initWithLanguageOptions:defaultLanguageOption:allowEmptySelection:'>
+<arg index='2' type64='B'/>
+</method>
+</class>
+<class name='MPPlayableContentManagerContext'>
+<method selector='contentLimitsEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='contentLimitsEnforced'>
+<retval type64='B'/>
+</method>
+<method selector='endpointAvailable'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='MPRemoteCommand'>
+<method selector='addTargetWithHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='q'/>
+</arg>
+</method>
+<method selector='isEnabled'>
+<retval type64='B'/>
+</method>
+<method selector='setEnabled:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+</signatures>

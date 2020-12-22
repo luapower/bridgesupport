@@ -1,0 +1,87 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/GSS.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreData.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='ACAccountStoreDidChangeNotification' type64='@'/>
+<constant name='ACAccountTypeIdentifierFacebook' type64='@'/>
+<constant name='ACAccountTypeIdentifierLinkedIn' type64='@'/>
+<constant name='ACAccountTypeIdentifierSinaWeibo' type64='@'/>
+<constant name='ACAccountTypeIdentifierTencentWeibo' type64='@'/>
+<constant name='ACAccountTypeIdentifierTwitter' type64='@'/>
+<constant name='ACErrorDomain' type64='@'/>
+<constant name='ACFacebookAppIdKey' type64='@'/>
+<constant name='ACFacebookAudienceEveryone' type64='@'/>
+<constant name='ACFacebookAudienceFriends' type64='@'/>
+<constant name='ACFacebookAudienceKey' type64='@'/>
+<constant name='ACFacebookAudienceOnlyMe' type64='@'/>
+<constant name='ACFacebookPermissionsKey' type64='@'/>
+<constant name='ACLinkedInAppIdKey' type64='@'/>
+<constant name='ACLinkedInPermissionsKey' type64='@'/>
+<constant name='ACTencentWeiboAppIdKey' type64='@'/>
+<enum name='ACAccountCredentialRenewResultFailed' value64='2'/>
+<enum name='ACAccountCredentialRenewResultRejected' value64='1'/>
+<enum name='ACAccountCredentialRenewResultRenewed' value64='0'/>
+<enum name='ACErrorAccessDeniedByProtectionPolicy' value64='10'/>
+<enum name='ACErrorAccessInfoInvalid' value64='8'/>
+<enum name='ACErrorAccountAlreadyExists' value64='5'/>
+<enum name='ACErrorAccountAuthenticationFailed' value64='3'/>
+<enum name='ACErrorAccountMissingRequiredProperty' value64='2'/>
+<enum name='ACErrorAccountNotFound' value64='6'/>
+<enum name='ACErrorAccountTypeInvalid' value64='4'/>
+<enum name='ACErrorClientPermissionDenied' value64='9'/>
+<enum name='ACErrorCoreDataSaveFailed' value64='18'/>
+<enum name='ACErrorCredentialItemNotExpired' value64='23'/>
+<enum name='ACErrorCredentialItemNotFound' value64='22'/>
+<enum name='ACErrorCredentialNotFound' value64='11'/>
+<enum name='ACErrorDeniedByPlugin' value64='17'/>
+<enum name='ACErrorFailedSerializingAccountInfo' value64='19'/>
+<enum name='ACErrorFetchCredentialFailed' value64='12'/>
+<enum name='ACErrorInvalidClientBundleID' value64='16'/>
+<enum name='ACErrorInvalidCommand' value64='20'/>
+<enum name='ACErrorMissingTransportMessageID' value64='21'/>
+<enum name='ACErrorPermissionDenied' value64='7'/>
+<enum name='ACErrorRemoveCredentialFailed' value64='14'/>
+<enum name='ACErrorStoreCredentialFailed' value64='13'/>
+<enum name='ACErrorUnknown' value64='1'/>
+<enum name='ACErrorUpdatingNonexistentAccount' value64='15'/>
+<class name='ACAccountStore'>
+<method selector='removeAccount:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='renewCredentialsForAccount:completion:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='q'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='requestAccessToAccountsWithType:options:completion:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='saveAccount:withCompletionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='ACAccountType'>
+<method selector='accessGranted'>
+<retval type64='B'/>
+</method>
+</class>
+</signatures>

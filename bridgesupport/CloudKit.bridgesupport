@@ -1,0 +1,697 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreLocation.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<constant name='CKAccountChangedNotification' type64='@'/>
+<constant name='CKCurrentUserDefaultName' type64='@'/>
+<constant name='CKErrorDomain' type64='@'/>
+<constant name='CKErrorRetryAfterKey' type64='@'/>
+<constant name='CKOwnerDefaultName' type64='@'/>
+<constant name='CKPartialErrorsByItemIDKey' type64='@'/>
+<constant name='CKQueryOperationMaximumResults' type64='Q'/>
+<constant name='CKRecordChangedErrorAncestorRecordKey' type64='@'/>
+<constant name='CKRecordChangedErrorClientRecordKey' type64='@'/>
+<constant name='CKRecordChangedErrorServerRecordKey' type64='@'/>
+<constant name='CKRecordParentKey' type64='@'/>
+<constant name='CKRecordShareKey' type64='@'/>
+<constant name='CKRecordTypeShare' type64='@'/>
+<constant name='CKRecordTypeUserRecord' type64='@'/>
+<constant name='CKRecordZoneDefaultName' type64='@'/>
+<constant name='CKShareThumbnailImageDataKey' type64='@'/>
+<constant name='CKShareTitleKey' type64='@'/>
+<constant name='CKShareTypeKey' type64='@'/>
+<enum name='CKAccountStatusAvailable' value64='1'/>
+<enum name='CKAccountStatusCouldNotDetermine' value64='0'/>
+<enum name='CKAccountStatusNoAccount' value64='3'/>
+<enum name='CKAccountStatusRestricted' value64='2'/>
+<enum name='CKApplicationPermissionStatusCouldNotComplete' value64='1'/>
+<enum name='CKApplicationPermissionStatusDenied' value64='2'/>
+<enum name='CKApplicationPermissionStatusGranted' value64='3'/>
+<enum name='CKApplicationPermissionStatusInitialState' value64='0'/>
+<enum name='CKApplicationPermissionUserDiscoverability' value64='1'/>
+<enum name='CKDatabaseScopePrivate' value64='2'/>
+<enum name='CKDatabaseScopePublic' value64='1'/>
+<enum name='CKDatabaseScopeShared' value64='3'/>
+<enum name='CKErrorBadContainer' value64='5'/>
+<enum name='CKErrorInternalError' value64='1'/>
+<enum name='CKErrorInvalidArguments' value64='12'/>
+<enum name='CKErrorMissingEntitlement' value64='8'/>
+<enum name='CKErrorNetworkFailure' value64='4'/>
+<enum name='CKErrorNetworkUnavailable' value64='3'/>
+<enum name='CKErrorNotAuthenticated' value64='9'/>
+<enum name='CKErrorPartialFailure' value64='2'/>
+<enum name='CKErrorPermissionFailure' value64='10'/>
+<enum name='CKErrorRequestRateLimited' value64='7'/>
+<enum name='CKErrorResultsTruncated' value64='13'/>
+<enum name='CKErrorServiceUnavailable' value64='6'/>
+<enum name='CKErrorUnknownItem' value64='11'/>
+<enum name='CKNotificationTypeDatabase' value64='4'/>
+<enum name='CKNotificationTypeQuery' value64='1'/>
+<enum name='CKNotificationTypeReadNotification' value64='3'/>
+<enum name='CKNotificationTypeRecordZone' value64='2'/>
+<enum name='CKQueryNotificationReasonRecordCreated' value64='1'/>
+<enum name='CKQueryNotificationReasonRecordDeleted' value64='3'/>
+<enum name='CKQueryNotificationReasonRecordUpdated' value64='2'/>
+<enum name='CKQuerySubscriptionOptionsFiresOnRecordCreation' value64='1'/>
+<enum name='CKQuerySubscriptionOptionsFiresOnRecordDeletion' value64='4'/>
+<enum name='CKQuerySubscriptionOptionsFiresOnRecordUpdate' value64='2'/>
+<enum name='CKQuerySubscriptionOptionsFiresOnce' value64='8'/>
+<enum name='CKRecordSaveAllKeys' value64='2'/>
+<enum name='CKRecordSaveChangedKeys' value64='1'/>
+<enum name='CKRecordSaveIfServerRecordUnchanged' value64='0'/>
+<enum name='CKRecordZoneCapabilityAtomic' value64='2'/>
+<enum name='CKRecordZoneCapabilityFetchChanges' value64='1'/>
+<enum name='CKRecordZoneCapabilitySharing' value64='4'/>
+<enum name='CKReferenceActionDeleteSelf' value64='1'/>
+<enum name='CKReferenceActionNone' value64='0'/>
+<enum name='CKShareParticipantAcceptanceStatusAccepted' value64='2'/>
+<enum name='CKShareParticipantAcceptanceStatusPending' value64='1'/>
+<enum name='CKShareParticipantAcceptanceStatusRemoved' value64='3'/>
+<enum name='CKShareParticipantAcceptanceStatusUnknown' value64='0'/>
+<enum name='CKShareParticipantPermissionNone' value64='1'/>
+<enum name='CKShareParticipantPermissionReadOnly' value64='2'/>
+<enum name='CKShareParticipantPermissionReadWrite' value64='3'/>
+<enum name='CKShareParticipantPermissionUnknown' value64='0'/>
+<enum name='CKShareParticipantTypeOwner' value64='1'/>
+<enum name='CKShareParticipantTypePrivateUser' value64='3'/>
+<enum name='CKShareParticipantTypePublicUser' value64='4'/>
+<enum name='CKShareParticipantTypeUnknown' value64='0'/>
+<enum name='CKSubscriptionOptionsFiresOnRecordCreation' value64='1'/>
+<enum name='CKSubscriptionOptionsFiresOnRecordDeletion' value64='4'/>
+<enum name='CKSubscriptionOptionsFiresOnRecordUpdate' value64='2'/>
+<enum name='CKSubscriptionOptionsFiresOnce' value64='8'/>
+<enum name='CKSubscriptionTypeDatabase' value64='3'/>
+<enum name='CKSubscriptionTypeQuery' value64='1'/>
+<enum name='CKSubscriptionTypeRecordZone' value64='2'/>
+<class name='CKAcceptSharesOperation'>
+<method selector='setAcceptSharesCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setPerShareCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKContainer'>
+<method selector='acceptShareMetadata:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='accountStatusWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='q'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='discoverAllContactUserInfosWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='discoverAllIdentitiesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='discoverUserIdentityWithEmailAddress:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='discoverUserIdentityWithPhoneNumber:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='discoverUserIdentityWithUserRecordID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='discoverUserInfoWithEmailAddress:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='discoverUserInfoWithUserRecordID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchAllLongLivedOperationIDsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchLongLivedOperationWithID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchShareMetadataWithURL:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchShareParticipantWithEmailAddress:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchShareParticipantWithPhoneNumber:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchShareParticipantWithUserRecordID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchUserRecordIDWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='requestApplicationPermission:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='q'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='statusForApplicationPermission:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='q'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKDatabase'>
+<method selector='deleteRecordWithID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='deleteRecordZoneWithID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='deleteSubscriptionWithID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchAllRecordZonesWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchAllSubscriptionsWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchRecordWithID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchRecordZoneWithID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='fetchSubscriptionWithID:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='performQuery:inZoneWithID:completionHandler:'>
+<arg function_pointer='true' index='2' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='saveRecord:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='saveRecordZone:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='saveSubscription:completionHandler:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKDiscoverAllContactsOperation'>
+<method selector='setDiscoverAllContactsCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKDiscoverAllUserIdentitiesOperation'>
+<method selector='setDiscoverAllUserIdentitiesCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setUserIdentityDiscoveredBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKDiscoverUserIdentitiesOperation'>
+<method selector='setDiscoverUserIdentitiesCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setUserIdentityDiscoveredBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKDiscoverUserInfosOperation'>
+<method selector='setDiscoverUserInfosCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKFetchDatabaseChangesOperation'>
+<method selector='fetchAllChanges'>
+<retval type64='B'/>
+</method>
+<method selector='setChangeTokenUpdatedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setFetchAllChanges:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setFetchDatabaseChangesCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setRecordZoneWithIDChangedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setRecordZoneWithIDWasDeletedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKFetchNotificationChangesOperation'>
+<method selector='moreComing'>
+<retval type64='B'/>
+</method>
+<method selector='setFetchNotificationChangesCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setNotificationChangedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKFetchRecordChangesOperation'>
+<method selector='moreComing'>
+<retval type64='B'/>
+</method>
+<method selector='setFetchRecordChangesCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setRecordChangedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setRecordWithIDWasDeletedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKFetchRecordZoneChangesOperation'>
+<method selector='fetchAllChanges'>
+<retval type64='B'/>
+</method>
+<method selector='setFetchAllChanges:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setFetchRecordZoneChangesCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setRecordChangedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setRecordWithIDWasDeletedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setRecordZoneChangeTokensUpdatedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setRecordZoneFetchCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<arg type64='@'/>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKFetchRecordZonesOperation'>
+<method selector='setFetchRecordZonesCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKFetchRecordsOperation'>
+<method selector='setFetchRecordsCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setPerRecordCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setPerRecordProgressBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKFetchShareMetadataOperation'>
+<method selector='setFetchShareMetadataCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setPerShareMetadataBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setShouldFetchRootRecord:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldFetchRootRecord'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CKFetchShareParticipantsOperation'>
+<method selector='setFetchShareParticipantsCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setShareParticipantFetchedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKFetchSubscriptionsOperation'>
+<method selector='setFetchSubscriptionCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKFetchWebAuthTokenOperation'>
+<method selector='setFetchWebAuthTokenCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKMarkNotificationsReadOperation'>
+<method selector='setMarkNotificationsReadCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKModifyBadgeOperation'>
+<method selector='setModifyBadgeCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKModifyRecordZonesOperation'>
+<method selector='setModifyRecordZonesCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKModifyRecordsOperation'>
+<method selector='atomic'>
+<retval type64='B'/>
+</method>
+<method selector='setAtomic:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setModifyRecordsCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setPerRecordCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setPerRecordProgressBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='d'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKModifySubscriptionsOperation'>
+<method selector='setModifySubscriptionsCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKNotification'>
+<method selector='isPruned'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CKNotificationInfo'>
+<method selector='setShouldBadge:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setShouldSendContentAvailable:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='shouldBadge'>
+<retval type64='B'/>
+</method>
+<method selector='shouldSendContentAvailable'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CKOperation'>
+<method selector='allowsCellularAccess'>
+<retval type64='B'/>
+</method>
+<method selector='isLongLived'>
+<retval type64='B'/>
+</method>
+<method selector='setAllowsCellularAccess:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setLongLived:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setLongLivedOperationWasPersistedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setUsesBackgroundSession:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='usesBackgroundSession'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CKQueryNotification'>
+<method selector='isPublicDatabase'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='CKQueryOperation'>
+<method selector='setQueryCompletionBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='setRecordFetchedBlock:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='CKUserIdentity'>
+<method selector='hasiCloudAccount'>
+<retval type64='B'/>
+</method>
+</class>
+</signatures>

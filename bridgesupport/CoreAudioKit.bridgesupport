@@ -1,0 +1,45 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AppKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMIDI.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreBluetooth.framework'/>
+<depends_on path='/System/Library/Frameworks/ScriptingBridge.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioVideoBridging.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioUnit.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/Cocoa.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<enum name='AUViewParametersDisplayFlag' value='4'/>
+<enum name='AUViewPropertiesDisplayFlag' value='2'/>
+<enum name='AUViewTitleDisplayFlag' value='1'/>
+<class name='AUAudioUnit'>
+<method selector='requestViewControllerWithCompletionHandler:'>
+<arg function_pointer='true' index='0' type='@?'>
+<arg type='^{NSViewController=#@@@@@@@@@@@b1b1b1b1b28}'/>
+<retval type='v'/>
+</arg>
+</method>
+</class>
+<class name='AUGenericView'>
+<method selector='setShowsExpertParameters:'>
+<arg index='0' type='B'/>
+</method>
+<method selector='showsExpertParameters'>
+<retval type='B'/>
+</method>
+</class>
+<class name='CANetworkBrowserWindowController'>
+<method class_method='true' selector='isAVBSupported'>
+<retval type='B'/>
+</method>
+</class>
+<informal_protocol name='AUCustomViewPersistentData'>
+<method selector='id' type='{NSDictionary=}8@0:4' type64='{NSDictionary=}16@0:8'/>
+<method selector='setId:' type='v8@0:4{NSDictionary=}8' type64='v16@0:8{NSDictionary=}16'/>
+</informal_protocol>
+</signatures>

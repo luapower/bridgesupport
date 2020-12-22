@@ -1,0 +1,65 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/MediaAccessibility.framework'/>
+<depends_on path='/System/Library/Frameworks/ImageIO.framework'/>
+<depends_on path='/System/Library/Frameworks/IOSurface.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreVideo.framework'/>
+<depends_on path='/System/Library/Frameworks/QuartzCore.framework'/>
+<depends_on path='/System/Library/Frameworks/ApplicationServices.framework'/>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/OpenGL.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreMedia.framework'/>
+<depends_on path='/System/Library/Frameworks/VideoToolbox.framework'/>
+<depends_on path='/System/Library/Frameworks/AudioUnit.framework'/>
+<depends_on path='/System/Library/Frameworks/SystemConfiguration.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreAudio.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/CFNetwork.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreGraphics.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreServices.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreText.framework'/>
+<struct name='MTAudioProcessingTapCallbacks' type='{_MTAudioProcessingTapCallbacks=&quot;version&quot;i&quot;clientInfo&quot;^v&quot;init&quot;^?&quot;finalize&quot;^?&quot;prepare&quot;^?&quot;unprepare&quot;^?&quot;process&quot;^?}'/>
+<cftype gettypeid_func='MTAudioProcessingTapGetTypeID' name='MTAudioProcessingTapRef' tollfree='__NSCFType' type='^{opaqueMTAudioProcessingTap=}'/>
+<enum name='kMTAudioProcessingTapCallbacksVersion_0' value='0'/>
+<enum name='kMTAudioProcessingTapCreationFlag_PostEffects' value='2'/>
+<enum name='kMTAudioProcessingTapCreationFlag_PreEffects' value='1'/>
+<enum name='kMTAudioProcessingTapFlag_EndOfStream' value='512'/>
+<enum name='kMTAudioProcessingTapFlag_StartOfStream' value='256'/>
+<function name='MTAudioProcessingTapCreate'>
+<arg type='^{__CFAllocator=}'/>
+<arg type='^{_MTAudioProcessingTapCallbacks=i^v^?^?^?^?^?}'/>
+<arg type='I'/>
+<arg type='^^{opaqueMTAudioProcessingTap}'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='MTAudioProcessingTapGetSourceAudio'>
+<arg type='^{opaqueMTAudioProcessingTap=}'/>
+<arg type='l' type64='q'/>
+<arg type='^{AudioBufferList=I[1{AudioBuffer=II^v}]}'/>
+<arg type='^I'/>
+<arg type='^{_CMTimeRange={?=qiIq}{?=qiIq}}'/>
+<arg type='^i' type64='^q'/>
+<retval type='l' type64='i'/>
+</function>
+<function name='MTAudioProcessingTapGetStorage'>
+<arg type='^{opaqueMTAudioProcessingTap=}'/>
+<retval type='^v'/>
+</function>
+<function name='MTAudioProcessingTapGetTypeID'>
+<retval type='L' type64='Q'/>
+</function>
+<function name='MTCopyLocalizedNameForMediaSubType'>
+<arg type='L' type64='I'/>
+<arg type='L' type64='I'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='MTCopyLocalizedNameForMediaType'>
+<arg type='L' type64='I'/>
+<retval already_retained='true' type='^{__CFString=}'/>
+</function>
+<function name='MTRegisterProfessionalVideoWorkflowFormatReaders'/>
+</signatures>

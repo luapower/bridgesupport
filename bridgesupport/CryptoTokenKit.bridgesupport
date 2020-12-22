@@ -1,0 +1,191 @@
+<?xml version='1.0'?>
+<!DOCTYPE signatures SYSTEM "file://localhost/System/Library/DTDs/BridgeSupport.dtd">
+<signatures version='1.0'>
+<depends_on path='/System/Library/Frameworks/Foundation.framework'/>
+<depends_on path='/System/Library/Frameworks/Security.framework'/>
+<depends_on path='/System/Library/Frameworks/LocalAuthentication.framework'/>
+<depends_on path='/System/Library/Frameworks/CoreFoundation.framework'/>
+<depends_on path='/System/Library/Frameworks/IOKit.framework'/>
+<constant name='TKErrorDomain' type64='@'/>
+<enum name='TKErrorAuthenticationFailed' value64='-5'/>
+<enum name='TKErrorCodeAuthenticationFailed' value64='-5'/>
+<enum name='TKErrorCodeAuthenticationNeeded' value64='-9'/>
+<enum name='TKErrorCodeBadParameter' value64='-8'/>
+<enum name='TKErrorCodeCanceledByUser' value64='-4'/>
+<enum name='TKErrorCodeCommunicationError' value64='-2'/>
+<enum name='TKErrorCodeCorruptedData' value64='-3'/>
+<enum name='TKErrorCodeNotImplemented' value64='-1'/>
+<enum name='TKErrorCodeObjectNotFound' value64='-6'/>
+<enum name='TKErrorCodeTokenNotFound' value64='-7'/>
+<enum name='TKErrorObjectNotFound' value64='-6'/>
+<enum name='TKErrorTokenNotFound' value64='-7'/>
+<enum name='TKSmartCardPINCharsetAlphanumeric' value64='1'/>
+<enum name='TKSmartCardPINCharsetNumeric' value64='0'/>
+<enum name='TKSmartCardPINCharsetUpperAlphanumeric' value64='2'/>
+<enum name='TKSmartCardPINCompletionKey' value64='2'/>
+<enum name='TKSmartCardPINCompletionMaxLength' value64='1'/>
+<enum name='TKSmartCardPINCompletionTimeout' value64='4'/>
+<enum name='TKSmartCardPINConfirmationCurrent' value64='2'/>
+<enum name='TKSmartCardPINConfirmationNew' value64='1'/>
+<enum name='TKSmartCardPINConfirmationNone' value64='0'/>
+<enum name='TKSmartCardPINEncodingASCII' value64='1'/>
+<enum name='TKSmartCardPINEncodingBCD' value64='2'/>
+<enum name='TKSmartCardPINEncodingBinary' value64='0'/>
+<enum name='TKSmartCardPINJustificationLeft' value64='0'/>
+<enum name='TKSmartCardPINJustificationRight' value64='1'/>
+<enum name='TKSmartCardProtocolAny' value64='65535'/>
+<enum name='TKSmartCardProtocolNone' value64='0'/>
+<enum name='TKSmartCardProtocolT0' value64='1'/>
+<enum name='TKSmartCardProtocolT1' value64='2'/>
+<enum name='TKSmartCardProtocolT15' value64='32768'/>
+<enum name='TKSmartCardSlotStateEmpty' value64='1'/>
+<enum name='TKSmartCardSlotStateMissing' value64='0'/>
+<enum name='TKSmartCardSlotStateMuteCard' value64='3'/>
+<enum name='TKSmartCardSlotStateProbing' value64='2'/>
+<enum name='TKSmartCardSlotStateValidCard' value64='4'/>
+<enum name='TKTokenOperationDecryptData' value64='3'/>
+<enum name='TKTokenOperationNone' value64='0'/>
+<enum name='TKTokenOperationPerformKeyExchange' value64='4'/>
+<enum name='TKTokenOperationReadData' value64='1'/>
+<enum name='TKTokenOperationSignData' value64='2'/>
+<class name='NSObject'>
+<method selector='tokenSession:supportsOperation:usingKey:algorithm:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='TKSmartCard'>
+<method selector='beginSessionWithReply:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='inSessionWithError:executeBlock:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='^@'/>
+<retval type64='B'/>
+</arg>
+<retval type64='B'/>
+</method>
+<method selector='sendIns:p1:p2:data:le:reply:'>
+<arg function_pointer='true' index='5' type64='@?'>
+<arg type64='@'/>
+<arg type64='S'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='sensitive'>
+<retval type64='B'/>
+</method>
+<method selector='setSensitive:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setUseCommandChaining:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setUseExtendedLength:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='transmitRequest:reply:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='useCommandChaining'>
+<retval type64='B'/>
+</method>
+<method selector='useExtendedLength'>
+<retval type64='B'/>
+</method>
+<method selector='valid'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='TKSmartCardATR'>
+<method selector='initWithSource:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<retval type64='i'/>
+</arg>
+</method>
+</class>
+<class name='TKSmartCardSlotManager'>
+<method selector='getSlotWithName:reply:'>
+<arg function_pointer='true' index='1' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='TKSmartCardUserInteraction'>
+<method selector='cancel'>
+<retval type64='B'/>
+</method>
+<method selector='runWithReply:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='B'/>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<class name='TKTokenAuthOperation'>
+<method selector='finishWithError:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='TKTokenKeyAlgorithm'>
+<method selector='isAlgorithm:'>
+<retval type64='B'/>
+</method>
+<method selector='supportsAlgorithm:'>
+<retval type64='B'/>
+</method>
+</class>
+<class name='TKTokenKeychainKey'>
+<method selector='canDecrypt'>
+<retval type64='B'/>
+</method>
+<method selector='canPerformKeyExchange'>
+<retval type64='B'/>
+</method>
+<method selector='canSign'>
+<retval type64='B'/>
+</method>
+<method selector='isSuitableForLogin'>
+<retval type64='B'/>
+</method>
+<method selector='setCanDecrypt:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setCanPerformKeyExchange:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setCanSign:'>
+<arg index='0' type64='B'/>
+</method>
+<method selector='setSuitableForLogin:'>
+<arg index='0' type64='B'/>
+</method>
+</class>
+<class name='TKTokenWatcher'>
+<method selector='addRemovalHandler:forTokenID:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+<method selector='initWithInsertionHandler:'>
+<arg function_pointer='true' index='0' type64='@?'>
+<arg type64='@'/>
+<retval type64='v'/>
+</arg>
+</method>
+</class>
+<informal_protocol name='TKTokenSessionDelegate'>
+<method selector='tokenSession:supportsOperation:usingKey:algorithm:' type64='B48@0:8@16q24@32@40'/>
+</informal_protocol>
+</signatures>
